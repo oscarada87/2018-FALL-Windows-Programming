@@ -12,6 +12,8 @@ namespace hw1
 {
     public partial class POSCustomerSideForm : Form
     {
+  
+
         public POSCustomerSideForm()
         {
             InitializeComponent();

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddButton = new System.Windows.Forms.Button();
             this.MealsGroupBox = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
@@ -44,6 +46,8 @@
             this.NextPageButton = new System.Windows.Forms.Button();
             this.recordDataGridView = new System.Windows.Forms.DataGridView();
             this.TotalLabel = new System.Windows.Forms.Label();
+            this.MealsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MealsPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MealsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recordDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -203,9 +207,34 @@
             // 
             // recordDataGridView
             // 
+            this.recordDataGridView.AllowUserToAddRows = false;
+            this.recordDataGridView.AllowUserToDeleteRows = false;
+            this.recordDataGridView.AllowUserToResizeColumns = false;
+            this.recordDataGridView.AllowUserToResizeRows = false;
+            this.recordDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recordDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.recordDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.recordDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MealsName,
+            this.MealsPrice});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.recordDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.recordDataGridView.Location = new System.Drawing.Point(592, 24);
             this.recordDataGridView.Name = "recordDataGridView";
+            this.recordDataGridView.RowHeadersVisible = false;
             this.recordDataGridView.RowTemplate.Height = 24;
             this.recordDataGridView.Size = new System.Drawing.Size(606, 572);
             this.recordDataGridView.TabIndex = 8;
@@ -221,11 +250,21 @@
             this.TotalLabel.TabIndex = 7;
             this.TotalLabel.Text = "Total: 200元";
             // 
+            // MealsName
+            // 
+            this.MealsName.HeaderText = "Name";
+            this.MealsName.Name = "MealsName";
+            // 
+            // MealsPrice
+            // 
+            this.MealsPrice.HeaderText = "Unit Price";
+            this.MealsPrice.Name = "MealsPrice";
+            // 
             // POSCustomerSideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 675);
+            this.ClientSize = new System.Drawing.Size(1211, 680);
             this.Controls.Add(this.TotalLabel);
             this.Controls.Add(this.recordDataGridView);
             this.Controls.Add(this.MealsGroupBox);
@@ -257,7 +296,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn MealsName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MealsPrice;
     }
 
 }
