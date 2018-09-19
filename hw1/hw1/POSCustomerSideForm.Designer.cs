@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddButton = new System.Windows.Forms.Button();
             this.MealsGroupBox = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
@@ -45,9 +45,9 @@
             this.PreviousPageButton = new System.Windows.Forms.Button();
             this.NextPageButton = new System.Windows.Forms.Button();
             this.recordDataGridView = new System.Windows.Forms.DataGridView();
-            this.TotalLabel = new System.Windows.Forms.Label();
             this.MealsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MealsPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalLabel = new System.Windows.Forms.Label();
             this.MealsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recordDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -187,6 +187,8 @@
             // 
             // PreviousPageButton
             // 
+            this.PreviousPageButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PreviousPageButton.Enabled = false;
             this.PreviousPageButton.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.PreviousPageButton.Location = new System.Drawing.Point(215, 608);
             this.PreviousPageButton.Name = "PreviousPageButton";
@@ -212,32 +214,42 @@
             this.recordDataGridView.AllowUserToResizeColumns = false;
             this.recordDataGridView.AllowUserToResizeRows = false;
             this.recordDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.recordDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recordDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.recordDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.recordDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MealsName,
             this.MealsPrice});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.recordDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.recordDataGridView.DefaultCellStyle = dataGridViewCellStyle10;
             this.recordDataGridView.Location = new System.Drawing.Point(592, 24);
             this.recordDataGridView.Name = "recordDataGridView";
             this.recordDataGridView.RowHeadersVisible = false;
             this.recordDataGridView.RowTemplate.Height = 24;
             this.recordDataGridView.Size = new System.Drawing.Size(606, 572);
             this.recordDataGridView.TabIndex = 8;
+            // 
+            // MealsName
+            // 
+            this.MealsName.HeaderText = "Name";
+            this.MealsName.Name = "MealsName";
+            // 
+            // MealsPrice
+            // 
+            this.MealsPrice.HeaderText = "Unit Price";
+            this.MealsPrice.Name = "MealsPrice";
             // 
             // TotalLabel
             // 
@@ -249,16 +261,6 @@
             this.TotalLabel.Size = new System.Drawing.Size(184, 38);
             this.TotalLabel.TabIndex = 7;
             this.TotalLabel.Text = "Total: 200元";
-            // 
-            // MealsName
-            // 
-            this.MealsName.HeaderText = "Name";
-            this.MealsName.Name = "MealsName";
-            // 
-            // MealsPrice
-            // 
-            this.MealsPrice.HeaderText = "Unit Price";
-            this.MealsPrice.Name = "MealsPrice";
             // 
             // POSCustomerSideForm
             // 
