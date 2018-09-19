@@ -8,5 +8,8 @@ namespace hw1
 {
     class POSCustomerSideModel
     {
+        private int currentPage = 1;
+
+
     }
 }
