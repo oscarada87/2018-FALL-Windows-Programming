@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace hw1
 {
-    class POSCustomerSideModel
+    public class POSCustomerSideModel
     {
-        private int currentPage = 1;
-
-
+        private Order _order;
+        
     }
 }

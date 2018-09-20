@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace hw1
 {
-    public partial class POSCustomerSideForm : Form
+    public partial class POSCustomerSideForm: Form
     {
-  
+        POSCustomerSideModel model;
 
-        public POSCustomerSideForm()
+        public POSCustomerSideForm(POSCustomerSideModel model)
         {
             InitializeComponent();
         }

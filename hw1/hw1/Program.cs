@@ -16,7 +16,7 @@ namespace hw1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new POSCustomerSideForm());
+            Application.Run(new POSCustomerSideForm(new POSCustomerSideModel()));
         }
     }
 }
