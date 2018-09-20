@@ -6,24 +6,27 @@ using System.Threading.Tasks;
 
 namespace hw1
 {
-    class Meal
+    public class Meal
     {
-        public string name;
-        public int price;
+        private string _name;
+        private int _price;
+
         public Meal(string name, int price)
         {
-            this.name = name;
-            this.price = price;
+            this._name = name;
+            this._price = price;
         }
+
         //取得價格
         public int GetPrice()
         {
-            return price;
+            return _price;
         }
+
         //取得名字
         public string GetName()
         {
-            return name;
+            return _name;
         }
     }
 }
