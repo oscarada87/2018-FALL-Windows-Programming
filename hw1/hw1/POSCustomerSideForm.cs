@@ -76,15 +76,15 @@ namespace hw1
         //按下新增按鈕
         private void _add_button_Click(object sender, EventArgs e)
         {
-            _total_label.Text = "Total: " + model.GetTotalPrice() + "元";
+            _totalLabel.Text = "Total: " + model.GetTotalPrice() + "元";
             int length = model.GetLengthOfMealList();
             for (int i = 1; i <= length; i++)
             {
                 DataGridViewRow row = new DataGridViewRow();
-                row.CreateCells(_record_datagridview);
+                row.CreateCells(_recordDatagridview);
                 row.Cells[0].Value = "123";
                 row.Cells[1].Value = 456;
-                _record_datagridview.Rows.Add(row);
+                _recordDatagridview.Rows.Add(row);
             }
             
             
