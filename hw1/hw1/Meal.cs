@@ -10,23 +10,34 @@ namespace hw1
     {
         private string _name;
         private int _price;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = Name;
+            }
+        }
+
+        public int Price
+        {
+            get
+            {
+                return _price;
+            }
+            set
+            {
+                _price = Price;
+            }
+        }        
 
         public Meal(string name, int price)
         {
             this._name = name;
             this._price = price;
-        }
-
-        //取得價格
-        public int GetPrice()
-        {
-            return _price;
-        }
-
-        //取得名字
-        public string GetName()
-        {
-            return _name;
         }
     }
 }

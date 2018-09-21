@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hw1", "hw1\hw1.csproj", "{187ED3E4-FAA8-47A6-80BF-F927643341F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS-CustomerSide", "hw1\POS-CustomerSide.csproj", "{187ED3E4-FAA8-47A6-80BF-F927643341F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

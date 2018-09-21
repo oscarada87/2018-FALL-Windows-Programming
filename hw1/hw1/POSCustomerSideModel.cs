@@ -28,6 +28,18 @@ namespace hw1
             return _order.GetTotalPrice();
         }
 
+        //呼叫order中的ClearMealList
+        public void ClearMealList()
+        {
+            _order.ClearMealList();
+        }
+
+        //呼叫order中的AddToDisplayMealList
+        public void AddToDisplayMealList()
+        {
+            _order.AddToDisplayMealList();
+        }
+
         //呼叫order中的GetLengthOfMealList
         public int GetLengthOfMealList()
         {
