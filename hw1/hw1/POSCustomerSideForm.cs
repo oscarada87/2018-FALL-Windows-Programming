@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace hw1
+namespace POSCustomerSide
 {
     public partial class POSCustomerSideForm : Form
     {
@@ -19,6 +19,8 @@ namespace hw1
         const int PRICE79 = 79;
         const int PRICE99 = 99;
         const int PRICE104 = 104;
+        const int PRICE109 = 109;
+        const int PRICE156 = 156;
         private POSCustomerSideModel _model = new POSCustomerSideModel();
 
         public POSCustomerSideForm(POSCustomerSideModel _model)
@@ -80,12 +82,80 @@ namespace hw1
             _model.AddMeal("麥脆雞（2塊）", PRICE104);
         }
 
-        //按下新增按鈕
+        //按下麥脆雞（3塊）按鈕
+        private void MealButton10Click(object sender, EventArgs e)
+        {
+            _model.AddMeal("麥脆雞（3塊）", PRICE156);
+        }
+
+        //按下黃金起司豬排堡按鈕
+        private void MealButton11Click(object sender, EventArgs e)
+        {
+            _model.AddMeal("黃金起司豬排堡", PRICE49);
+        }
+
+        //按下麥香魚按鈕
+        private void MealButton12Click(object sender, EventArgs e)
+        {
+            _model.AddMeal("麥香魚", PRICE49);
+        }
+
+        //按下千島黃金蝦堡按鈕
+        private void MealButton13Click(object sender, EventArgs e)
+        {
+            _model.AddMeal("千島黃金蝦堡", PRICE69);
+        }
+
+        //按下 BLT 安格斯黑牛堡按鈕
+        private void MealButton14Click(object sender, EventArgs e)
+        {
+            _model.AddMeal("BLT安格斯黑牛堡", PRICE109);
+        }
+
+        //按下 BLT 辣脆雞腿堡按鈕
+        private void MealButton15Click(object sender, EventArgs e)
+        {
+            _model.AddMeal("BLT辣脆雞腿堡", PRICE109);
+        }
+
+        //按下第一頁新增按鈕
         private void AddButton1Click(object sender, EventArgs e)
         {
             List<Meal> mealList = _model.GetMealList();
 
-            mealList.ForEach(x=>
+            mealList.ForEach(x =>
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row.CreateCells(_mealGridView);
+                row.Cells[0].Value = x.Name;
+                row.Cells[1].Value = x.Price;
+                _mealGridView.Rows.Add(row);
+            });
+            _model.AddToDisplayMealList();
+            _model.ClearMealList();
+            _totalLabel.Text = "Total: " + _model.GetTotalPrice() + "元";
+        }
+
+        //按下上一頁
+        private void PreviousPageButton2Click(object sender, EventArgs e)
+        {
+            _mealsGroupBox1.Visible = true;
+            _mealsGroupBox2.Visible = false;
+        }
+
+        //按下下一頁
+        private void NextPageButton1Click(object sender, EventArgs e)
+        {
+            _mealsGroupBox1.Visible = false;
+            _mealsGroupBox2.Visible = true;
+        }
+
+        //按下第二頁新增按鈕
+        private void AddButton2Click(object sender, EventArgs e)
+        {
+            List<Meal> mealList = _model.GetMealList();
+
+            mealList.ForEach(x =>
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(_mealGridView);

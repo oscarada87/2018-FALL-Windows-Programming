@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace hw1.Properties {
+namespace POSCustomerSide.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

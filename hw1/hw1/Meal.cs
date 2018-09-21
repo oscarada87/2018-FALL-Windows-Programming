@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hw1
+namespace POSCustomerSide
 {
     public class Meal
     {

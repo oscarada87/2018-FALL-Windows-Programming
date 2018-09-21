@@ -188,13 +188,13 @@
           <Reviews>
             <Smell>
               <Id>1</Id>
-              <SmellType>Unsuitable naming(名不符實)-hw1(hw)</SmellType>
-              <HashCode>UnsuitableNaming.Root.hw1.hw1</HashCode>
+              <SmellType>Literal constants(字面常數)-"Total: "</SmellType>
+              <HashCode>LiteralConstants.AddButton1Click."Total: "</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
-              <File>Meal.cs</File>
-              <Line>7</Line>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>136</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -204,13 +204,13 @@
             </Smell>
             <Smell>
               <Id>2</Id>
-              <SmellType>Unsuitable naming(名不符實)-hw1(hw)</SmellType>
-              <HashCode>UnsuitableNaming.Root.hw1.hw1</HashCode>
+              <SmellType>Literal constants(字面常數)-"Total: "</SmellType>
+              <HashCode>LiteralConstants.AddButton2Click."Total: "</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
-              <File>Order.cs</File>
-              <Line>7</Line>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>168</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -220,13 +220,13 @@
             </Smell>
             <Smell>
               <Id>3</Id>
-              <SmellType>Unsuitable naming(名不符實)-hw1(hw)</SmellType>
-              <HashCode>UnsuitableNaming.Root.hw1.hw1</HashCode>
+              <SmellType>Literal constants(字面常數)-"元"</SmellType>
+              <HashCode>LiteralConstants.AddButton1Click."元"</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
               <File>POSCustomerSideForm.cs</File>
-              <Line>11</Line>
+              <Line>136</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -236,13 +236,29 @@
             </Smell>
             <Smell>
               <Id>4</Id>
+              <SmellType>Literal constants(字面常數)-"元"</SmellType>
+              <HashCode>LiteralConstants.AddButton2Click."元"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>168</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>5</Id>
               <SmellType>ICS(變數-2)</SmellType>
               <HashCode>Variable2.POSCustomerSideForm._model</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
               <File>POSCustomerSideForm.cs</File>
-              <Line>24</Line>
+              <Line>26</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -251,46 +267,46 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>5</Id>
-              <SmellType>Unsuitable naming(名不符實)-hw1(hw)</SmellType>
-              <HashCode>UnsuitableNaming.Root.hw1.hw1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>POS-CustomerSide</Project>
-              <File>POSCustomerSideForm.Designer.cs</File>
-              <Line>1</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
               <Id>6</Id>
-              <SmellType>Unsuitable naming(名不符實)-_mealsGroupbox1(groupbox)</SmellType>
-              <HashCode>UnsuitableNaming.POSCustomerSideForm._mealsGroupbox1._mealsGroupbox1</HashCode>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.POSCustomerSideForm.PreviousPageButton2Click</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
-              <File>POSCustomerSideForm.Designer.cs</File>
-              <Line>316</Line>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>140</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment />
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>7</Id>
-              <SmellType>Unsuitable naming(名不符實)-hw1(hw)</SmellType>
-              <HashCode>UnsuitableNaming.Root.hw1.hw1</HashCode>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.POSCustomerSideForm.NextPageButton1Click</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
-              <File>POSCustomerSideModel.cs</File>
-              <Line>7</Line>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>147</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>8</Id>
+              <SmellType>Duplicated code(重複的程式碼)精確比對1</SmellType>
+              <HashCode>POS-CustomerSide.POSCustomerSideForm.cs.AddButton1Click.124.136</HashCode>
+              <Severity>Red</Severity>
+              <Weight>13</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>124</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -299,14 +315,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>8</Id>
-              <SmellType>Unsuitable naming(名不符實)-hw1(hw)</SmellType>
-              <HashCode>UnsuitableNaming.Root.hw1.hw1</HashCode>
+              <Id>9</Id>
+              <SmellType>Duplicated code(重複的程式碼)精確比對1</SmellType>
+              <HashCode>POS-CustomerSide.POSCustomerSideForm.cs.AddButton2Click.156.168</HashCode>
               <Severity>Red</Severity>
-              <Weight>1</Weight>
+              <Weight>13</Weight>
               <Project>POS-CustomerSide</Project>
-              <File>Program.cs</File>
-              <Line>7</Line>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>156</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -366,7 +382,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>638</ProductionLoc>
+          <ProductionLoc>849</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>
