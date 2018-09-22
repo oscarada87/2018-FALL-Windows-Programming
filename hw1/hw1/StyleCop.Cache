@@ -35,7 +35,7 @@
     <timestamps>
       <styleCop>2018/09/19 17:29:50.181</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/09/21 19:31:00.514</sourceFile>
+      <sourceFile>2018/09/22 20:59:45.878</sourceFile>
       <parser>2018/09/19 17:29:50.181</parser>
       <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -43,67 +43,13 @@
     <violations>
       <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Variable2" ruleCheckId="VR0002">
         <context>ICS(變數-2)</context>
-        <line>26</line>
-        <index>730</index>
-        <endIndex>756</endIndex>
-        <startLine>26</startLine>
+        <line>29</line>
+        <index>822</index>
+        <endIndex>848</endIndex>
+        <startLine>29</startLine>
         <startColumn>36</startColumn>
-        <endLine>26</endLine>
+        <endLine>29</endLine>
         <endColumn>62</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-"Total: "</context>
-        <line>136</line>
-        <index>3839</index>
-        <endIndex>3847</endIndex>
-        <startLine>136</startLine>
-        <startColumn>32</startColumn>
-        <endLine>136</endLine>
-        <endColumn>40</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-"元"</context>
-        <line>136</line>
-        <index>3876</index>
-        <endIndex>3878</endIndex>
-        <startLine>136</startLine>
-        <startColumn>69</startColumn>
-        <endLine>136</endLine>
-        <endColumn>71</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Method2" ruleCheckId="MT0002">
-        <context>ICS(函式-2)</context>
-        <line>140</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="Method2" ruleCheckId="MT0002">
-        <context>ICS(函式-2)</context>
-        <line>147</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-"Total: "</context>
-        <line>168</line>
-        <index>4891</index>
-        <endIndex>4899</endIndex>
-        <startLine>168</startLine>
-        <startColumn>32</startColumn>
-        <endLine>168</endLine>
-        <endColumn>40</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LiteralConstants" ruleCheckId="LC0001">
-        <context>Literal constants(字面常數)-"元"</context>
-        <line>168</line>
-        <index>4928</index>
-        <endIndex>4930</endIndex>
-        <startLine>168</startLine>
-        <startColumn>69</startColumn>
-        <endLine>168</endLine>
-        <endColumn>71</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
@@ -112,7 +58,7 @@
     <timestamps>
       <styleCop>2018/09/19 17:29:50.181</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/09/21 19:31:00.498</sourceFile>
+      <sourceFile>2018/09/22 20:59:09.230</sourceFile>
       <parser>2018/09/19 17:29:50.181</parser>
       <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
