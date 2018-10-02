@@ -15,11 +15,12 @@ namespace POSCustomerSide
         const int ZERO = 0;
         const int NINE = 9;
         const int FIFTEEN = 15; 
-        private POSCustomerSideModel _model = new POSCustomerSideModel();
+        private POSCustomerSideModel _model;
 
-        public CustomerSideForm(POSCustomerSideModel _model)
+        public CustomerSideForm(POSCustomerSideModel model)
         {
             InitializeComponent();
+            _model = model;
         }
 
         //按下食物按鈕
@@ -38,8 +39,9 @@ namespace POSCustomerSide
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(_mealGridView);
-                row.Cells[0].Value = x.Name;
-                row.Cells[1].Value = x.Price;
+                row.Cells[0].Value = "X";
+                row.Cells[1].Value = x.Name;
+                row.Cells[2].Value = x.Price;
                 _mealGridView.Rows.Add(row);
             });
             _model.AddToDisplayMealList();

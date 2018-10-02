@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StartUpFormPresentationModel.cs" />
+    <Compile Include="CustomerFormPresentationModel.cs" />
     <Compile Include="POSRestaurantSideForm.cs">
       <SubType>Form</SubType>
     </Compile>
