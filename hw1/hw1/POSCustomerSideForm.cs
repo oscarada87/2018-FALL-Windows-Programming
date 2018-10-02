@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace POSCustomerSide
 {
-    public partial class POSCustomerSideForm : Form
+    public partial class CustomerSideForm : Form
     {
         const int ZERO = 0;
         const int NINE = 9;
         const int FIFTEEN = 15; 
         private POSCustomerSideModel _model = new POSCustomerSideModel();
 
-        public POSCustomerSideForm(POSCustomerSideModel _model)
+        public CustomerSideForm(POSCustomerSideModel _model)
         {
             InitializeComponent();
         }

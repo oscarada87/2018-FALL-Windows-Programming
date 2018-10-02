@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="POSRestaurantSideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POSRestaurantSideForm.Designer.cs">
+      <DependentUpon>POSRestaurantSideForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartUpForm.Designer.cs">
+      <DependentUpon>StartUpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="POSCustomerSideForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,9 @@
     <EmbeddedResource Include="POSCustomerSideForm.resx">
       <DependentUpon>POSCustomerSideForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="POSRestaurantSideForm.resx">
+      <DependentUpon>POSRestaurantSideForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -70,6 +85,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StartUpForm.resx">
+      <DependentUpon>StartUpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

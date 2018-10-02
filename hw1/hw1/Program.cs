@@ -16,7 +16,8 @@ namespace POSCustomerSide
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new POSCustomerSideForm(new POSCustomerSideModel()));
+            //Application.Run(new CustomerSideForm(new POSCustomerSideModel()));
+            Application.Run(new StartUpForm());
         }
     }
 }

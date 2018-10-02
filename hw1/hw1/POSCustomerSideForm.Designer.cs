@@ -1,6 +1,6 @@
 ﻿namespace POSCustomerSide
 {
-    partial class POSCustomerSideForm
+    partial class CustomerSideForm
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -51,6 +51,7 @@
             this._pageLabel1 = new System.Windows.Forms.Label();
             this._previousPageButton = new System.Windows.Forms.Button();
             this._mealGridView = new System.Windows.Forms.DataGridView();
+            this._deleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this._mealsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._totalLabel = new System.Windows.Forms.Label();
@@ -320,6 +321,7 @@
             this._mealGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this._mealGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this._mealGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._deleteColumn,
             this._mealsName,
             this._mealsPrice});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -337,6 +339,13 @@
             this._mealGridView.RowTemplate.Height = 24;
             this._mealGridView.Size = new System.Drawing.Size(646, 572);
             this._mealGridView.TabIndex = 8;
+            // 
+            // _deleteColumn
+            // 
+            this._deleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this._deleteColumn.HeaderText = "Delete";
+            this._deleteColumn.Name = "_deleteColumn";
+            this._deleteColumn.Width = 75;
             // 
             // _mealsName
             // 
@@ -359,7 +368,7 @@
             this._totalLabel.TabIndex = 7;
             this._totalLabel.Text = "Total: 0元";
             // 
-            // POSCustomerSideForm
+            // CustomerSideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -369,7 +378,7 @@
             this.Controls.Add(this._totalLabel);
             this.Controls.Add(this._mealGridView);
             this.Controls.Add(this._mealsGroupBox);
-            this.Name = "POSCustomerSideForm";
+            this.Name = "CustomerSideForm";
             this.Text = "POS-Customer Side";
             this._mealsGroupBox.ResumeLayout(false);
             this._mealsGroupBox.PerformLayout();
@@ -397,14 +406,15 @@
         private System.Windows.Forms.Button _mealButton3;
         private System.Windows.Forms.Button _mealButton2;
         private System.Windows.Forms.Button _mealButton1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _mealsName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _mealsPrice;
         private System.Windows.Forms.Button _mealButton15;
         private System.Windows.Forms.Button _mealButton14;
         private System.Windows.Forms.Button _mealButton13;
         private System.Windows.Forms.Button _mealButton12;
         private System.Windows.Forms.Button _mealButton11;
         private System.Windows.Forms.Button _mealButton10;
+        private System.Windows.Forms.DataGridViewButtonColumn _deleteColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _mealsName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _mealsPrice;
     }
 
 }
