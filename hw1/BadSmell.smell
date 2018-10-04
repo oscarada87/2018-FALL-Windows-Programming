@@ -252,13 +252,61 @@
             </Smell>
             <Smell>
               <Id>5</Id>
-              <SmellType>ICS(變數-1)</SmellType>
-              <HashCode>Variable1.CustomerSideForm.projectPath</HashCode>
+              <SmellType>Literal constants(字面常數)-','</SmellType>
+              <HashCode>LiteralConstants.ReadMenuList.','</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>16</Line>
+              <File>Order.cs</File>
+              <Line>30</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>6</Id>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.ReadMenuList.2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>Order.cs</File>
+              <Line>31</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>7</Id>
+              <SmellType>Literal constants(字面常數)-3</SmellType>
+              <HashCode>LiteralConstants.ReadMenuList.3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>Order.cs</File>
+              <Line>31</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>8</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.Order.projectPath</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>Order.cs</File>
+              <Line>12</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -267,10 +315,42 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>6</Id>
+              <Id>9</Id>
+              <SmellType>ICS(空白與空行-3)</SmellType>
+              <HashCode>SpacingAndNewLine3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>54</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-3) for, foreach, while, switch, if 等關鍵字與左括號之間加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>10</Id>
               <SmellType>Literal constants(字面常數)-'\n'</SmellType>
               <HashCode>LiteralConstants.ProcessInput.'\n'</HashCode>
               <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>POSCustomerSideModel.cs</File>
+              <Line>28</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>11</Id>
+              <SmellType>Literal constants(字面常數)-'$'</SmellType>
+              <HashCode>LiteralConstants.ProcessInput.'$'</HashCode>
+              <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
               <File>POSCustomerSideModel.cs</File>
@@ -283,30 +363,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>7</Id>
-              <SmellType>Literal constants(字面常數)-'$'</SmellType>
-              <HashCode>LiteralConstants.ProcessInput.'$'</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>POS-CustomerSide</Project>
-              <File>POSCustomerSideModel.cs</File>
-              <Line>30</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>8</Id>
+              <Id>12</Id>
               <SmellType>Literal constants(字面常數)-'元'</SmellType>
               <HashCode>LiteralConstants.ProcessInput.'元'</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
               <File>POSCustomerSideModel.cs</File>
-              <Line>30</Line>
+              <Line>29</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -315,7 +379,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>9</Id>
+              <Id>13</Id>
               <SmellType>ICS(變數-1)</SmellType>
               <HashCode>Variable1.RestaurantSideForm._OkButton</HashCode>
               <Severity>Red</Severity>
@@ -331,7 +395,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>10</Id>
+              <Id>14</Id>
               <SmellType>Unsuitable naming(名不符實)-_notification(notification)</SmellType>
               <HashCode>UnsuitableNaming.RestaurantSideForm._notification._notification</HashCode>
               <Severity>Red</Severity>
@@ -347,7 +411,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>11</Id>
+              <Id>15</Id>
               <SmellType>Literal constants(字面常數)-"POS-Customer Side"</SmellType>
               <HashCode>LiteralConstants.IsFrontEndFormExist."POS-Customer Side"</HashCode>
               <Severity>Red</Severity>
@@ -363,7 +427,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>12</Id>
+              <Id>16</Id>
               <SmellType>Literal constants(字面常數)-"POS-Restaurant Side"</SmellType>
               <HashCode>LiteralConstants.IsBackEndFormExist."POS-Restaurant Side"</HashCode>
               <Severity>Red</Severity>
@@ -464,7 +528,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1138</ProductionLoc>
+          <ProductionLoc>1213</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>

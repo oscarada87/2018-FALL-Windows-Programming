@@ -55,6 +55,7 @@
             this._mealsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._totalLabel = new System.Windows.Forms.Label();
+            this._mealDescriptionBox = new System.Windows.Forms.RichTextBox();
             this._mealsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._mealGridView)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +63,7 @@
             // _addButton
             // 
             this._addButton.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._addButton.Location = new System.Drawing.Point(386, 571);
+            this._addButton.Location = new System.Drawing.Point(396, 660);
             this._addButton.Name = "_addButton";
             this._addButton.Size = new System.Drawing.Size(150, 31);
             this._addButton.TabIndex = 3;
@@ -72,6 +73,7 @@
             // 
             // _mealsGroupBox
             // 
+            this._mealsGroupBox.Controls.Add(this._mealDescriptionBox);
             this._mealsGroupBox.Controls.Add(this._mealButton1);
             this._mealsGroupBox.Controls.Add(this._mealButton2);
             this._mealsGroupBox.Controls.Add(this._mealButton3);
@@ -94,7 +96,7 @@
             this._mealsGroupBox.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this._mealsGroupBox.Location = new System.Drawing.Point(13, 12);
             this._mealsGroupBox.Name = "_mealsGroupBox";
-            this._mealsGroupBox.Size = new System.Drawing.Size(572, 651);
+            this._mealsGroupBox.Size = new System.Drawing.Size(572, 735);
             this._mealsGroupBox.TabIndex = 7;
             this._mealsGroupBox.TabStop = false;
             this._mealsGroupBox.Text = "Meals";
@@ -273,7 +275,7 @@
             // _nextPageButton
             // 
             this._nextPageButton.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._nextPageButton.Location = new System.Drawing.Point(386, 608);
+            this._nextPageButton.Location = new System.Drawing.Point(396, 697);
             this._nextPageButton.Name = "_nextPageButton";
             this._nextPageButton.Size = new System.Drawing.Size(150, 31);
             this._nextPageButton.TabIndex = 4;
@@ -285,7 +287,7 @@
             // 
             this._pageLabel1.AutoSize = true;
             this._pageLabel1.ForeColor = System.Drawing.Color.SteelBlue;
-            this._pageLabel1.Location = new System.Drawing.Point(22, 610);
+            this._pageLabel1.Location = new System.Drawing.Point(16, 699);
             this._pageLabel1.Name = "_pageLabel1";
             this._pageLabel1.Size = new System.Drawing.Size(93, 24);
             this._pageLabel1.TabIndex = 6;
@@ -296,7 +298,7 @@
             this._previousPageButton.Cursor = System.Windows.Forms.Cursors.Default;
             this._previousPageButton.Enabled = false;
             this._previousPageButton.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._previousPageButton.Location = new System.Drawing.Point(230, 608);
+            this._previousPageButton.Location = new System.Drawing.Point(240, 697);
             this._previousPageButton.Name = "_previousPageButton";
             this._previousPageButton.Size = new System.Drawing.Size(150, 31);
             this._previousPageButton.TabIndex = 5;
@@ -337,7 +339,7 @@
             this._mealGridView.Name = "_mealGridView";
             this._mealGridView.RowHeadersVisible = false;
             this._mealGridView.RowTemplate.Height = 24;
-            this._mealGridView.Size = new System.Drawing.Size(646, 572);
+            this._mealGridView.Size = new System.Drawing.Size(646, 682);
             this._mealGridView.TabIndex = 8;
             // 
             // _deleteColumn
@@ -362,11 +364,21 @@
             this._totalLabel.AutoSize = true;
             this._totalLabel.Font = new System.Drawing.Font("微軟正黑體", 22F);
             this._totalLabel.ForeColor = System.Drawing.Color.SaddleBrown;
-            this._totalLabel.Location = new System.Drawing.Point(1113, 612);
+            this._totalLabel.Location = new System.Drawing.Point(1109, 709);
             this._totalLabel.Name = "_totalLabel";
             this._totalLabel.Size = new System.Drawing.Size(150, 38);
             this._totalLabel.TabIndex = 7;
             this._totalLabel.Text = "Total: 0元";
+            // 
+            // _mealDescriptionBox
+            // 
+            this._mealDescriptionBox.BackColor = System.Drawing.SystemColors.Window;
+            this._mealDescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._mealDescriptionBox.Location = new System.Drawing.Point(20, 544);
+            this._mealDescriptionBox.Name = "_mealDescriptionBox";
+            this._mealDescriptionBox.Size = new System.Drawing.Size(526, 96);
+            this._mealDescriptionBox.TabIndex = 22;
+            this._mealDescriptionBox.Text = "";
             // 
             // CustomerSideForm
             // 
@@ -374,7 +386,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1292, 680);
+            this.ClientSize = new System.Drawing.Size(1292, 759);
             this.Controls.Add(this._totalLabel);
             this.Controls.Add(this._mealGridView);
             this.Controls.Add(this._mealsGroupBox);
@@ -415,6 +427,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn _deleteColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _mealsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn _mealsPrice;
+        private System.Windows.Forms.RichTextBox _mealDescriptionBox;
     }
 
 }

@@ -8,9 +8,12 @@ namespace POSCustomerSide
 {
     public class Meal
     {
+        private int _mealNumber;
         private string _name;
         private int _price;
-        
+        private string _imageRelativePath;
+        private string _description;
+
         public string Name
         {
             get
@@ -33,12 +36,26 @@ namespace POSCustomerSide
             {
                 _price = Price;
             }
-        }        
+        }
 
-        public Meal(string name, int price)
+        public string ImageRelativePath
         {
+            get
+            {
+                return _imageRelativePath;
+            }
+            set
+            {
+                _imageRelativePath = ImageRelativePath;
+            }
+        }
+
+        public Meal(int mealNumber, string name, int price, string imageRelativePath)
+        {
+            this._mealNumber = mealNumber;
             this._name = name;
             this._price = price;
+            this._imageRelativePath = imageRelativePath;
         }
     }
 }

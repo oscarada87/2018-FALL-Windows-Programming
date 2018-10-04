@@ -55,9 +55,9 @@ namespace POSCustomerSide
         }
 
         //呼叫model中的AddMeal
-        public void AddMeal(string input)
+        public void AddMeal(int buttonNumber)
         {
-            _model.AddMeal(input);
+            _model.AddMeal(buttonNumber);
         }
 
         //呼叫model中的AddToDisplayMealList
@@ -76,6 +76,18 @@ namespace POSCustomerSide
         public int GetTotalPrice()
         {
             return _model.GetTotalPrice();
+        }
+
+        //呼叫model中的GetImagePath
+        public string GetImagePath(int buttonIndex)
+        {
+            return _model.GetImagePath(buttonIndex);
+        }
+
+        //呼叫model中的GetPrice
+        public string GetPrice(int buttonIndex)
+        {
+            return _model.GetPrice(buttonIndex);
         }
     }
 }
