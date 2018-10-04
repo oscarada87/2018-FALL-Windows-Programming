@@ -12,8 +12,8 @@ namespace POSCustomerSide
         //Front End Form 是否存在
         public bool IsFrontEndFormExist()
         {
-            FormCollection formcollection = Application.OpenForms;
-            foreach (Form form in formcollection)
+            FormCollection formCollection = Application.OpenForms;
+            foreach (Form form in formCollection)
             {
                 if (form.Text == "POS-Customer Side")
                     return true;
@@ -24,8 +24,8 @@ namespace POSCustomerSide
         //Back End Form 是否存在
         public bool IsBackEndFormExist()
         {
-            FormCollection formcollection = Application.OpenForms;
-            foreach (Form form in formcollection)
+            FormCollection formCollection = Application.OpenForms;
+            foreach (Form form in formCollection)
             {
                 if (form.Text == "POS-Restaurant Side")
                     return true;

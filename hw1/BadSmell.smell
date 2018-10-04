@@ -188,22 +188,86 @@
           <Reviews>
             <Smell>
               <Id>1</Id>
-              <SmellType>ICS(變數-2)</SmellType>
-              <HashCode>Variable2.POSCustomerSideForm._model</HashCode>
-              <Severity>Red</Severity>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.IsNextPageButtonEnable.2</HashCode>
+              <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>20</Line>
+              <File>CustomerFormPresentationModel.cs</File>
+              <Line>17</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
-              <Comment>ICS(變數-2) 區域變數-函式參數命名規則與 class 成員變數相似，僅差在不以底線開始</Comment>
+              <Comment />
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>2</Id>
+              <SmellType>Literal constants(字面常數)-"Page: "</SmellType>
+              <HashCode>LiteralConstants.GetCurrentPage."Page: "</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>CustomerFormPresentationModel.cs</File>
+              <Line>35</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>3</Id>
+              <SmellType>Literal constants(字面常數)-"/2"</SmellType>
+              <HashCode>LiteralConstants.GetCurrentPage."/2"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>CustomerFormPresentationModel.cs</File>
+              <Line>35</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>4</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.CustomerFormPresentationModel.MinusOnePage</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>CustomerFormPresentationModel.cs</File>
+              <Line>46</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>5</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.CustomerSideForm.projectPath</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>16</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>6</Id>
               <SmellType>Literal constants(字面常數)-'\n'</SmellType>
               <HashCode>LiteralConstants.ProcessInput.'\n'</HashCode>
               <Severity>Red</Severity>
@@ -219,7 +283,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>3</Id>
+              <Id>7</Id>
               <SmellType>Literal constants(字面常數)-'$'</SmellType>
               <HashCode>LiteralConstants.ProcessInput.'$'</HashCode>
               <Severity>Warning</Severity>
@@ -235,7 +299,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>4</Id>
+              <Id>8</Id>
               <SmellType>Literal constants(字面常數)-'元'</SmellType>
               <HashCode>LiteralConstants.ProcessInput.'元'</HashCode>
               <Severity>Warning</Severity>
@@ -250,16 +314,84 @@
               <Comment />
               <Auto>false</Auto>
             </Smell>
+            <Smell>
+              <Id>9</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.RestaurantSideForm._OkButton</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>POSRestaurantSideForm.Designer.cs</File>
+              <Line>71</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>10</Id>
+              <SmellType>Unsuitable naming(名不符實)-_notification(notification)</SmellType>
+              <HashCode>UnsuitableNaming.RestaurantSideForm._notification._notification</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>POSRestaurantSideForm.Designer.cs</File>
+              <Line>72</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>11</Id>
+              <SmellType>Literal constants(字面常數)-"POS-Customer Side"</SmellType>
+              <HashCode>LiteralConstants.IsFrontEndFormExist."POS-Customer Side"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>StartUpFormPresentationModel.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>12</Id>
+              <SmellType>Literal constants(字面常數)-"POS-Restaurant Side"</SmellType>
+              <HashCode>LiteralConstants.IsBackEndFormExist."POS-Restaurant Side"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>StartUpFormPresentationModel.cs</File>
+              <Line>30</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
           </Reviews>
           <HashCodeIgnoreList />
           <HashCodeRequestIgnoreList>
-            <string>Variable2.POSCustomerSideForm._model</string>
             <string>LiteralConstants.ProcessInput.'\n'</string>
             <string>LiteralConstants.ProcessInput.'$'</string>
             <string>LiteralConstants.ProcessInput.'元'</string>
           </HashCodeRequestIgnoreList>
           <AnalysisFileManager>
             <AnalysisFiles>
+              <AnalysisFile>
+                <RelativePath>CustomerFormPresentationModel.cs</RelativePath>
+                <ProjectName>POS-CustomerSide</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Meal.cs</RelativePath>
                 <ProjectName>POS-CustomerSide</ProjectName>
@@ -286,6 +418,16 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
+                <RelativePath>POSRestaurantSideForm.cs</RelativePath>
+                <ProjectName>POS-CustomerSide</ProjectName>
+                <AnalysisFileType>ViewOrController</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>POSRestaurantSideForm.Designer.cs</RelativePath>
+                <ProjectName>POS-CustomerSide</ProjectName>
+                <AnalysisFileType>Designer</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
                 <RelativePath>Program.cs</RelativePath>
                 <ProjectName>POS-CustomerSide</ProjectName>
                 <AnalysisFileType>ViewOrController</AnalysisFileType>
@@ -305,9 +447,24 @@
                 <ProjectName>POS-CustomerSide</ProjectName>
                 <AnalysisFileType>Designer</AnalysisFileType>
               </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>StartUpForm.cs</RelativePath>
+                <ProjectName>POS-CustomerSide</ProjectName>
+                <AnalysisFileType>ViewOrController</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>StartUpForm.Designer.cs</RelativePath>
+                <ProjectName>POS-CustomerSide</ProjectName>
+                <AnalysisFileType>Designer</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>StartUpFormPresentationModel.cs</RelativePath>
+                <ProjectName>POS-CustomerSide</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>695</ProductionLoc>
+          <ProductionLoc>1138</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>

@@ -10,6 +10,7 @@ namespace POSCustomerSide
     {
         private string _name;
         private int _price;
+        
         public string Name
         {
             get

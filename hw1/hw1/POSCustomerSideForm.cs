@@ -7,20 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace POSCustomerSide
 {
     public partial class CustomerSideForm : Form
     {
+        string projectPath = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()));
+        const string IMAGE_RELATIVE_PATH = @"\resources\";
+        const string IMAGE_FILE_NAME = ".jpg";
         const int ZERO = 0;
         const int NINE = 9;
         const int FIFTEEN = 15; 
-        private POSCustomerSideModel _model;
+        //private POSCustomerSideModel _model;
+        private CustomerFormPresentationModel _model;
 
-        public CustomerSideForm(POSCustomerSideModel model)
+        public CustomerSideForm(CustomerFormPresentationModel model)
         {
             InitializeComponent();
-            _model = model;
+            this._model = model;
+            this._mealGridView.CellClick += ClickDataGridCell;
+            this.AddBackGroundImageToMealButton();
+        }
+
+        //加入背景圖片到按鈕
+        private void AddBackGroundImageToMealButton()
+        {
+            for (int i = 1; i < 16; i++)
+            {
+                _mealsGroupBox.Controls[i - 1].BackgroundImage = Image.FromFile(projectPath + IMAGE_RELATIVE_PATH + i.ToString() + IMAGE_FILE_NAME);
+                _mealsGroupBox.Controls[i - 1].BackgroundImageLayout = ImageLayout.Stretch;
+            }
         }
 
         //按下食物按鈕
@@ -56,9 +73,10 @@ namespace POSCustomerSide
                 _mealsGroupBox.Controls[i].Visible = true;
             for (int i = NINE; i < FIFTEEN; i++)
                 _mealsGroupBox.Controls[i].Visible = false;
-            _nextPageButton.Enabled = true;
-            _previousPageButton.Enabled = false;
-            _pageLabel1.Text = "Page: 1/2";
+            _model.MinusOnePage();
+            _nextPageButton.Enabled = _model.IsNextPageButtonEnable();
+            _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable();
+            _pageLabel1.Text = _model.GetCurrentPage();
         }
 
         //按下下一頁
@@ -68,9 +86,21 @@ namespace POSCustomerSide
                 _mealsGroupBox.Controls[i].Visible = false;
             for (int i = NINE; i < FIFTEEN; i++)
                 _mealsGroupBox.Controls[i].Visible = true;
-            _nextPageButton.Enabled = false;
-            _previousPageButton.Enabled = true;
-            _pageLabel1.Text = "Page: 2/2";
+            _model.AddOnePage();
+            _nextPageButton.Enabled = _model.IsNextPageButtonEnable();
+            _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable();
+            _pageLabel1.Text = _model.GetCurrentPage();
+        }
+
+        //按下datagridview中的刪除鈕
+        private void ClickDataGridCell(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == _mealGridView.NewRowIndex || e.RowIndex < 0)
+                return;
+            if (e.ColumnIndex == _mealGridView.Columns["_deleteColumn"].Index)
+            {
+                _mealGridView.Rows.RemoveAt(e.RowIndex);
+            }
         }
     }
 }
