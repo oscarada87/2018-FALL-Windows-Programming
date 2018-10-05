@@ -9,13 +9,16 @@ namespace POSCustomerSide
 {
     public class StartUpFormPresentationModel
     {
+        private const string FRONT_END_FORM_NAME = "POS-Customer Side";
+        private const string BACK_END_FORM_NAME = "POS-Restaurant Side";
+
         //Front End Form 是否存在
         public bool IsFrontEndFormExist()
         {
             FormCollection formCollection = Application.OpenForms;
             foreach (Form form in formCollection)
             {
-                if (form.Text == "POS-Customer Side")
+                if (form.Text == FRONT_END_FORM_NAME)
                     return true;
             }
             return false;
@@ -27,7 +30,7 @@ namespace POSCustomerSide
             FormCollection formCollection = Application.OpenForms;
             foreach (Form form in formCollection)
             {
-                if (form.Text == "POS-Restaurant Side")
+                if (form.Text == BACK_END_FORM_NAME)
                     return true;
             }
             return false;

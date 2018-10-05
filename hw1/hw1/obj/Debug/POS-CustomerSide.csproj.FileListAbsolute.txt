@@ -10,3 +10,15 @@ C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\
 C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.StartUpForm.resources
 C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.CustomerSideForm.resources
 C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.RestaurantSideForm.resources
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\bin\Debug\POSCustomerSide.exe.config
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\bin\Debug\POSCustomerSide.exe
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\bin\Debug\POSCustomerSide.pdb
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POS-CustomerSide.csprojAssemblyReference.cache
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.CustomerSideForm.resources
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.RestaurantSideForm.resources
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.Properties.Resources.resources
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.StartUpForm.resources
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POS-CustomerSide.csproj.GenerateResource.cache
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POS-CustomerSide.csproj.CoreCompileInputs.cache
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.exe
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.pdb

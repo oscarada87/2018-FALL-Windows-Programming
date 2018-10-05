@@ -13,9 +13,10 @@ namespace POSCustomerSide
 {
     public partial class CustomerSideForm : Form
     {
-        const int ZERO = 0;
-        const int NINE = 9;
-        const int FIFTEEN = 15; 
+        private const int ZERO = 0;
+        private const int NINE = 9;
+        private const int FIFTEEN = 15;
+        private const string DOLLAR = "元"; 
         private CustomerFormPresentationModel _model;
         private List<Button> _mealButtons = new List<Button>();
 
@@ -25,7 +26,7 @@ namespace POSCustomerSide
             this._model = model;
             this._mealGridView.CellClick += ClickDataGridCell;
             this.AddMealButtonToList();
-            this.AddTxtToMealButton();
+            this.AddTextToMealButton();
             this.AddBackGroundImageToMealButton();
         }
 
@@ -52,7 +53,7 @@ namespace POSCustomerSide
         //加入背景圖片到按鈕
         private void AddBackGroundImageToMealButton()
         {
-            foreach(Button mealButton in _mealButtons)
+            foreach (Button mealButton in _mealButtons)
             {
                 mealButton.BackgroundImage = Image.FromFile(_model.GetImagePath(_mealButtons.IndexOf(mealButton)));
                 mealButton.BackgroundImageLayout = ImageLayout.Stretch;
@@ -60,11 +61,11 @@ namespace POSCustomerSide
         }
 
         //加入文字到按鈕
-        private void AddTxtToMealButton()
+        private void AddTextToMealButton()
         {
             foreach (Button mealButton in _mealButtons)
             {
-                mealButton.Text = "$ "+_model.GetPrice(_mealButtons.IndexOf(mealButton)) + "元";
+                mealButton.Text = "$ "+_model.GetPrice(_mealButtons.IndexOf(mealButton)) + DOLLAR;
                 mealButton.ForeColor = Color.White;
                 mealButton.TextAlign = ContentAlignment.BottomRight;
             }
@@ -93,16 +94,16 @@ namespace POSCustomerSide
             });
             _model.AddToDisplayMealList();
             _model.ClearMealList();
-            _totalLabel.Text = "Total: " + _model.GetTotalPrice() + "元";
+            _totalLabel.Text = "Total: " + _model.GetTotalPrice() + DOLLAR;
         }
 
         //按下上一頁
         private void ClickPreviousPage(object sender, EventArgs e)
         {
             for (int i = ZERO; i < NINE; i++)
-                _mealButtons[i].Visible = false;
-            for (int i = NINE; i < FIFTEEN; i++)
                 _mealButtons[i].Visible = true;
+            for (int i = NINE; i < FIFTEEN; i++)
+                _mealButtons[i].Visible = false;
             _model.MinusOnePage();
             _nextPageButton.Enabled = _model.IsNextPageButtonEnable();
             _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable();
@@ -113,9 +114,9 @@ namespace POSCustomerSide
         private void ClickNextPage(object sender, EventArgs e)
         {
             for (int i = ZERO; i < NINE; i++)
-                _mealButtons[i].Visible = true;
-            for (int i = NINE; i < FIFTEEN; i++)
                 _mealButtons[i].Visible = false;
+            for (int i = NINE; i < FIFTEEN; i++)
+                _mealButtons[i].Visible = true;
             _model.AddOnePage();
             _nextPageButton.Enabled = _model.IsNextPageButtonEnable();
             _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable();

@@ -22,14 +22,6 @@ namespace POSCustomerSide
             _order.AddMeal(buttonNumber);
         }
 
-        //處理按鈕傳過來的字串
-        public string[] ProcessInput(string input)
-        {
-            string [] result = input.Split('\n');
-            result[1] = result[1].Trim(new char[] {'$','元'});
-            return result;
-        }
-
         //呼叫order中的GetImagePath
         public string GetImagePath(int buttonIndex)
         {

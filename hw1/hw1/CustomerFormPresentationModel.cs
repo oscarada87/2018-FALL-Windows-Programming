@@ -10,11 +10,12 @@ namespace POSCustomerSide
     {
         private POSCustomerSideModel _model = new POSCustomerSideModel();
         private int _currentPage = 1;
+        private const int TOTAL_PAGE = 2;
 
         //確認Next Page的狀態
         public bool IsNextPageButtonEnable()
         {
-            if (_currentPage == 2)
+            if (_currentPage == TOTAL_PAGE)
                 return false;
             else
                 return true;

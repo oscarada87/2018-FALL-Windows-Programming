@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._OkButton = new System.Windows.Forms.Button();
-            this._notification = new System.Windows.Forms.Label();
+            this._okButton = new System.Windows.Forms.Button();
+            this._notice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // _OkButton
+            // _okButton
             // 
-            this._OkButton.Font = new System.Drawing.Font("標楷體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._OkButton.Location = new System.Drawing.Point(280, 180);
-            this._OkButton.Name = "_OkButton";
-            this._OkButton.Size = new System.Drawing.Size(101, 27);
-            this._OkButton.TabIndex = 0;
-            this._OkButton.Text = "OK";
-            this._OkButton.UseVisualStyleBackColor = true;
+            this._okButton.Font = new System.Drawing.Font("標楷體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._okButton.Location = new System.Drawing.Point(280, 180);
+            this._okButton.Name = "_OkButton";
+            this._okButton.Size = new System.Drawing.Size(101, 27);
+            this._okButton.TabIndex = 0;
+            this._okButton.Text = "OK";
+            this._okButton.UseVisualStyleBackColor = true;
             // 
-            // _notification
+            // _notice
             // 
-            this._notification.AutoSize = true;
-            this._notification.Font = new System.Drawing.Font("標楷體", 50F, System.Drawing.FontStyle.Bold);
-            this._notification.Location = new System.Drawing.Point(92, 65);
-            this._notification.Name = "_notification";
-            this._notification.Size = new System.Drawing.Size(484, 67);
-            this._notification.TabIndex = 1;
-            this._notification.Text = "Comming Soon!";
+            this._notice.AutoSize = true;
+            this._notice.Font = new System.Drawing.Font("標楷體", 50F, System.Drawing.FontStyle.Bold);
+            this._notice.Location = new System.Drawing.Point(92, 65);
+            this._notice.Name = "_notification";
+            this._notice.Size = new System.Drawing.Size(484, 67);
+            this._notice.TabIndex = 1;
+            this._notice.Text = "Comming Soon!";
             // 
             // RestaurantSideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 268);
-            this.Controls.Add(this._notification);
-            this.Controls.Add(this._OkButton);
+            this.Controls.Add(this._notice);
+            this.Controls.Add(this._okButton);
             this.Name = "RestaurantSideForm";
             this.Text = "POS-Restaurant Side";
             this.ResumeLayout(false);
@@ -68,7 +68,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button _OkButton;
-        private System.Windows.Forms.Label _notification;
+        private System.Windows.Forms.Button _okButton;
+        private System.Windows.Forms.Label _notice;
     }
 }

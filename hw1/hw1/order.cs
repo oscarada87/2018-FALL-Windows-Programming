@@ -9,7 +9,7 @@ namespace POSCustomerSide
 {
     public class Order
     {
-        string projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
+        string _projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
         const string MENU_RELATIVE_PATH = @"\resources\menu.txt";
         private List<Meal> _mealList = new List<Meal>();
         private List<Meal> _displayMealList = new List<Meal>();
@@ -24,7 +24,7 @@ namespace POSCustomerSide
         private void ReadMenuList()
         {
             string line;
-            StreamReader file = new StreamReader(projectPath + MENU_RELATIVE_PATH, System.Text.Encoding.Default);
+            StreamReader file = new StreamReader(_projectPath + MENU_RELATIVE_PATH, System.Text.Encoding.Default);
             while ((line = file.ReadLine()) != null)
             {
                 string[] data = line.Split(',');
@@ -36,7 +36,7 @@ namespace POSCustomerSide
         //取得Menu的背景圖片位置
         public string GetImagePath(int buttonIndex)
         {
-            string path = projectPath + _menuList[buttonIndex].ImageRelativePath;
+            string path = _projectPath + _menuList[buttonIndex].ImageRelativePath;
             return path;
         }
 
