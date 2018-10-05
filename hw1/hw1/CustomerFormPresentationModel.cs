@@ -67,6 +67,12 @@ namespace POSCustomerSide
             _model.AddToDisplayMealList();
         }
 
+        //呼叫model中的DeleteFromDisplayMealList
+        public void DeleteFromDisplayMealList(int mealIndex)
+        {
+            _model.DeleteFromDisplayMealList(mealIndex);
+        }
+
         //呼叫model中的ClearMealList
         public void ClearMealList()
         {

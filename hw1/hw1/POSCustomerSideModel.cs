@@ -64,6 +64,12 @@ namespace POSCustomerSide
             _order.AddToDisplayMealList();
         }
 
+        //呼叫order中的DeleteFromDisplayMealList
+        public void DeleteFromDisplayMealList(int mealIndex)
+        {
+            _order.DeleteFromDisplayMealList(mealIndex);
+        }
+
         //呼叫order中的GetLengthOfMealList
         public int GetLengthOfMealList()
         {

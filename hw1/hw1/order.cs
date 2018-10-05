@@ -102,6 +102,12 @@ namespace POSCustomerSide
             _displayMealList.AddRange(_mealList);
         }
 
+        //刪除display中指定的meal
+        public void DeleteFromDisplayMealList(int mealIndex)
+        {
+            _displayMealList.RemoveAt(mealIndex);
+        }
+
         //取得總價
         public int GetTotalPrice()
         {

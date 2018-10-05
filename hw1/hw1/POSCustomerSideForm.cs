@@ -95,7 +95,7 @@ namespace POSCustomerSide
             });
             _model.AddToDisplayMealList();
             _model.ClearMealList();
-            _totalLabel.Text = "Total: " + _model.GetTotalPrice() + DOLLAR;
+            UpdateTotalPrice();
         }
 
         //按下上一頁
@@ -132,12 +132,20 @@ namespace POSCustomerSide
                 return;
             if (e.ColumnIndex == _mealGridView.Columns["_deleteColumn"].Index)
             {
+                _model.DeleteFromDisplayMealList(e.RowIndex);
+                UpdateTotalPrice();
                 _mealGridView.Rows.RemoveAt(e.RowIndex);
             }
             else
             {
                 _mealDescriptionBox.Text = _model.GetDescriptionByName(dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString());
             }
+        }
+
+        //更新總價
+        private void UpdateTotalPrice()
+        {
+            _totalLabel.Text = "Total: " + _model.GetTotalPrice() + DOLLAR;
         }
     }
 }
