@@ -50,12 +50,25 @@ namespace POSCustomerSide
             }
         }
 
-        public Meal(int mealNumber, string name, int price, string imageRelativePath)
+        public string Description
+        {
+            get
+            {
+                return _description;
+            }
+            set
+            {
+                _description = Description;
+            }
+        }
+
+        public Meal(int mealNumber, string name, int price, string imageRelativePath, string description)
         {
             this._mealNumber = mealNumber;
             this._name = name;
             this._price = price;
             this._imageRelativePath = imageRelativePath;
+            this._description = description;
         }
     }
 }

@@ -90,5 +90,17 @@ namespace POSCustomerSide
         {
             return _model.GetPrice(buttonIndex);
         }
+
+        //呼叫model中的GetDescriptionByName
+        public string GetDescriptionByName(string mealName)
+        {
+            return _model.GetDescriptionByName(mealName);
+        }
+
+        //呼叫model中的GetDescriptionByIndex
+        public string GetDescriptionByIndex(int mealIndex)
+        {
+            return _model.GetDescriptionByIndex(mealIndex);
+        }
     }
 }

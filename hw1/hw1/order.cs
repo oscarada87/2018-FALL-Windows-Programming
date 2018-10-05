@@ -28,9 +28,21 @@ namespace POSCustomerSide
             while ((line = file.ReadLine()) != null)
             {
                 string[] data = line.Split(',');
-                Meal meal = new Meal(int.Parse(data[0]), data[1], int.Parse(data[2]), data[3]);
+                Meal meal = new Meal(int.Parse(data[0]), data[1], int.Parse(data[2]), data[3], data[4]);
                 _menuList.Add(meal);
             }
+        }
+
+        //透過名字找到餐點
+        private Meal FindMealThroughName(string mealName)
+        {
+            foreach (var meal in _menuList)
+            {
+                if (meal.Name == mealName)
+                    return meal;
+            }
+            //Console.WriteLine("Not Found!");
+            return null;
         }
 
         //取得Menu的背景圖片位置
@@ -44,6 +56,19 @@ namespace POSCustomerSide
         public string GetPrice(int buttonIndex)
         {
             return _menuList[buttonIndex].Price.ToString();
+        }
+
+        //取得Menu的描述透過名字
+        public string GetDescriptionByName(string mealName)
+        {
+            Meal meal = FindMealThroughName(mealName);
+            return meal.Description;
+        }
+
+        //取得Menu的描述透過Index
+        public string GetDescriptionByIndex(int mealIndex)
+        {
+            return _menuList[mealIndex].Description;
         }
 
         //新增一項餐點

@@ -76,6 +76,7 @@ namespace POSCustomerSide
         {
             Button mealButton = (Button)sender;
             _model.AddMeal(_mealButtons.IndexOf(mealButton));
+            _mealDescriptionBox.Text = _model.GetDescriptionByIndex(_mealButtons.IndexOf(mealButton));
         }
 
         //按下新增按鈕
@@ -123,14 +124,19 @@ namespace POSCustomerSide
             _pageLabel1.Text = _model.GetCurrentPage();
         }
 
-        //按下datagridview中的刪除鈕
+        //按下datagridview中的物件
         private void ClickDataGridCell(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridView dataGrid = (DataGridView)sender;
             if (e.RowIndex == _mealGridView.NewRowIndex || e.RowIndex < 0)
                 return;
             if (e.ColumnIndex == _mealGridView.Columns["_deleteColumn"].Index)
             {
                 _mealGridView.Rows.RemoveAt(e.RowIndex);
+            }
+            else
+            {
+                _mealDescriptionBox.Text = _model.GetDescriptionByName(dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString());
             }
         }
     }

@@ -15,6 +15,13 @@ namespace POSCustomerSide
         public RestaurantSideForm()
         {
             InitializeComponent();
+            this._okButton.Click += ClickButton;
+        }
+
+        //按下ok按鈕
+        private void ClickButton(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

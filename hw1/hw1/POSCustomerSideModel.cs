@@ -34,6 +34,18 @@ namespace POSCustomerSide
             return _order.GetPrice(buttonIndex);
         }
 
+        //呼叫order中的GetDescriptionByName
+        public string GetDescriptionByName(string mealName)
+        {
+            return _order.GetDescriptionByName(mealName);
+        }
+
+        //呼叫order中的GetDescriptionByIndex
+        public string GetDescriptionByIndex(int mealIndex)
+        {
+            return _order.GetDescriptionByIndex(mealIndex);
+        }
+
         //呼叫order中的GetTotalPrice
         public int GetTotalPrice()
         {

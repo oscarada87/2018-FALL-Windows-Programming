@@ -284,6 +284,22 @@
             </Smell>
             <Smell>
               <Id>7</Id>
+              <SmellType>Literal constants(字面常數)-4</SmellType>
+              <HashCode>LiteralConstants.ReadMenuList.4</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>Order.cs</File>
+              <Line>31</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>8</Id>
               <SmellType>ICS(空白與空行-7)</SmellType>
               <HashCode>SpacingAndNewLine7</HashCode>
               <Severity>Red</Severity>
@@ -298,25 +314,18 @@
               <Comment>ICS(空白與空行-7) 二元運算子的前面與後面各加一個空白</Comment>
               <Auto>false</Auto>
             </Smell>
-            <Smell>
-              <Id>8</Id>
-              <SmellType>Unresolved warnings(忽視警告)-欄位 'Meal._description' 從未使用過</SmellType>
-              <HashCode>hw1\POS-CustomerSide.Meal.cs.Unresolved warnings(忽視警告)-欄位 'Meal._description' 從未使用過.15</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>hw1\POS-CustomerSide</Project>
-              <File>Meal.cs</File>
-              <Line>15</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
           </Reviews>
           <HashCodeIgnoreList />
-          <HashCodeRequestIgnoreList />
+          <HashCodeRequestIgnoreList>
+            <string>LiteralConstants.GetCurrentPage."Page: "</string>
+            <string>LiteralConstants.GetCurrentPage."/2"</string>
+            <string>Method2.CustomerFormPresentationModel.MinusOnePage</string>
+            <string>LiteralConstants.ReadMenuList.','</string>
+            <string>LiteralConstants.ReadMenuList.2</string>
+            <string>LiteralConstants.ReadMenuList.3</string>
+            <string>LiteralConstants.ReadMenuList.4</string>
+            <string>SpacingAndNewLine7</string>
+          </HashCodeRequestIgnoreList>
           <AnalysisFileManager>
             <AnalysisFiles>
               <AnalysisFile>
@@ -396,7 +405,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1254</ProductionLoc>
+          <ProductionLoc>1359</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>
