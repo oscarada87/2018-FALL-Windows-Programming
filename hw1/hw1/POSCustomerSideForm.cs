@@ -26,6 +26,7 @@ namespace POSCustomerSide
             InitializeComponent();
             this._model = model;
             this._mealGridView.CellClick += ClickDataGridCell;
+            this._tabControlButton.SelectedIndexChanged += ClickTabPage;
             UpdateTabPage();
             UpdateMealButton();
         }
@@ -96,27 +97,41 @@ namespace POSCustomerSide
         //按下上一頁
         private void ClickPreviousPage(object sender, EventArgs e)
         {
+            string categoryName = _tabControlButton.SelectedTab.Name;
+            //Console.WriteLine(categoryName);
             for (int i = ZERO; i < NINE; i++)
                 _mealButtons[i].Visible = true;
             for (int i = NINE; i < FIFTEEN; i++)
                 _mealButtons[i].Visible = false;
-            _model.MinusOnePage();
-            _nextPageButton.Enabled = _model.IsNextPageButtonEnable();
-            _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable();
-            _pageLabel1.Text = _model.GetCurrentPage();
+            _model.MinusOnePage(categoryName);
+            _nextPageButton.Enabled = _model.IsNextPageButtonEnable(categoryName);
+            _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable(categoryName);
+            _pageLabel1.Text = _model.GetCurrentPage(categoryName);
         }
 
         //按下下一頁
         private void ClickNextPage(object sender, EventArgs e)
         {
+            string categoryName = _tabControlButton.SelectedTab.Name;
+            //Console.WriteLine(categoryName);
             for (int i = ZERO; i < NINE; i++)
                 _mealButtons[i].Visible = false;
             for (int i = NINE; i < FIFTEEN; i++)
                 _mealButtons[i].Visible = true;
-            _model.AddOnePage();
-            _nextPageButton.Enabled = _model.IsNextPageButtonEnable();
-            _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable();
-            _pageLabel1.Text = _model.GetCurrentPage();
+            _model.AddOnePage(categoryName);
+            _nextPageButton.Enabled = _model.IsNextPageButtonEnable(categoryName);
+            _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable(categoryName);
+            _pageLabel1.Text = _model.GetCurrentPage(categoryName);
+        }
+
+        //按下tabPage
+        private void ClickTabPage(object sender, EventArgs e)
+        {
+            string categoryName = _tabControlButton.SelectedTab.Name;
+            //Console.WriteLine(categoryName);
+            _nextPageButton.Enabled = _model.IsNextPageButtonEnable(categoryName);
+            _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable(categoryName);
+            _pageLabel1.Text = _model.GetCurrentPage(categoryName);
         }
 
         //按下datagridview中的物件

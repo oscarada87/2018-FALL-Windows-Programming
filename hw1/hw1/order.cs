@@ -25,13 +25,13 @@ namespace POSCustomerSide
             //Debug();
         }
 
-        private void Debug()
+        /*private void Debug()
         {
             _menuList.ForEach(x =>
             {
                 Console.WriteLine(x.Name);
             });
-        }
+        }*/
 
         //讀取Categories
         private void ReadCategories()

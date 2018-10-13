@@ -10,10 +10,8 @@ namespace POSCustomerSide
     public class CustomerFormPresentationModel
     {
         private POSCustomerSideModel _model = new POSCustomerSideModel();
-        private int _currentPage = 1;
-        private const int TOTAL_PAGE = 2;
-        private const int BUTTONLOCATIONX = 20;
-        private const int BUTTONLOCATIONY = 40;
+        private const int BUTTONLOCATIONX = 10;
+        private const int BUTTONLOCATIONY = 10;
         private List<CategoryState> _categoriesState = new List<CategoryState>();
 
         //Constructor
@@ -35,6 +33,7 @@ namespace POSCustomerSide
                 this._name = name;
                 this._currentPage = 1;
                 this._buttonCount = 0;
+                this._totalPage = 1;
             }
             public string Name
             {
@@ -44,7 +43,7 @@ namespace POSCustomerSide
                 }
                 set
                 {
-                    _name = Name;
+                    _name = value;
                 }
             }
             public int CurrentPage
@@ -55,7 +54,7 @@ namespace POSCustomerSide
                 }
                 set
                 {
-                    _currentPage = CurrentPage;
+                    _currentPage = value;
                 }
             }
             public int TotalPage
@@ -66,7 +65,7 @@ namespace POSCustomerSide
                 }
                 set
                 {
-                    _totalPage = TotalPage;
+                    _totalPage = value;
                 }
             }
             public int ButtonCount
@@ -77,14 +76,14 @@ namespace POSCustomerSide
                 }
                 set
                 {
-                    _buttonCount = ButtonCount;
+                    _buttonCount = value;
                 }
             }
 
-            //新增一個按鈕
-            public void AddButtonCount()
+            //更新最大頁數
+            public void UpdateTotalPage()
             {
-                _buttonCount = _buttonCount + 1;
+                _totalPage = (_buttonCount / 9) + 1;
             }
         }
 
@@ -104,20 +103,21 @@ namespace POSCustomerSide
         {
             int XLocation = 0;
             int YLocation = 0;
-            _categoriesState.ForEach(x =>
+            foreach(CategoryState categoryState in _categoriesState)
             {
-                if (meal.Category.Name == x.Name)
+                if (meal.Category.Name == categoryState.Name)
                 {
                     int buttonCount = 0;
-                    if (x.ButtonCount > 9)
-                    {
-                        buttonCount = x.ButtonCount % 9;
-                    }
-                    XLocation = (buttonCount / 3) * 160 + BUTTONLOCATIONX;
-                    YLocation = (buttonCount % 3) * 160 + BUTTONLOCATIONY;
-                    x.AddButtonCount();
+                    if (categoryState.ButtonCount >= 9)
+                        buttonCount = categoryState.ButtonCount % 9;
+                    else
+                        buttonCount = categoryState.ButtonCount;
+                    XLocation = (buttonCount % 3) * 160 + BUTTONLOCATIONX;
+                    YLocation = (buttonCount / 3) * 160 + BUTTONLOCATIONY;
+                    categoryState.ButtonCount++;
+                    categoryState.UpdateTotalPage();
                 }
-            });
+            };
             //Console.WriteLine(meal.Name + "\n X:" + XLocation + "\n Y:" + YLocation);
             return new Point(XLocation, YLocation);
         }
@@ -152,40 +152,74 @@ namespace POSCustomerSide
         }
 
         //確認Next Page的狀態
-        public bool IsNextPageButtonEnable()
+        public bool IsNextPageButtonEnable(string categoryName)
         {
-            if (_currentPage == TOTAL_PAGE)
-                return false;
-            else
-                return true;
+            foreach (CategoryState category in _categoriesState )
+            {
+                if (categoryName == category.Name)
+                {
+                    if (category.CurrentPage >= category.TotalPage)
+                        return false;
+                    else
+                        return true;
+                }
+            }
+            Console.WriteLine("ERROR");
+            return false;
         }
 
         //確認Previous Page的狀態
-        public bool IsPreviousPageButtonEnable()
+        public bool IsPreviousPageButtonEnable(string categoryName)
         {
-            if (_currentPage == 1)
-                return false;
-            else
-                return true;
+            foreach (CategoryState category in _categoriesState)
+            {
+                if (categoryName == category.Name)
+                {
+                    if (category.CurrentPage == 1)
+                        return false;
+                    else
+                        return true;
+                }
+            }
+            Console.WriteLine("ERROR");
+            return false;
         }
 
         //回傳現在的頁碼
-        public string GetCurrentPage()
+        public string GetCurrentPage(string categoryName)
         {
-            String currentPage = "Page: " + _currentPage.ToString() + "/2";
-            return currentPage;
+            foreach (CategoryState category in _categoriesState)
+            {
+                if (categoryName == category.Name)
+                {
+                    return "Page: " + category.CurrentPage.ToString() + "/" + category.TotalPage.ToString();
+                }
+            }
+            return "";
         }
 
         //加1頁
-        public void AddOnePage()
+        public void AddOnePage(string categoryName)
         {
-            _currentPage++;
+            foreach (CategoryState category in _categoriesState)
+            {
+                if (categoryName == category.Name)
+                {
+                    category.CurrentPage++;
+                }
+            }
         }
 
         //減1頁
-        public void MinusOnePage()
+        public void MinusOnePage(string categoryName)
         {
-            _currentPage--;
+            foreach (CategoryState category in _categoriesState)
+            {
+                if (categoryName == category.Name)
+                {
+                    category.CurrentPage--;
+                }
+            }
         }
 
         //呼叫model的GetMealList

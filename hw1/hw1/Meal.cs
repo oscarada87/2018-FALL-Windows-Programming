@@ -32,7 +32,7 @@ namespace POSCustomerSide
             }
             set
             {
-                _name = Name;
+                _name = value;
             }
         }
 
@@ -44,7 +44,7 @@ namespace POSCustomerSide
             }
             set
             {
-                _price = Price;
+                _price = value;
             }
         }
 
@@ -56,7 +56,7 @@ namespace POSCustomerSide
             }
             set
             {
-                _imageRelativePath = ImageRelativePath;
+                _imageRelativePath = value;
             }
         }
 
@@ -68,7 +68,7 @@ namespace POSCustomerSide
             }
             set
             {
-                _description = Description;
+                _description = value;
             }
         }
 
@@ -80,7 +80,7 @@ namespace POSCustomerSide
             }
             set
             {
-                _category = Category;
+                _category = value;
             }
         }
     }

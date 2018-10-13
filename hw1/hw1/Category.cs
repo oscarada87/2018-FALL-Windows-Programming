@@ -24,7 +24,7 @@ namespace POSCustomerSide
             }
             set
             {
-                _name = Name;
+                _name = value;
             }
         }
     }
