@@ -19,6 +19,7 @@ namespace POSCustomerSide
         private const string DOLLAR = "元"; 
         private CustomerFormPresentationModel _model;
         private List<Button> _mealButtons = new List<Button>();
+        string _projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
 
         public CustomerSideForm(CustomerFormPresentationModel model)
         {
@@ -27,8 +28,6 @@ namespace POSCustomerSide
             this._mealGridView.CellClick += ClickDataGridCell;
             UpdateTabPage();
             UpdateMealButton();
-            AddTextToMealButton();
-            AddBackGroundImageToMealButton();
         }
 
         //把category加到tabpage
@@ -47,28 +46,23 @@ namespace POSCustomerSide
         //將餐點按鈕加進List中
         private void UpdateMealButton()
         {
-          
-        }
-
-        //加入背景圖片到按鈕
-        private void AddBackGroundImageToMealButton()
-        {
-            foreach (Button mealButton in _mealButtons)
+            List<Meal> menu = _model.GetMenu();
+            menu.ForEach(x =>
             {
-                mealButton.BackgroundImage = Image.FromFile(_model.GetImagePath(_mealButtons.IndexOf(mealButton)));
-                mealButton.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-        }
-
-        //加入文字到按鈕
-        private void AddTextToMealButton()
-        {
-            foreach (Button mealButton in _mealButtons)
-            {
-                mealButton.Text = "$ "+_model.GetPrice(_mealButtons.IndexOf(mealButton)) + DOLLAR;
-                mealButton.ForeColor = Color.White;
-                mealButton.TextAlign = ContentAlignment.BottomRight;
-            }
+                Button button = new Button();
+                button.Size = new Size(150, 130);
+                button.Location = _model.GetMealButtonLocation(x);
+                button.Text = x.Name + "\n" + x.Price.ToString() + DOLLAR;
+                button.Font = new Font("微軟正黑體", 10);
+                button.BackgroundImageLayout = ImageLayout.Stretch;
+                button.BackgroundImage = Image.FromFile(_projectPath + x.ImageRelativePath);
+                button.ForeColor = Color.White;
+                button.TextAlign = ContentAlignment.BottomRight;
+                //button.Visible = _model.GetMealButtonVisible(x);
+                _mealButtons.Add(button);
+                _tabControlButton.TabPages[_model.GetMealButtonCategoryIndex(x)].Controls.Add(button);
+            });
+            
         }
 
         //按下食物按鈕

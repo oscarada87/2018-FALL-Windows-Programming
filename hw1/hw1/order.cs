@@ -22,6 +22,15 @@ namespace POSCustomerSide
         {
             ReadCategories();
             ReadMenuList();
+            //Debug();
+        }
+
+        private void Debug()
+        {
+            _menuList.ForEach(x =>
+            {
+                Console.WriteLine(x.Name);
+            });
         }
 
         //讀取Categories
@@ -36,7 +45,6 @@ namespace POSCustomerSide
                 Categories.Add(data[0]);
             }
             InitCategories(Categories);
-            Console.WriteLine(_categories[0].Name);
         }
 
         //讀取meal
@@ -82,6 +90,12 @@ namespace POSCustomerSide
             }
             //Console.WriteLine("Not Found!");
             return null;
+        }
+
+        //取得menu
+        public List<Meal> GetMenu()
+        {
+            return _menuList;
         }
 
         //取得Menu的背景圖片位置

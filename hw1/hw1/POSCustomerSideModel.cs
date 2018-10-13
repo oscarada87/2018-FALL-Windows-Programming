@@ -81,5 +81,11 @@ namespace POSCustomerSide
         {
             return _order.GetCategories();
         }
+
+        //呼叫order中的GetMenu
+        public List<Meal> GetMenu()
+        {
+            return _order.GetMenu();
+        }
     }
 }
