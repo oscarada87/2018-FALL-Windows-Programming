@@ -13,15 +13,15 @@
 漢堡,千島黃金蝦堡,69,\resources\13.jpg,美味的千島黃金蝦堡
 漢堡,BLT 安格斯黑牛堡,109,\resources\14.jpg,美味的 BLT 安格斯黑牛堡
 漢堡,BLT 辣脆雞腿堡,109,\resources\15.jpg,美味的 BLT 辣脆雞腿堡
-點心,薯條（小包）,32,\resources\temp.jpg,美味的薯條（小包）
-點心,薯條（中包）,42,\resources\temp.jpg,美味的薯條（中包）
-點心,薯條（大包）,55,\resources\temp.jpg,美味的薯條（大包）
-點心,薯餅,32,\resources\temp.jpg,美味的薯餅
-點心,蘋果派,32,\resources\temp.jpg,美味的蘋果派
-點心,水果袋,39,\resources\temp.jpg,美味的水果袋
-飲料,可口可樂（大）,40,\resources\temp.jpg,好喝的可口可樂
-飲料,雪碧（大）,40,\resources\temp.jpg,好喝的雪碧
-飲料,冰紅茶（大）,40,\resources\temp.jpg,好喝的冰紅茶
-飲料,冰綠茶（大）,40,\resources\temp.jpg,好喝的冰綠茶
-飲料,冰奶茶（大）,45,\resources\temp.jpg,好喝的冰奶茶
-飲料,柳橙汁（大）,45,\resources\temp.jpg,好喝的柳橙汁
+點心,薯條（小包）,32,\resources\16.jpg,美味的薯條（小包）
+點心,薯條（中包）,42,\resources\17.jpg,美味的薯條（中包）
+點心,薯條（大包）,55,\resources\18.jpg,美味的薯條（大包）
+點心,薯餅,32,\resources\19.jpg,美味的薯餅
+點心,蘋果派,32,\resources\20.jpg,美味的蘋果派
+點心,水果袋,39,\resources\21.jpg,美味的水果袋
+飲料,可口可樂（大）,40,\resources\22.jpg,好喝的可口可樂
+飲料,雪碧（大）,40,\resources\23.jpg,好喝的雪碧
+飲料,冰紅茶（大）,40,\resources\24.jpg,好喝的冰紅茶
+飲料,冰綠茶（大）,40,\resources\25.jpg,好喝的冰綠茶
+飲料,冰奶茶（大）,45,\resources\26.jpg,好喝的冰奶茶
+飲料,柳橙汁（大）,45,\resources\27.jpg,好喝的柳橙汁

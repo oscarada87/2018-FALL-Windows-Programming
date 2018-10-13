@@ -54,10 +54,10 @@ namespace POSCustomerSide
                 button.Size = new Size(150, 130);
                 button.Location = _model.GetMealButtonLocation(x);
                 button.Text = x.Name + "\n" + x.Price.ToString() + DOLLAR;
-                button.Font = new Font("微軟正黑體", 10);
+                button.Font = new Font("微軟正黑體", 10, FontStyle.Bold);
                 button.BackgroundImageLayout = ImageLayout.Stretch;
                 button.BackgroundImage = Image.FromFile(_projectPath + x.ImageRelativePath);
-                button.ForeColor = Color.White;
+                button.ForeColor = Color.Red;
                 button.TextAlign = ContentAlignment.BottomRight;
                 //button.Visible = _model.GetMealButtonVisible(x);
                 _mealButtons.Add(button);
