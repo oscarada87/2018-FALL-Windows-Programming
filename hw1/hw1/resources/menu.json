@@ -1,0 +1,11 @@
+[
+  {
+    "name": "hamburger",
+    "meal": {
+      "name": "大麥克",
+      "price": 69,
+      "imagePath": "\\resources\\1.jpg",
+      "description": "好吃的大麥克"
+    }
+  }
+]

@@ -25,29 +25,29 @@ namespace POSCustomerSide
             InitializeComponent();
             this._model = model;
             this._mealGridView.CellClick += ClickDataGridCell;
-            this.AddMealButtonToList();
-            this.AddTextToMealButton();
-            this.AddBackGroundImageToMealButton();
+            UpdateTabPage();
+            UpdateMealButton();
+            AddTextToMealButton();
+            AddBackGroundImageToMealButton();
+        }
+
+        //把category加到tabpage
+        private void UpdateTabPage()
+        {
+            List<string> categoriesName = _model.GetCategories();
+            categoriesName.ForEach(x => 
+            {
+                TabPage tabPage = new TabPage();
+                tabPage.Name = x;
+                tabPage.Text = x;
+                _tabControlButton.TabPages.Add(tabPage);
+            });
         }
 
         //將餐點按鈕加進List中
-        private void AddMealButtonToList()
+        private void UpdateMealButton()
         {
-            _mealButtons.Add(_mealButton1);
-            _mealButtons.Add(_mealButton2);
-            _mealButtons.Add(_mealButton3);
-            _mealButtons.Add(_mealButton4);
-            _mealButtons.Add(_mealButton5);
-            _mealButtons.Add(_mealButton6);
-            _mealButtons.Add(_mealButton7);
-            _mealButtons.Add(_mealButton8);
-            _mealButtons.Add(_mealButton9);
-            _mealButtons.Add(_mealButton10);
-            _mealButtons.Add(_mealButton11);
-            _mealButtons.Add(_mealButton12);
-            _mealButtons.Add(_mealButton13);
-            _mealButtons.Add(_mealButton14);
-            _mealButtons.Add(_mealButton15);
+          
         }
 
         //加入背景圖片到按鈕
@@ -90,7 +90,8 @@ namespace POSCustomerSide
                 row.CreateCells(_mealGridView);
                 row.Cells[0].Value = "X";
                 row.Cells[1].Value = x.Name;
-                row.Cells[2].Value = x.Price;
+                row.Cells[2].Value = x.Category.Name;
+                row.Cells[3].Value = x.Price;
                 _mealGridView.Rows.Add(row);
             });
             _model.AddToDisplayMealList();

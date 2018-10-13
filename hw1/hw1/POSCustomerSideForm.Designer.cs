@@ -33,32 +33,18 @@
             this._addButton = new System.Windows.Forms.Button();
             this._mealsGroupBox = new System.Windows.Forms.GroupBox();
             this._mealDescriptionBox = new System.Windows.Forms.RichTextBox();
-            this._mealButton1 = new System.Windows.Forms.Button();
-            this._mealButton2 = new System.Windows.Forms.Button();
-            this._mealButton3 = new System.Windows.Forms.Button();
-            this._mealButton4 = new System.Windows.Forms.Button();
-            this._mealButton5 = new System.Windows.Forms.Button();
-            this._mealButton6 = new System.Windows.Forms.Button();
-            this._mealButton7 = new System.Windows.Forms.Button();
-            this._mealButton8 = new System.Windows.Forms.Button();
-            this._mealButton9 = new System.Windows.Forms.Button();
-            this._mealButton10 = new System.Windows.Forms.Button();
-            this._mealButton11 = new System.Windows.Forms.Button();
-            this._mealButton12 = new System.Windows.Forms.Button();
-            this._mealButton13 = new System.Windows.Forms.Button();
-            this._mealButton14 = new System.Windows.Forms.Button();
-            this._mealButton15 = new System.Windows.Forms.Button();
             this._nextPageButton = new System.Windows.Forms.Button();
             this._pageLabel1 = new System.Windows.Forms.Label();
             this._previousPageButton = new System.Windows.Forms.Button();
             this._mealGridView = new System.Windows.Forms.DataGridView();
-            this._totalLabel = new System.Windows.Forms.Label();
             this._deleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this._mealsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsQuantity = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
             this._mealSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._totalLabel = new System.Windows.Forms.Label();
+            this._tabControlButton = new System.Windows.Forms.TabControl();
             this._mealsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._mealGridView)).BeginInit();
             this.SuspendLayout();
@@ -76,22 +62,8 @@
             // 
             // _mealsGroupBox
             // 
+            this._mealsGroupBox.Controls.Add(this._tabControlButton);
             this._mealsGroupBox.Controls.Add(this._mealDescriptionBox);
-            this._mealsGroupBox.Controls.Add(this._mealButton1);
-            this._mealsGroupBox.Controls.Add(this._mealButton2);
-            this._mealsGroupBox.Controls.Add(this._mealButton3);
-            this._mealsGroupBox.Controls.Add(this._mealButton4);
-            this._mealsGroupBox.Controls.Add(this._mealButton5);
-            this._mealsGroupBox.Controls.Add(this._mealButton6);
-            this._mealsGroupBox.Controls.Add(this._mealButton7);
-            this._mealsGroupBox.Controls.Add(this._mealButton8);
-            this._mealsGroupBox.Controls.Add(this._mealButton9);
-            this._mealsGroupBox.Controls.Add(this._mealButton10);
-            this._mealsGroupBox.Controls.Add(this._mealButton11);
-            this._mealsGroupBox.Controls.Add(this._mealButton12);
-            this._mealsGroupBox.Controls.Add(this._mealButton13);
-            this._mealsGroupBox.Controls.Add(this._mealButton14);
-            this._mealsGroupBox.Controls.Add(this._mealButton15);
             this._mealsGroupBox.Controls.Add(this._nextPageButton);
             this._mealsGroupBox.Controls.Add(this._addButton);
             this._mealsGroupBox.Controls.Add(this._pageLabel1);
@@ -115,177 +87,6 @@
             this._mealDescriptionBox.Size = new System.Drawing.Size(526, 96);
             this._mealDescriptionBox.TabIndex = 22;
             this._mealDescriptionBox.Text = "";
-            // 
-            // _mealButton1
-            // 
-            this._mealButton1.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton1.Location = new System.Drawing.Point(20, 41);
-            this._mealButton1.Name = "_mealButton1";
-            this._mealButton1.Size = new System.Drawing.Size(160, 150);
-            this._mealButton1.TabIndex = 7;
-            this._mealButton1.Text = "大麥克\r\n$ 69元";
-            this._mealButton1.UseVisualStyleBackColor = true;
-            this._mealButton1.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton2
-            // 
-            this._mealButton2.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton2.Location = new System.Drawing.Point(202, 41);
-            this._mealButton2.Name = "_mealButton2";
-            this._mealButton2.Size = new System.Drawing.Size(160, 150);
-            this._mealButton2.TabIndex = 8;
-            this._mealButton2.Text = "雙層牛肉吉事堡\r\n$ 59元";
-            this._mealButton2.UseVisualStyleBackColor = true;
-            this._mealButton2.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton3
-            // 
-            this._mealButton3.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton3.Location = new System.Drawing.Point(386, 41);
-            this._mealButton3.Name = "_mealButton3";
-            this._mealButton3.Size = new System.Drawing.Size(160, 150);
-            this._mealButton3.TabIndex = 9;
-            this._mealButton3.Text = "安格斯黑牛堡\r\n$ 99元";
-            this._mealButton3.UseVisualStyleBackColor = true;
-            this._mealButton3.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton4
-            // 
-            this._mealButton4.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton4.Location = new System.Drawing.Point(20, 205);
-            this._mealButton4.Name = "_mealButton4";
-            this._mealButton4.Size = new System.Drawing.Size(160, 150);
-            this._mealButton4.TabIndex = 10;
-            this._mealButton4.Text = "嫩煎雞腿堡\r\n$ 79元";
-            this._mealButton4.UseVisualStyleBackColor = true;
-            this._mealButton4.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton5
-            // 
-            this._mealButton5.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton5.Location = new System.Drawing.Point(202, 205);
-            this._mealButton5.Name = "_mealButton5";
-            this._mealButton5.Size = new System.Drawing.Size(160, 150);
-            this._mealButton5.TabIndex = 11;
-            this._mealButton5.Text = "麥香雞\r\n$ 49元";
-            this._mealButton5.UseVisualStyleBackColor = true;
-            this._mealButton5.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton6
-            // 
-            this._mealButton6.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton6.Location = new System.Drawing.Point(386, 205);
-            this._mealButton6.Name = "_mealButton6";
-            this._mealButton6.Size = new System.Drawing.Size(160, 150);
-            this._mealButton6.TabIndex = 12;
-            this._mealButton6.Text = "麥克雞塊 （6塊）\r\n$ 59元";
-            this._mealButton6.UseVisualStyleBackColor = true;
-            this._mealButton6.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton7
-            // 
-            this._mealButton7.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton7.Location = new System.Drawing.Point(20, 367);
-            this._mealButton7.Name = "_mealButton7";
-            this._mealButton7.Size = new System.Drawing.Size(160, 150);
-            this._mealButton7.TabIndex = 13;
-            this._mealButton7.Text = "麥克雞塊（9塊）\r\n$ 89元";
-            this._mealButton7.UseVisualStyleBackColor = true;
-            this._mealButton7.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton8
-            // 
-            this._mealButton8.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton8.Location = new System.Drawing.Point(202, 367);
-            this._mealButton8.Name = "_mealButton8";
-            this._mealButton8.Size = new System.Drawing.Size(160, 150);
-            this._mealButton8.TabIndex = 14;
-            this._mealButton8.Text = "勁辣雞腿堡\r\n$ 69元";
-            this._mealButton8.UseVisualStyleBackColor = true;
-            this._mealButton8.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton9
-            // 
-            this._mealButton9.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton9.Location = new System.Drawing.Point(386, 367);
-            this._mealButton9.Name = "_mealButton9";
-            this._mealButton9.Size = new System.Drawing.Size(160, 150);
-            this._mealButton9.TabIndex = 15;
-            this._mealButton9.Text = "麥脆雞 （2塊）\r\n$ 104元";
-            this._mealButton9.UseVisualStyleBackColor = true;
-            this._mealButton9.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton10
-            // 
-            this._mealButton10.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton10.Location = new System.Drawing.Point(20, 41);
-            this._mealButton10.Name = "_mealButton10";
-            this._mealButton10.Size = new System.Drawing.Size(160, 150);
-            this._mealButton10.TabIndex = 16;
-            this._mealButton10.Text = "麥脆雞（3塊）\r\n$ 156元";
-            this._mealButton10.UseVisualStyleBackColor = true;
-            this._mealButton10.Visible = false;
-            this._mealButton10.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton11
-            // 
-            this._mealButton11.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton11.Location = new System.Drawing.Point(202, 41);
-            this._mealButton11.Name = "_mealButton11";
-            this._mealButton11.Size = new System.Drawing.Size(160, 150);
-            this._mealButton11.TabIndex = 17;
-            this._mealButton11.Text = "黃金起司豬排堡\r\n$ 49元";
-            this._mealButton11.UseVisualStyleBackColor = true;
-            this._mealButton11.Visible = false;
-            this._mealButton11.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton12
-            // 
-            this._mealButton12.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton12.Location = new System.Drawing.Point(386, 41);
-            this._mealButton12.Name = "_mealButton12";
-            this._mealButton12.Size = new System.Drawing.Size(160, 150);
-            this._mealButton12.TabIndex = 18;
-            this._mealButton12.Text = "麥香魚\r\n$ 49元";
-            this._mealButton12.UseVisualStyleBackColor = true;
-            this._mealButton12.Visible = false;
-            this._mealButton12.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton13
-            // 
-            this._mealButton13.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton13.Location = new System.Drawing.Point(20, 205);
-            this._mealButton13.Name = "_mealButton13";
-            this._mealButton13.Size = new System.Drawing.Size(160, 150);
-            this._mealButton13.TabIndex = 19;
-            this._mealButton13.Text = "千島黃金蝦堡\r\n$ 69元";
-            this._mealButton13.UseVisualStyleBackColor = true;
-            this._mealButton13.Visible = false;
-            this._mealButton13.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton14
-            // 
-            this._mealButton14.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton14.Location = new System.Drawing.Point(202, 205);
-            this._mealButton14.Name = "_mealButton14";
-            this._mealButton14.Size = new System.Drawing.Size(160, 150);
-            this._mealButton14.TabIndex = 20;
-            this._mealButton14.Text = "BLT 安格斯黑牛堡\r\n$ 109元";
-            this._mealButton14.UseVisualStyleBackColor = true;
-            this._mealButton14.Visible = false;
-            this._mealButton14.Click += new System.EventHandler(this.MealButtonClick);
-            // 
-            // _mealButton15
-            // 
-            this._mealButton15.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this._mealButton15.Location = new System.Drawing.Point(386, 205);
-            this._mealButton15.Name = "_mealButton15";
-            this._mealButton15.Size = new System.Drawing.Size(160, 150);
-            this._mealButton15.TabIndex = 21;
-            this._mealButton15.Text = "BLT 辣脆雞腿堡\r\n$ 109元";
-            this._mealButton15.UseVisualStyleBackColor = true;
-            this._mealButton15.Visible = false;
-            this._mealButton15.Click += new System.EventHandler(this.MealButtonClick);
             // 
             // _nextPageButton
             // 
@@ -346,7 +147,7 @@
             this._mealSubtotal});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 10F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -360,17 +161,6 @@
             this._mealGridView.RowTemplate.Height = 24;
             this._mealGridView.Size = new System.Drawing.Size(646, 682);
             this._mealGridView.TabIndex = 8;
-            // 
-            // _totalLabel
-            // 
-            this._totalLabel.AutoSize = true;
-            this._totalLabel.Font = new System.Drawing.Font("微軟正黑體", 22F);
-            this._totalLabel.ForeColor = System.Drawing.Color.SaddleBrown;
-            this._totalLabel.Location = new System.Drawing.Point(1109, 709);
-            this._totalLabel.Name = "_totalLabel";
-            this._totalLabel.Size = new System.Drawing.Size(150, 38);
-            this._totalLabel.TabIndex = 7;
-            this._totalLabel.Text = "Total: 0元";
             // 
             // _deleteColumn
             // 
@@ -408,6 +198,25 @@
             this._mealSubtotal.Name = "_mealSubtotal";
             this._mealSubtotal.ReadOnly = true;
             // 
+            // _totalLabel
+            // 
+            this._totalLabel.AutoSize = true;
+            this._totalLabel.Font = new System.Drawing.Font("微軟正黑體", 22F);
+            this._totalLabel.ForeColor = System.Drawing.Color.SaddleBrown;
+            this._totalLabel.Location = new System.Drawing.Point(1109, 709);
+            this._totalLabel.Name = "_totalLabel";
+            this._totalLabel.Size = new System.Drawing.Size(150, 38);
+            this._totalLabel.TabIndex = 7;
+            this._totalLabel.Text = "Total: 0元";
+            // 
+            // _tabControlButton
+            // 
+            this._tabControlButton.Location = new System.Drawing.Point(20, 32);
+            this._tabControlButton.Name = "_tabControlButton";
+            this._tabControlButton.SelectedIndex = 0;
+            this._tabControlButton.Size = new System.Drawing.Size(526, 506);
+            this._tabControlButton.TabIndex = 23;
+            // 
             // CustomerSideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -437,21 +246,6 @@
         private System.Windows.Forms.Label _pageLabel1;
         private System.Windows.Forms.DataGridView _mealGridView;
         private System.Windows.Forms.Label _totalLabel;
-        private System.Windows.Forms.Button _mealButton9;
-        private System.Windows.Forms.Button _mealButton8;
-        private System.Windows.Forms.Button _mealButton7;
-        private System.Windows.Forms.Button _mealButton6;
-        private System.Windows.Forms.Button _mealButton5;
-        private System.Windows.Forms.Button _mealButton4;
-        private System.Windows.Forms.Button _mealButton3;
-        private System.Windows.Forms.Button _mealButton2;
-        private System.Windows.Forms.Button _mealButton1;
-        private System.Windows.Forms.Button _mealButton15;
-        private System.Windows.Forms.Button _mealButton14;
-        private System.Windows.Forms.Button _mealButton13;
-        private System.Windows.Forms.Button _mealButton12;
-        private System.Windows.Forms.Button _mealButton11;
-        private System.Windows.Forms.Button _mealButton10;
         private System.Windows.Forms.RichTextBox _mealDescriptionBox;
         private System.Windows.Forms.DataGridViewButtonColumn _deleteColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _mealsName;
@@ -459,6 +253,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn _mealsPrice;
         private DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn _mealsQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn _mealSubtotal;
+        private System.Windows.Forms.TabControl _tabControlButton;
     }
 
 }

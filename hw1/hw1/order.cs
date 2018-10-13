@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Web;
 
 namespace POSCustomerSide
 {
@@ -11,16 +12,34 @@ namespace POSCustomerSide
     {
         string _projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
         const string MENU_RELATIVE_PATH = @"\resources\menu.txt";
+        private List<Meal> _menuList = new List<Meal>();
+        private List<Category> _categories = new List<Category>();
         private List<Meal> _mealList = new List<Meal>();
         private List<Meal> _displayMealList = new List<Meal>();
-        private List<Meal> _menuList = new List<Meal>();
 
+        //Constructor
         public Order()
         {
+            ReadCategories();
             ReadMenuList();
         }
 
-        //將外部的menu讀進來
+        //讀取Categories
+        private void ReadCategories()
+        {
+            string line;
+            StreamReader file = new StreamReader(_projectPath + MENU_RELATIVE_PATH, System.Text.Encoding.Default);
+            HashSet<string> Categories = new HashSet<string>();
+            while ((line = file.ReadLine()) != null)
+            {
+                string[] data = line.Split(',');
+                Categories.Add(data[0]);
+            }
+            InitCategories(Categories);
+            Console.WriteLine(_categories[0].Name);
+        }
+
+        //讀取meal
         private void ReadMenuList()
         {
             string line;
@@ -28,8 +47,28 @@ namespace POSCustomerSide
             while ((line = file.ReadLine()) != null)
             {
                 string[] data = line.Split(',');
-                Meal meal = new Meal(int.Parse(data[0]), data[1], int.Parse(data[2]), data[3], data[4]);
+                Meal meal = new Meal(data[1], int.Parse(data[2]), data[3], data[4], FindMealCategory(data[0]));
                 _menuList.Add(meal);
+            }
+        }
+
+        //初始化將Category加到meal中
+        private Category FindMealCategory(string categoryName)
+        {
+            foreach (Category category in _categories)
+            {
+                if (category.Name == categoryName)
+                    return category;
+            }
+            return null;
+        }
+
+        //初始化Categories
+        private void InitCategories(HashSet<string> Categories)
+        {
+            foreach (string category in Categories)
+            {
+                _categories.Add(new Category(category));
             }
         }
 
@@ -113,6 +152,17 @@ namespace POSCustomerSide
         {
             int total = _displayMealList.Sum(x => x.Price);
             return total;
+        }
+
+        //取得Categories名字列表
+        public List<string> GetCategories()
+        {
+            List<string> CategoriesName = new List<string>();
+            _categories.ForEach(x =>
+            {
+                CategoriesName.Add(x.Name);
+            });
+            return CategoriesName;
         }
     }
 }

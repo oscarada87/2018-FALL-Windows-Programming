@@ -242,7 +242,7 @@
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
               <File>Order.cs</File>
-              <Line>30</Line>
+              <Line>34</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -252,13 +252,13 @@
             </Smell>
             <Smell>
               <Id>5</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.ReadMenuList.2</HashCode>
-              <Severity>Warning</Severity>
+              <SmellType>Literal constants(字面常數)-','</SmellType>
+              <HashCode>LiteralConstants.ReadMenuList.','</HashCode>
+              <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
               <File>Order.cs</File>
-              <Line>31</Line>
+              <Line>40</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -268,13 +268,13 @@
             </Smell>
             <Smell>
               <Id>6</Id>
-              <SmellType>Literal constants(字面常數)-3</SmellType>
-              <HashCode>LiteralConstants.ReadMenuList.3</HashCode>
-              <Severity>Red</Severity>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.ReadMenuList.2</HashCode>
+              <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
               <File>Order.cs</File>
-              <Line>31</Line>
+              <Line>41</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -284,13 +284,13 @@
             </Smell>
             <Smell>
               <Id>7</Id>
-              <SmellType>Literal constants(字面常數)-4</SmellType>
-              <HashCode>LiteralConstants.ReadMenuList.4</HashCode>
+              <SmellType>Literal constants(字面常數)-3</SmellType>
+              <HashCode>LiteralConstants.ReadMenuList.3</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS-CustomerSide</Project>
               <File>Order.cs</File>
-              <Line>31</Line>
+              <Line>41</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -300,6 +300,86 @@
             </Smell>
             <Smell>
               <Id>8</Id>
+              <SmellType>Literal constants(字面常數)-4</SmellType>
+              <HashCode>LiteralConstants.ReadMenuList.4</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>Order.cs</File>
+              <Line>41</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>9</Id>
+              <SmellType>ICS(變數-2)</SmellType>
+              <HashCode>Variable2.ReadMenuList.Categories</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>Order.cs</File>
+              <Line>31</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-2) 區域變數-函式參數命名規則與 class 成員變數相似，僅差在不以底線開始</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>10</Id>
+              <SmellType>Unsuitable naming(名不符實)-InitCategories(init)</SmellType>
+              <HashCode>UnsuitableNaming.Order.InitCategories.InitCategories</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>Order.cs</File>
+              <Line>47</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>11</Id>
+              <SmellType>ICS(變數-2)</SmellType>
+              <HashCode>Variable2.InitCategories.Categories</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>Order.cs</File>
+              <Line>47</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-2) 區域變數-函式參數命名規則與 class 成員變數相似，僅差在不以底線開始</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>12</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.Order.InitCategories</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS-CustomerSide</Project>
+              <File>Order.cs</File>
+              <Line>47</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>13</Id>
               <SmellType>ICS(空白與空行-7)</SmellType>
               <HashCode>SpacingAndNewLine7</HashCode>
               <Severity>Red</Severity>
@@ -312,6 +392,2950 @@
               <EndLine>0</EndLine>
               <EndCol>0</EndCol>
               <Comment>ICS(空白與空行-7) 二元運算子的前面與後面各加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>14</Id>
+              <SmellType>ICS(空白與空行-13)</SmellType>
+              <HashCode>SpacingAndNewLine13</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>154</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-13) 轉型(Type casting)宣告與變數間不加空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>15</Id>
+              <SmellType>ICS(空白與空行-15)</SmellType>
+              <HashCode>SpacingAndNewLine15</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>56</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-15) 不亂加多個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>16</Id>
+              <SmellType>ICS(空白與空行-15)</SmellType>
+              <HashCode>SpacingAndNewLine15</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>57</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-15) 不亂加多個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>17</Id>
+              <SmellType>ICS(空白與空行-15)</SmellType>
+              <HashCode>SpacingAndNewLine15</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>58</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-15) 不亂加多個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>18</Id>
+              <SmellType>ICS(空白與空行-15)</SmellType>
+              <HashCode>SpacingAndNewLine15</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>59</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-15) 不亂加多個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>19</Id>
+              <SmellType>ICS(空白與空行-15)</SmellType>
+              <HashCode>SpacingAndNewLine15</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>114</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-15) 不亂加多個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>20</Id>
+              <SmellType>ICS(空白與空行-15)</SmellType>
+              <HashCode>SpacingAndNewLine15</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>406</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-15) 不亂加多個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>21</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.anyCenter.                                                                         DataGridViewContentAlignment.MiddleCenter |</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>25</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>22</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.anyCenter.                                                                         DataGridViewContentAlignment.BottomCenter;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>26</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>23</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.KeyEntersEditMode.                 (e.KeyCode &gt;= Keys.NumPad0 &amp;&amp; e.KeyCode &lt;= Keys.NumPad9) ||</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>457</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>24</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.KeyEntersEditMode.                 negativeSignKey == e.KeyCode ||</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>458</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>25</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.KeyEntersEditMode.                 Keys.Subtract == e.KeyCode) &amp;&amp;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>459</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>26</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.Paint.                                      object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle,</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>518</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>27</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.Paint.                                      DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>519</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>28</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.Paint.                       paintParts &amp; ~(DataGridViewPaintParts.ErrorIcon | DataGridViewPaintParts.ContentForeground));</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>528</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>29</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.Paint.                                           srcRect, GraphicsUnit.Pixel);</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>612</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>30</Id>
+              <SmellType>ICS(縮排與換行-4)</SmellType>
+              <HashCode>IndentAndNewLine4.Paint.                               cellStyle, advancedBorderStyle, DataGridViewPaintParts.ErrorIcon);</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>619</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-4) 縮排一律使用 tab(空 4 格)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>31</Id>
+              <SmellType>Literal constants(字面常數)-10</SmellType>
+              <HashCode>LiteralConstants.DataGridViewNumericUpDownCell.10</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>79</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>32</Id>
+              <SmellType>Literal constants(字面常數)-10</SmellType>
+              <HashCode>LiteralConstants.DataGridViewNumericUpDownCell.10</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>80</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>33</Id>
+              <SmellType>Literal constants(字面常數)-99</SmellType>
+              <HashCode>LiteralConstants.set.99</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>107</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>34</Id>
+              <SmellType>Literal constants(字面常數)-99</SmellType>
+              <HashCode>LiteralConstants.SetDecimalPlaces.99</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>667</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>35</Id>
+              <SmellType>Literal constants(字面常數)-"The DecimalPlaces property cannot be smaller than 0 or larger than 99."</SmellType>
+              <HashCode>LiteralConstants.set."The DecimalPlaces property cannot be smaller than 0 or larger than 99."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>109</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>36</Id>
+              <SmellType>Literal constants(字面常數)-0.0</SmellType>
+              <HashCode>LiteralConstants.set.0.0</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>154</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>37</Id>
+              <SmellType>Literal constants(字面常數)-0.0</SmellType>
+              <HashCode>LiteralConstants.SetIncrement.0.0</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>680</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>38</Id>
+              <SmellType>Literal constants(字面常數)-"The Increment property cannot be smaller than 0."</SmellType>
+              <HashCode>LiteralConstants.set."The Increment property cannot be smaller than 0."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>156</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>39</Id>
+              <SmellType>Literal constants(字面常數)-"Cell is detached or its grid has no editing control."</SmellType>
+              <HashCode>LiteralConstants.DetachEditingControl."Cell is detached or its grid has no editing control."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>290</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>40</Id>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.GetAdjustedEditingControlBounds.2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>318</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>41</Id>
+              <SmellType>Literal constants(字面常數)-2</SmellType>
+              <HashCode>LiteralConstants.GetAdjustedEditingControlBounds.2</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>329</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>42</Id>
+              <SmellType>Literal constants(字面常數)-3</SmellType>
+              <HashCode>LiteralConstants.GetAdjustedEditingControlBounds.3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>321</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>43</Id>
+              <SmellType>Literal constants(字面常數)-"N"</SmellType>
+              <HashCode>LiteralConstants.GetFormattedValue."N"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>385</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>44</Id>
+              <SmellType>Literal constants(字面常數)-"F"</SmellType>
+              <HashCode>LiteralConstants.GetFormattedValue."F"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>385</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>45</Id>
+              <SmellType>Literal constants(字面常數)-100</SmellType>
+              <HashCode>LiteralConstants.Paint.100</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>585</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>46</Id>
+              <SmellType>Literal constants(字面常數)-255</SmellType>
+              <HashCode>LiteralConstants.Paint.255</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>599</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>47</Id>
+              <SmellType>Literal constants(字面常數)-255</SmellType>
+              <HashCode>LiteralConstants.Paint.255</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>602</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>48</Id>
+              <SmellType>Literal constants(字面常數)-"DataGridViewNumericUpDownCell { ColumnIndex="</SmellType>
+              <HashCode>LiteralConstants.ToString."DataGridViewNumericUpDownCell { ColumnIndex="</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>765</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>49</Id>
+              <SmellType>Literal constants(字面常數)-", RowIndex="</SmellType>
+              <HashCode>LiteralConstants.ToString.", RowIndex="</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>765</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>50</Id>
+              <SmellType>Literal constants(字面常數)-" }"</SmellType>
+              <HashCode>LiteralConstants.ToString." }"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>765</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>51</Id>
+              <SmellType>Large class(過大類別)</SmellType>
+              <HashCode>LargeClass.DataGridViewNumericUpDownElements.DataGridViewNumericUpDownCell.708</HashCode>
+              <Severity>Red</Severity>
+              <Weight>708</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>52</Id>
+              <SmellType>Static method and fields(濫用Static)</SmellType>
+              <HashCode>StaticMethodAndFields 20972588</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>21</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>53</Id>
+              <SmellType>Static method and fields(濫用Static)</SmellType>
+              <HashCode>StaticMethodAndFields 4430376</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>24</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>54</Id>
+              <SmellType>Static method and fields(濫用Static)</SmellType>
+              <HashCode>StaticMethodAndFields 39589200</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>55</Id>
+              <SmellType>Static method and fields(濫用Static)</SmellType>
+              <HashCode>StaticMethodAndFields 25060945</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>46</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>56</Id>
+              <SmellType>Static method and fields(濫用Static)</SmellType>
+              <HashCode>StaticMethodAndFields 35542135</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>57</Id>
+              <SmellType>Static method and fields(濫用Static)</SmellType>
+              <HashCode>StaticMethodAndFields 3074778</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>54</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>58</Id>
+              <SmellType>Static method and fields(濫用Static)</SmellType>
+              <HashCode>StaticMethodAndFields 8437318</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>772</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>59</Id>
+              <SmellType>Unsuitable naming(名不符實)-VkKeyScan(vk)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.VkKeyScan.VkKeyScan</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>60</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.anyRight</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>21</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>61</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.anyCenter</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>24</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>62</Id>
+              <SmellType>Unsuitable naming(名不符實)-DATAGRIDVIEWNUMERICUPDOWNCELL_defaultRenderingBitmapWidth(datagridviewnumericupdowncell)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultRenderingBitmapWidth.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultRenderingBitmapWidth</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>29</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>63</Id>
+              <SmellType>ICS(變數-4)</SmellType>
+              <HashCode>Variable4.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultRenderingBitmapWidth</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>29</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-4) 定義字面常數的名稱的所有字母大寫，並以底線隔開單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>64</Id>
+              <SmellType>Unsuitable naming(名不符實)-DATAGRIDVIEWNUMERICUPDOWNCELL_defaultRenderingBitmapHeight(datagridviewnumericupdowncell)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultRenderingBitmapHeight.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultRenderingBitmapHeight</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>30</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>65</Id>
+              <SmellType>ICS(變數-4)</SmellType>
+              <HashCode>Variable4.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultRenderingBitmapHeight</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>30</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-4) 定義字面常數的名稱的所有字母大寫，並以底線隔開單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>66</Id>
+              <SmellType>Unsuitable naming(名不符實)-DATAGRIDVIEWNUMERICUPDOWNCELL_defaultDecimalPlaces(datagridviewnumericupdowncell)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultDecimalPlaces.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultDecimalPlaces</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>67</Id>
+              <SmellType>ICS(變數-4)</SmellType>
+              <HashCode>Variable4.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultDecimalPlaces</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>33</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-4) 定義字面常數的名稱的所有字母大寫，並以底線隔開單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>68</Id>
+              <SmellType>Unsuitable naming(名不符實)-DATAGRIDVIEWNUMERICUPDOWNCELL_defaultIncrement(datagridviewnumericupdowncell)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultIncrement.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultIncrement</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>35</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>69</Id>
+              <SmellType>ICS(變數-4)</SmellType>
+              <HashCode>Variable4.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultIncrement</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>35</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-4) 定義字面常數的名稱的所有字母大寫，並以底線隔開單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>70</Id>
+              <SmellType>Unsuitable naming(名不符實)-DATAGRIDVIEWNUMERICUPDOWNCELL_defaultMaximum(datagridviewnumericupdowncell)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultMaximum.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultMaximum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>37</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>71</Id>
+              <SmellType>ICS(變數-4)</SmellType>
+              <HashCode>Variable4.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultMaximum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>37</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-4) 定義字面常數的名稱的所有字母大寫，並以底線隔開單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>72</Id>
+              <SmellType>Unsuitable naming(名不符實)-DATAGRIDVIEWNUMERICUPDOWNCELL_defaultMinimum(datagridviewnumericupdowncell)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultMinimum.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultMinimum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>39</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>73</Id>
+              <SmellType>ICS(變數-4)</SmellType>
+              <HashCode>Variable4.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultMinimum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>39</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-4) 定義字面常數的名稱的所有字母大寫，並以底線隔開單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>74</Id>
+              <SmellType>Unsuitable naming(名不符實)-DATAGRIDVIEWNUMERICUPDOWNCELL_defaultThousandsSeparator(datagridviewnumericupdowncell)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultThousandsSeparator.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultThousandsSeparator</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>41</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>75</Id>
+              <SmellType>ICS(變數-4)</SmellType>
+              <HashCode>Variable4.DataGridViewNumericUpDownCell.DATAGRIDVIEWNUMERICUPDOWNCELL_defaultThousandsSeparator</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>41</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-4) 定義字面常數的名稱的所有字母大寫，並以底線隔開單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>76</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.defaultEditType</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>44</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>77</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.defaultValueType</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>46</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>78</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.renderingBitmap</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>50</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>79</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.paintingNumericUpDown</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>54</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>80</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.decimalPlaces</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>56</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>81</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.increment</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>57</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>82</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.minimum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>58</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>83</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.maximum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>59</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>84</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownCell.thousandsSeparator</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>60</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>85</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownCell.DetachEditingControl.25</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>25</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>285</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>86</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownCell.GetAdjustedEditingControlBounds.27Rectangle editingControlBounds;DataGridViewCellStyle cellStyle;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>27</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>314</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>87</Id>
+              <SmellType>ICS(變數-4)</SmellType>
+              <HashCode>Variable4.GetErrorIconBounds.ButtonsWidth</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>348</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-4) 定義字面常數的名稱的所有字母大寫，並以底線隔開單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>88</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownCell.GetFormattedValue.24object value;int rowIndex;DataGridViewCellStyle cellStyle;TypeConverter valueTypeConverter;TypeConverter formattedValueTypeConverter;DataGridViewDataErrorContexts context;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>24</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>366</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>89</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>366</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>90</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>367</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>91</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>368</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>92</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>369</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>93</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>370</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>94</Id>
+              <SmellType>Unsuitable naming(名不符實)-constraintSize(constraint)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.GetPreferredSize.constraintSize</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>395</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>95</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownCell.InitializeEditingControl.23int rowIndex;object initialFormattedValue;DataGridViewCellStyle dataGridViewCellStyle;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>23</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>417</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>96</Id>
+              <SmellType>Unsuitable naming(名不符實)-negativeSignStr(str)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.KeyEntersEditMode.negativeSignStr</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>450</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>97</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownCell.OnCommonChange.23</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>23</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>472</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>98</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.DataGridViewNumericUpDownCell.OnCommonChange</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>472</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>99</Id>
+              <SmellType>Unsuitable naming(名不符實)-ptCurrentCell(pt)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownCell.Paint.ptCurrentCell</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>530</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>100</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownCell.Paint.106Graphics graphics;Rectangle clipBounds;Rectangle cellBounds;int rowIndex;DataGridViewElementStates cellState;object value;object formattedValue;string errorText;DataGridViewCellStyle cellStyle;DataGridViewAdvancedBorderStyle advancedBorderStyle;DataGridViewPaintParts paintParts;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>106</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>517</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>101</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>517</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>102</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>518</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>103</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownCell.PositionEditingControl.21bool setLocation;bool setSize;Rectangle cellBounds;Rectangle cellClip;DataGridViewCellStyle cellStyle;bool singleVerticalBorderAdded;bool singleHorizontalBorderAdded;bool isFirstDisplayedColumn;bool isFirstDisplayedRow;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>21</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>636</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>104</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>636</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>105</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>637</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>106</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>638</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>107</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>639</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>108</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>640</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>109</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>641</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>110</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>642</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>111</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>643</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-1) 函式若有兩個以上的參數-請在逗號後面加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>112</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownCell.SetMaximum.23int rowIndex;Decimal value;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>23</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>693</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>113</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownCell.SetMinimum.23int rowIndex;Decimal value;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>23</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownCell.cs</File>
+              <Line>722</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>114</Id>
+              <SmellType>Literal constants(字面常數)-"Value provided for CellTemplate must be of type DataGridViewNumericUpDownElements.DataGridViewNumericUpDownCell or derive from it."</SmellType>
+              <HashCode>LiteralConstants.set."Value provided for CellTemplate must be of type DataGridViewNumericUpDownElements.DataGridViewNumericUpDownCell or derive from it."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>40</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>115</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.get."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>60</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>116</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.set."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>68</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>117</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.get."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>109</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>118</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.set."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>117</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>119</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.get."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>157</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>120</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.set."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>165</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>121</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.get."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>209</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>122</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.set."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>217</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>123</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.get."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>261</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>124</Id>
+              <SmellType>Literal constants(字面常數)-"Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</SmellType>
+              <HashCode>LiteralConstants.set."Operation cannot be completed because this DataGridViewColumn does not have a CellTemplate."</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>269</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>125</Id>
+              <SmellType>Literal constants(字面常數)-100</SmellType>
+              <HashCode>LiteralConstants.ToString.100</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>309</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>126</Id>
+              <SmellType>Literal constants(字面常數)-"DataGridViewNumericUpDownColumn { Name="</SmellType>
+              <HashCode>LiteralConstants.ToString."DataGridViewNumericUpDownColumn { Name="</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>310</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>127</Id>
+              <SmellType>Literal constants(字面常數)-", Index="</SmellType>
+              <HashCode>LiteralConstants.ToString.", Index="</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>312</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>128</Id>
+              <SmellType>Literal constants(字面常數)-" }"</SmellType>
+              <HashCode>LiteralConstants.ToString." }"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>314</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>129</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.DataGridViewNumericUpDownColumn.ShouldSerializeIncrement</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>138</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>130</Id>
+              <SmellType>ICS(函式-3)</SmellType>
+              <HashCode>Method3.DataGridViewNumericUpDownColumn.ShouldSerializeIncrement</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>138</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-3) Getter 除了取得 bool 值使用 IsXXX()之外，其餘一律使用 GetXXX()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>131</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.DataGridViewNumericUpDownColumn.ShouldSerializeMaximum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>190</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>132</Id>
+              <SmellType>ICS(函式-3)</SmellType>
+              <HashCode>Method3.DataGridViewNumericUpDownColumn.ShouldSerializeMaximum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>190</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-3) Getter 除了取得 bool 值使用 IsXXX()之外，其餘一律使用 GetXXX()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>133</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.DataGridViewNumericUpDownColumn.ShouldSerializeMinimum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>242</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>134</Id>
+              <SmellType>ICS(函式-3)</SmellType>
+              <HashCode>Method3.DataGridViewNumericUpDownColumn.ShouldSerializeMinimum</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>242</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-3) Getter 除了取得 bool 值使用 IsXXX()之外，其餘一律使用 GetXXX()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>135</Id>
+              <SmellType>Unsuitable naming(名不符實)-sb(sb)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownColumn.ToString.sb</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownColumn.cs</File>
+              <Line>309</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>136</Id>
+              <SmellType>ICS(空白與空行-13)</SmellType>
+              <HashCode>SpacingAndNewLine13</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>61</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-13) 轉型(Type casting)宣告與變數間不加空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>137</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>150</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>138</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    TextBox textBox = this.Controls[1] as TextBox;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>151</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>139</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    if (textBox != null)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>152</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>140</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>153</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>141</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        if ((this.RightToLeft == RightToLeft.No &amp;&amp; !(textBox.SelectionLength == 0 &amp;&amp; textBox.SelectionStart == textBox.Text.Length)) ||</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>156</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>142</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>158</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>143</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                            return true;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>159</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>144</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>160</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>145</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>161</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>146</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    break;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>162</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>147</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>163</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>148</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>166</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>149</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    TextBox textBox = this.Controls[1] as TextBox;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>167</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>150</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    if (textBox != null)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>168</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>151</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>169</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>152</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        if ((this.RightToLeft == RightToLeft.No &amp;&amp; !(textBox.SelectionLength == 0 &amp;&amp; textBox.SelectionStart == 0)) ||</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>173</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>153</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>175</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>154</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                            return true;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>176</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>155</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>177</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>156</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>178</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>157</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    break;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>179</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>158</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>180</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>159</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>202</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>160</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    TextBox textBox = this.Controls[1] as TextBox;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>204</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>161</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    if (textBox != null)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>205</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>162</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>206</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>163</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        if (textBox.SelectionLength != textBox.Text.Length)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>207</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>164</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>208</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>165</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                            return true;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>209</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>166</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>210</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>167</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>211</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>168</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    break;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>212</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>169</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>213</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>170</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>216</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>171</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    TextBox textBox = this.Controls[1] as TextBox;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>218</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>172</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    if (textBox != null)</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>219</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>173</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>220</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>174</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        if (textBox.SelectionLength &gt; 0 ||</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>221</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>175</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        {</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>223</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>176</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                            return true;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>224</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>177</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                        }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>225</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>178</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>226</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>179</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                    break;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>227</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>180</Id>
+              <SmellType>ICS(縮排與換行-5)</SmellType>
+              <HashCode>IndentAndNewLine5.EditingControlWantsInputKey.                }</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>228</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(縮排與換行-5) 程式碼依內容階層深度縮排</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>181</Id>
+              <SmellType>Literal constants(字面常數)-255</SmellType>
+              <HashCode>LiteralConstants.ApplyCellStyleToEditingControl.255</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>126</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>182</Id>
+              <SmellType>Literal constants(字面常數)-255</SmellType>
+              <HashCode>LiteralConstants.ApplyCellStyleToEditingControl.255</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>129</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>183</Id>
+              <SmellType>Literal constants(字面常數)-"N"</SmellType>
+              <HashCode>LiteralConstants.GetEditingControlFormattedValue."N"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>243</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>184</Id>
+              <SmellType>Literal constants(字面常數)-"F"</SmellType>
+              <HashCode>LiteralConstants.GetEditingControlFormattedValue."F"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>243</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>185</Id>
+              <SmellType>Large class(過大類別)</SmellType>
+              <HashCode>LargeClass.DataGridViewNumericUpDownElements.DataGridViewNumericUpDownEditingControl.325</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>325</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>11</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>186</Id>
+              <SmellType>Unsuitable naming(名不符實)-hWnd(h, wnd)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownEditingControl.SendMessage.hWnd</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>187</Id>
+              <SmellType>Unsuitable naming(名不符實)-msg(msg)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownEditingControl.SendMessage.msg</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>188</Id>
+              <SmellType>Unsuitable naming(名不符實)-wParam(w, param)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownEditingControl.SendMessage.wParam</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>189</Id>
+              <SmellType>Unsuitable naming(名不符實)-lParam(l, param)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownEditingControl.SendMessage.lParam</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>190</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownEditingControl.dataGridView</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>18</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>191</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownEditingControl.valueChanged</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>20</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>192</Id>
+              <SmellType>ICS(變數-1)</SmellType>
+              <HashCode>Variable1.DataGridViewNumericUpDownEditingControl.rowIndex</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>22</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(變數-1) Class 成員變數以底線開始，底線後第一個字母小寫，若由多個單字組成，從第二個單字開始，每個單字的第一個字母大寫，其餘小寫。 不以底線區隔單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>193</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownEditingControl.EditingControlWantsInputKey.87Keys keyData;bool dataGridViewWantsInputKey;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>87</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>145</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>194</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.DataGridViewNumericUpDownEditingControl.EditingControlWantsInputKey</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>145</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>195</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewNumericUpDownEditingControl.OnKeyPress.37KeyPressEventArgs e;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>37</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>292</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>196</Id>
+              <SmellType>Unsuitable naming(名不符實)-m(m)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownEditingControl.ProcessKeyEventArgs.m</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>347</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>197</Id>
+              <SmellType>Unsuitable naming(名不符實)-ProcessKeyEventArgs(args)</SmellType>
+              <HashCode>UnsuitableNaming.DataGridViewNumericUpDownEditingControl.ProcessKeyEventArgs.ProcessKeyEventArgs</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>DataGridViewNumericUpDownElements</Project>
+              <File>DataGridViewNumericUpDownEditingControl.cs</File>
+              <Line>347</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
               <Auto>false</Auto>
             </Smell>
           </Reviews>
@@ -328,6 +3352,11 @@
           </HashCodeRequestIgnoreList>
           <AnalysisFileManager>
             <AnalysisFiles>
+              <AnalysisFile>
+                <RelativePath>Category.cs</RelativePath>
+                <ProjectName>POS-CustomerSide</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>CustomerFormPresentationModel.cs</RelativePath>
                 <ProjectName>POS-CustomerSide</ProjectName>
@@ -403,9 +3432,29 @@
                 <ProjectName>POS-CustomerSide</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>DataGridViewNumericUpDownCell.cs</RelativePath>
+                <ProjectName>DataGridViewNumericUpDownElements</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>DataGridViewNumericUpDownColumn.cs</RelativePath>
+                <ProjectName>DataGridViewNumericUpDownElements</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>DataGridViewNumericUpDownEditingControl.cs</RelativePath>
+                <ProjectName>DataGridViewNumericUpDownElements</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
+                <ProjectName>DataGridViewNumericUpDownElements</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1385</ProductionLoc>
+          <ProductionLoc>2951</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>

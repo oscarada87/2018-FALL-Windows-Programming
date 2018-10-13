@@ -8,11 +8,21 @@ namespace POSCustomerSide
 {
     public class Meal
     {
-        private int _mealNumber;
         private string _name;
         private int _price;
         private string _imageRelativePath;
         private string _description;
+        private Category _category;
+
+        //Constructor
+        public Meal(string name, int price, string imageRelativePath, string description, Category category)
+        {
+            this._name = name;
+            this._price = price;
+            this._imageRelativePath = imageRelativePath;
+            this._description = description;
+            this._category = category;
+        }
 
         public string Name
         {
@@ -62,13 +72,16 @@ namespace POSCustomerSide
             }
         }
 
-        public Meal(int mealNumber, string name, int price, string imageRelativePath, string description)
+        public Category Category
         {
-            this._mealNumber = mealNumber;
-            this._name = name;
-            this._price = price;
-            this._imageRelativePath = imageRelativePath;
-            this._description = description;
+            get
+            {
+                return _category;
+            }
+            set
+            {
+                _category = Category;
+            }
         }
     }
 }

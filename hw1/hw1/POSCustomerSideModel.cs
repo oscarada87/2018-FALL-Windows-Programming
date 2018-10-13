@@ -75,5 +75,11 @@ namespace POSCustomerSide
         {
             return _order.GetLengthOfMealList();
         }
+
+        //呼叫order中的GetCategories
+        public List<string> GetCategories()
+        {
+            return _order.GetCategories();
+        }
     }
 }

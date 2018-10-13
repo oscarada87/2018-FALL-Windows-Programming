@@ -108,5 +108,11 @@ namespace POSCustomerSide
         {
             return _model.GetDescriptionByIndex(mealIndex);
         }
+
+        //呼叫model中的GetCategories
+        public List<string> GetCategories()
+        {
+            return _model.GetCategories();
+        }
     }
 }
