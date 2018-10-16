@@ -68,22 +68,10 @@ namespace POSCustomerSide
                     _totalPage = value;
                 }
             }
-            public int ButtonCount
-            {
-                get
-                {
-                    return _buttonCount;
-                }
-                set
-                {
-                    _buttonCount = value;
-                }
-            }
-
             //更新最大頁數
-            public void UpdateTotalPage()
+            public void UpdateTotalPage(int number)
             {
-                _totalPage = (_buttonCount / 9) + 1;
+                _totalPage = (number / 9) + 1;
             }
         }
 
@@ -99,27 +87,21 @@ namespace POSCustomerSide
         }
 
         //取得button的位置，並將按鈕數量+1
-        public Point GetMealButtonLocation(Meal meal)
+        public Point GetMealButtonLocation(int number)
         {
             int XLocation = 0;
             int YLocation = 0;
-            foreach(CategoryState categoryState in _categoriesState)
-            {
-                if (meal.Category.Name == categoryState.Name)
-                {
-                    int buttonCount = 0;
-                    if (categoryState.ButtonCount >= 9)
-                        buttonCount = categoryState.ButtonCount % 9;
-                    else
-                        buttonCount = categoryState.ButtonCount;
-                    XLocation = (buttonCount % 3) * 160 + BUTTONLOCATIONX;
-                    YLocation = (buttonCount / 3) * 160 + BUTTONLOCATIONY;
-                    categoryState.ButtonCount++;
-                    categoryState.UpdateTotalPage();
-                }
-            };
-            //Console.WriteLine(meal.Name + "\n X:" + XLocation + "\n Y:" + YLocation);
+            if (number >= 9)
+                number = number % 9;
+            XLocation = (number % 3) * 160 + BUTTONLOCATIONX;
+            YLocation = (number / 3) * 160 + BUTTONLOCATIONY;
             return new Point(XLocation, YLocation);
+        }
+
+        //更新最大頁數
+        public void UpdateTotalPage(int buttonNumber, int categoryIndex)
+        {
+            _categoriesState[categoryIndex].UpdateTotalPage(buttonNumber);
         }
 
         //取得button的category的index
@@ -137,18 +119,20 @@ namespace POSCustomerSide
         }
 
         //取得button的visible
-        public bool GetMealButtonVisible(Meal meal)
+        public bool GetMealButtonVisible(string tabName, int number)
         {
-            bool visible = true;
-            _categoriesState.ForEach(x =>
+            foreach(CategoryState categoryState in _categoriesState)
             {
-                if (meal.Category.Name == x.Name)
+                if (categoryState.Name == tabName)
                 {
-                    if (x.ButtonCount > 9)
-                        visible = false;
+                    if (categoryState.CurrentPage * 9 > number && (categoryState.CurrentPage - 1) * 9 <= number)
+                        return true;
+                    else
+                        return false;
                 }
-            });
-            return visible;
+            };
+            Console.WriteLine("ERROR");
+            return false;
         }
 
         //確認Next Page的狀態

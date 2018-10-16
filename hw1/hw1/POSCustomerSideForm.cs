@@ -14,11 +14,9 @@ namespace POSCustomerSide
     public partial class CustomerSideForm : Form
     {
         private const int ZERO = 0;
-        private const int NINE = 9;
-        private const int FIFTEEN = 15;
         private const string DOLLAR = "元"; 
         private CustomerFormPresentationModel _model;
-        private List<Button> _mealButtons = new List<Button>();
+        private List<List<Button>> _mealButtons = new List<List<Button>>();
         string _projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
 
         public CustomerSideForm(CustomerFormPresentationModel model)
@@ -27,8 +25,17 @@ namespace POSCustomerSide
             this._model = model;
             this._mealGridView.CellClick += ClickDataGridCell;
             this._tabControlButton.SelectedIndexChanged += ClickTabPage;
+            InitButtonList();
             UpdateTabPage();
             UpdateMealButton();
+            UpdateTotalPage();
+        }
+
+        //初始化按鈕類別
+        public void InitButtonList()
+        {
+            for (int i = ZERO; i < _model.GetCategories().Count; i++)
+                _mealButtons.Add(new List<Button>());
         }
 
         //把category加到tabpage
@@ -48,30 +55,50 @@ namespace POSCustomerSide
         private void UpdateMealButton()
         {
             List<Meal> menu = _model.GetMenu();
+            List<string> categories = _model.GetCategories();
             menu.ForEach(x =>
             {
                 Button button = new Button();
                 button.Size = new Size(150, 130);
-                button.Location = _model.GetMealButtonLocation(x);
                 button.Text = x.Name + "\n" + x.Price.ToString() + DOLLAR;
                 button.Font = new Font("微軟正黑體", 10, FontStyle.Bold);
                 button.BackgroundImageLayout = ImageLayout.Stretch;
                 button.BackgroundImage = Image.FromFile(_projectPath + x.ImageRelativePath);
                 button.ForeColor = Color.Red;
                 button.TextAlign = ContentAlignment.BottomRight;
-                //button.Visible = _model.GetMealButtonVisible(x);
-                _mealButtons.Add(button);
-                _tabControlButton.TabPages[_model.GetMealButtonCategoryIndex(x)].Controls.Add(button);
+                UpdateMealCategory(x.Category.Name, button);
+                button.Location = _model.GetMealButtonLocation(_mealButtons[categories.IndexOf(x.Category.Name)].IndexOf(button));
             });
-            
+        }
+
+        //將餐點按鈕加到正確的類別
+        private void UpdateMealCategory(string category, Button button)
+        {
+            List<string> categories = _model.GetCategories();
+            categories.ForEach(x =>
+            {
+                if (x == category)
+                {
+                    _mealButtons[categories.IndexOf(x)].Add(button);
+                    _tabControlButton.TabPages[categories.IndexOf(x)].Controls.Add(button);
+                    button.Visible = _model.GetMealButtonVisible(x, _mealButtons[categories.IndexOf(x)].IndexOf(button));
+                }
+            });
+        }
+
+        //更新最大頁數
+        private void UpdateTotalPage()
+        {
+            _mealButtons.ForEach(x =>
+            {
+                _model.UpdateTotalPage(x.Count, _mealButtons.IndexOf(x));
+            });
         }
 
         //按下食物按鈕
         private void MealButtonClick(object sender, EventArgs e)
         {
             Button mealButton = (Button)sender;
-            _model.AddMeal(_mealButtons.IndexOf(mealButton));
-            _mealDescriptionBox.Text = _model.GetDescriptionByIndex(_mealButtons.IndexOf(mealButton));
         }
 
         //按下新增按鈕
@@ -98,30 +125,42 @@ namespace POSCustomerSide
         private void ClickPreviousPage(object sender, EventArgs e)
         {
             string categoryName = _tabControlButton.SelectedTab.Name;
-            //Console.WriteLine(categoryName);
-            for (int i = ZERO; i < NINE; i++)
-                _mealButtons[i].Visible = true;
-            for (int i = NINE; i < FIFTEEN; i++)
-                _mealButtons[i].Visible = false;
+            List<string> categories = _model.GetCategories();
             _model.MinusOnePage(categoryName);
             _nextPageButton.Enabled = _model.IsNextPageButtonEnable(categoryName);
             _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable(categoryName);
             _pageLabel1.Text = _model.GetCurrentPage(categoryName);
+            categories.ForEach(x =>
+            {
+                if (x == categoryName)
+                {
+                    _mealButtons[categories.IndexOf(x)].ForEach(y =>
+                    {
+                        y.Visible = _model.GetMealButtonVisible(x, _mealButtons[categories.IndexOf(x)].IndexOf(y));
+                    });            
+                }
+            });
         }
 
         //按下下一頁
         private void ClickNextPage(object sender, EventArgs e)
         {
             string categoryName = _tabControlButton.SelectedTab.Name;
-            //Console.WriteLine(categoryName);
-            for (int i = ZERO; i < NINE; i++)
-                _mealButtons[i].Visible = false;
-            for (int i = NINE; i < FIFTEEN; i++)
-                _mealButtons[i].Visible = true;
+            List<string> categories = _model.GetCategories();
             _model.AddOnePage(categoryName);
             _nextPageButton.Enabled = _model.IsNextPageButtonEnable(categoryName);
             _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable(categoryName);
             _pageLabel1.Text = _model.GetCurrentPage(categoryName);
+            categories.ForEach(x =>
+            {
+                if (x == categoryName)
+                {
+                    _mealButtons[categories.IndexOf(x)].ForEach(y =>
+                    {
+                        y.Visible = _model.GetMealButtonVisible(x, _mealButtons[categories.IndexOf(x)].IndexOf(y));
+                    });
+                }
+            });
         }
 
         //按下tabPage
