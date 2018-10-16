@@ -19,12 +19,14 @@ namespace POSCustomerSide
         private List<List<Button>> _mealButtons = new List<List<Button>>();
         string _projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
 
+
         public CustomerSideForm(CustomerFormPresentationModel model)
         {
             InitializeComponent();
             this._model = model;
-            this._mealGridView.CellClick += ClickDataGridCell;
-            this._tabControlButton.SelectedIndexChanged += ClickTabPage;
+            _mealGridView.CellClick += ClickDataGridCell;
+           
+            _tabControlButton.SelectedIndexChanged += ClickTabPage;
             InitButtonList();
             UpdateTabPage();
             UpdateMealButton();
@@ -119,6 +121,7 @@ namespace POSCustomerSide
                 row.Cells[2].Value = x.Category.Name;
                 row.Cells[3].Value = x.Price;
                 row.Cells[4].Value = 1;
+                row.Cells[5].Value = x.Price.ToString() + "  NTD";
                 _mealGridView.Rows.Add(row);
             });
             _model.AddToDisplayMealList();
@@ -190,16 +193,36 @@ namespace POSCustomerSide
                 UpdateTotalPrice();
                 _mealGridView.Rows.RemoveAt(e.RowIndex);
             }
+            else if (e.ColumnIndex == _mealGridView.Columns["__mealsQuantity"].Index)
+            {
+                int total = (int)_mealGridView.Rows[e.RowIndex].Cells[3].Value * (int)_mealGridView.Rows[e.RowIndex].Cells[4].Value;
+                _mealGridView.Rows[e.RowIndex].Cells[5].Value = total.ToString() + "  NTD";
+                UpdateTotalPrice();
+            }
             else
             {
                 _mealDescriptionBox.Text = _model.GetDescriptionByName(dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString());
             }
         }
 
+        //更改DataGeidView內的值
+        //private void OnDataGridViewValueChange(object sender, EventArgs e)
+        //{
+            
+        //}
+
         //更新總價
         private void UpdateTotalPrice()
         {
-            _totalLabel.Text = "Total: " + _model.GetTotalPrice() + DOLLAR;
+            int total = 0;
+            foreach (DataGridViewRow row in _mealGridView.Rows)
+            {
+                string subtotal = (string)row.Cells[5].Value;
+                total = total + Int32.Parse(subtotal.Split(' ')[0]);
+            }
+
+            //_totalLabel.Text = "Total: " + _model.GetTotalPrice() + DOLLAR;
+            _totalLabel.Text = "Total: " + total.ToString() + DOLLAR;
         }
     }
 }

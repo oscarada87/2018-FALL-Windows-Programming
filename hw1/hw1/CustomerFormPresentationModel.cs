@@ -12,6 +12,8 @@ namespace POSCustomerSide
         private POSCustomerSideModel _model = new POSCustomerSideModel();
         private const int BUTTONLOCATIONX = 10;
         private const int BUTTONLOCATIONY = 10;
+        private const int NUMBEROFONEPAGEBUTTON = 9;
+        private const string ERROR = "ERROR";
         private List<CategoryState> _categoriesState = new List<CategoryState>();
 
         //Constructor
@@ -23,7 +25,6 @@ namespace POSCustomerSide
         //儲存category狀態的class
         private class CategoryState
         {
-            private int _buttonCount;
             private int _currentPage;
             private int _totalPage;
             private string _name;
@@ -32,7 +33,6 @@ namespace POSCustomerSide
             {
                 this._name = name;
                 this._currentPage = 1;
-                this._buttonCount = 0;
                 this._totalPage = 1;
             }
             public string Name
@@ -71,7 +71,7 @@ namespace POSCustomerSide
             //更新最大頁數
             public void UpdateTotalPage(int number)
             {
-                _totalPage = (number / 9) + 1;
+                _totalPage = (number / NUMBEROFONEPAGEBUTTON) + 1;
             }
         }
 
@@ -91,8 +91,8 @@ namespace POSCustomerSide
         {
             int XLocation = 0;
             int YLocation = 0;
-            if (number >= 9)
-                number = number % 9;
+            if (number >= NUMBEROFONEPAGEBUTTON)
+                number = number % NUMBEROFONEPAGEBUTTON;
             XLocation = (number % 3) * 160 + BUTTONLOCATIONX;
             YLocation = (number / 3) * 160 + BUTTONLOCATIONY;
             return new Point(XLocation, YLocation);
@@ -121,17 +121,17 @@ namespace POSCustomerSide
         //取得button的visible
         public bool GetMealButtonVisible(string tabName, int number)
         {
-            foreach(CategoryState categoryState in _categoriesState)
+            foreach (CategoryState categoryState in _categoriesState)
             {
                 if (categoryState.Name == tabName)
                 {
-                    if (categoryState.CurrentPage * 9 > number && (categoryState.CurrentPage - 1) * 9 <= number)
+                    if (categoryState.CurrentPage * NUMBEROFONEPAGEBUTTON > number && (categoryState.CurrentPage - 1) * NUMBEROFONEPAGEBUTTON <= number)
                         return true;
                     else
                         return false;
                 }
             };
-            Console.WriteLine("ERROR");
+            Console.WriteLine(ERROR);
             return false;
         }
 
@@ -148,7 +148,7 @@ namespace POSCustomerSide
                         return true;
                 }
             }
-            Console.WriteLine("ERROR");
+            Console.WriteLine(ERROR);
             return false;
         }
 
@@ -165,7 +165,7 @@ namespace POSCustomerSide
                         return true;
                 }
             }
-            Console.WriteLine("ERROR");
+            Console.WriteLine(ERROR);
             return false;
         }
 
