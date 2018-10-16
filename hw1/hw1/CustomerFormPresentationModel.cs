@@ -213,9 +213,9 @@ namespace POSCustomerSide
         }
 
         //呼叫model中的AddMeal
-        public void AddMeal(int buttonNumber)
+        public void AddMeal(Meal meal)
         {
-            _model.AddMeal(buttonNumber);
+            _model.AddMeal(meal);
         }
 
         //呼叫model中的AddToDisplayMealList
@@ -276,6 +276,12 @@ namespace POSCustomerSide
         public List<Meal> GetMenu()
         {
             return _model.GetMenu();
+        }
+
+        //呼叫model中的FindMealByName
+        public Meal FindMealByName(string mealName)
+        {
+            return _model.FindMealByName(mealName);
         }
     }
 }

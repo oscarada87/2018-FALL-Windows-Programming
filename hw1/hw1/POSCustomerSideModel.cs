@@ -17,9 +17,9 @@ namespace POSCustomerSide
         }
 
         //呼叫order中的AddMeal
-        public void AddMeal(int buttonNumber)
+        public void AddMeal(Meal meal)
         {
-            _order.AddMeal(buttonNumber);
+            _order.AddMeal(meal);
         }
 
         //呼叫order中的GetImagePath
@@ -32,6 +32,12 @@ namespace POSCustomerSide
         public string GetPrice(int buttonIndex)
         {
             return _order.GetPrice(buttonIndex);
+        }
+
+        //呼叫order中的FindMealByName
+        public Meal FindMealByName(string mealName)
+        {
+            return _order.FindMealByName(mealName);
         }
 
         //呼叫order中的GetDescriptionByName

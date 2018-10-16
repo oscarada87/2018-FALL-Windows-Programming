@@ -66,6 +66,7 @@ namespace POSCustomerSide
                 button.BackgroundImage = Image.FromFile(_projectPath + x.ImageRelativePath);
                 button.ForeColor = Color.Red;
                 button.TextAlign = ContentAlignment.BottomRight;
+                button.Click += MealButtonClick;
                 UpdateMealCategory(x.Category.Name, button);
                 button.Location = _model.GetMealButtonLocation(_mealButtons[categories.IndexOf(x.Category.Name)].IndexOf(button));
             });
@@ -99,6 +100,9 @@ namespace POSCustomerSide
         private void MealButtonClick(object sender, EventArgs e)
         {
             Button mealButton = (Button)sender;
+            Meal meal = _model.FindMealByName(mealButton.Text.Split('\n')[0]);
+            _model.AddMeal(meal);
+            //Console.WriteLine(mealButton.Text.Split('\n')[0]);
         }
 
         //按下新增按鈕
@@ -114,6 +118,7 @@ namespace POSCustomerSide
                 row.Cells[1].Value = x.Name;
                 row.Cells[2].Value = x.Category.Name;
                 row.Cells[3].Value = x.Price;
+                row.Cells[4].Value = 1;
                 _mealGridView.Rows.Add(row);
             });
             _model.AddToDisplayMealList();

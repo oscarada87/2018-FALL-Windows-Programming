@@ -81,7 +81,7 @@ namespace POSCustomerSide
         }
 
         //透過名字找到餐點
-        private Meal FindMealThroughName(string mealName)
+        public Meal FindMealByName(string mealName)
         {
             foreach (var meal in _menuList)
             {
@@ -114,7 +114,7 @@ namespace POSCustomerSide
         //取得Menu的描述透過名字
         public string GetDescriptionByName(string mealName)
         {
-            Meal meal = FindMealThroughName(mealName);
+            Meal meal = FindMealByName(mealName);
             return meal.Description;
         }
 
@@ -125,10 +125,9 @@ namespace POSCustomerSide
         }
 
         //新增一項餐點
-        public void AddMeal(int buttonIndex)
+        public void AddMeal(Meal meal)
         {
-            //Console.WriteLine(buttonIndex);
-            _mealList.Add(_menuList[buttonIndex]);
+            _mealList.Add(meal);
         }
 
         //清除要新增的餐點列表

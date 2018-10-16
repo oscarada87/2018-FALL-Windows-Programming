@@ -25,3 +25,6 @@ C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\
 C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POS-CustomerSide.csproj.CopyComplete
 C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.exe
 C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POSCustomerSide.pdb
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\bin\Debug\DataGridViewNumericUpDownElements.dll
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\bin\Debug\DataGridViewNumericUpDownElements.pdb
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\hw1\obj\Debug\POS-CustomerSide.csproj.CopyComplete

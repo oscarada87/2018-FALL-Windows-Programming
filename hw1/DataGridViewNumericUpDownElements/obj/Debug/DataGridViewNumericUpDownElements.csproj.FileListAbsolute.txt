@@ -15,3 +15,9 @@ C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\
 C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\DataGridViewNumericUpDownElements\obj\Debug\DataGridViewNumericUpDownElements.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\DataGridViewNumericUpDownElements\obj\Debug\DataGridViewNumericUpDownElements.dll
 C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\DataGridViewNumericUpDownElements\obj\Debug\DataGridViewNumericUpDownElements.pdb
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\DataGridViewNumericUpDownElements\bin\Debug\DataGridViewNumericUpDownElements.dll
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\DataGridViewNumericUpDownElements\bin\Debug\DataGridViewNumericUpDownElements.pdb
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\DataGridViewNumericUpDownElements\obj\Debug\DataGridViewNumericUpDownElements.csprojAssemblyReference.cache
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\DataGridViewNumericUpDownElements\obj\Debug\DataGridViewNumericUpDownElements.csproj.CoreCompileInputs.cache
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\DataGridViewNumericUpDownElements\obj\Debug\DataGridViewNumericUpDownElements.dll
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\DataGridViewNumericUpDownElements\obj\Debug\DataGridViewNumericUpDownElements.pdb
