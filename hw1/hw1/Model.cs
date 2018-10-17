@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POSCustomerSide
 {
-    public class POSCustomerSideModel
+    public class Model
     {
         private Order _order = new Order();
 

@@ -25,7 +25,7 @@ namespace POSCustomerSide
             InitializeComponent();
             this._model = model;
             _mealGridView.CellClick += ClickDataGridCell;
-           
+            _mealGridView.CellValueChanged += OnDataGridViewValueChange;
             _tabControlButton.SelectedIndexChanged += ClickTabPage;
             InitButtonList();
             UpdateTabPage();
@@ -193,12 +193,6 @@ namespace POSCustomerSide
                 UpdateTotalPrice();
                 _mealGridView.Rows.RemoveAt(e.RowIndex);
             }
-            else if (e.ColumnIndex == _mealGridView.Columns["__mealsQuantity"].Index)
-            {
-                int total = (int)_mealGridView.Rows[e.RowIndex].Cells[3].Value * (int)_mealGridView.Rows[e.RowIndex].Cells[4].Value;
-                _mealGridView.Rows[e.RowIndex].Cells[5].Value = total.ToString() + "  NTD";
-                UpdateTotalPrice();
-            }
             else
             {
                 _mealDescriptionBox.Text = _model.GetDescriptionByName(dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString());
@@ -206,10 +200,12 @@ namespace POSCustomerSide
         }
 
         //更改DataGeidView內的值
-        //private void OnDataGridViewValueChange(object sender, EventArgs e)
-        //{
-            
-        //}
+        private void OnDataGridViewValueChange(object sender, EventArgs e)
+        {
+            DataGridView quantity = (DataGridView) sender;
+            Console.WriteLine(e);
+            //UpdateTotalPrice(); 
+        }
 
         //更新總價
         private void UpdateTotalPrice()

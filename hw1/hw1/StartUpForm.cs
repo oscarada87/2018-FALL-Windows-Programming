@@ -15,6 +15,7 @@ namespace POSCustomerSide
         private StartUpFormPresentationModel _presentationModel;
         private CustomerSideForm _customerSideForm;
         private RestaurantSideForm _restaurantSideForm;
+        private Model _mainModel = new Model();
 
         public StartUpForm(StartUpFormPresentationModel presentationModel)
         {
@@ -25,7 +26,7 @@ namespace POSCustomerSide
         //按下frontend button
         private void ClickFrontEndButton(object sender, EventArgs e)
         {
-            _customerSideForm = new CustomerSideForm(new CustomerFormPresentationModel());
+            _customerSideForm = new CustomerSideForm(new CustomerFormPresentationModel(_mainModel));
             _customerSideForm.FormClosed += CloseForm;
             _customerSideForm.Show();
             _frontEndButton.Enabled = !_presentationModel.IsFrontEndFormExist();
@@ -34,7 +35,7 @@ namespace POSCustomerSide
         //按下backend button
         private void ClickBackEndButton(object sender, EventArgs e)
         {
-            _restaurantSideForm = new RestaurantSideForm();
+            _restaurantSideForm = new RestaurantSideForm(new RestaurantSidePresentationModel(_mainModel));
             _restaurantSideForm.FormClosed += CloseForm;
             _restaurantSideForm.Show();
             _backEndButton.Enabled = !_presentationModel.IsBackEndFormExist();

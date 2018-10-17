@@ -9,7 +9,7 @@ namespace POSCustomerSide
 {
     public class CustomerFormPresentationModel
     {
-        private POSCustomerSideModel _model = new POSCustomerSideModel();
+        private Model _model;
         private const int BUTTONLOCATIONX = 10;
         private const int BUTTONLOCATIONY = 10;
         private const int NUMBEROFONEPAGEBUTTON = 9;
@@ -17,9 +17,11 @@ namespace POSCustomerSide
         private List<CategoryState> _categoriesState = new List<CategoryState>();
 
         //Constructor
-        public CustomerFormPresentationModel()
+        public CustomerFormPresentationModel(Model model)
         {
+            this._model = model;
             InitCategoriesState();
+
         }
 
         //儲存category狀態的class

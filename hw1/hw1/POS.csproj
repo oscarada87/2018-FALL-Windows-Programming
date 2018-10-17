@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="RestaurantSidePresentationModel.cs" />
     <Compile Include="StartUpFormPresentationModel.cs" />
     <Compile Include="CustomerFormPresentationModel.cs" />
     <Compile Include="POSRestaurantSideForm.cs">
@@ -69,7 +70,7 @@
     </Compile>
     <Compile Include="Meal.cs" />
     <Compile Include="Order.cs" />
-    <Compile Include="POSCustomerSideModel.cs" />
+    <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="POSCustomerSideForm.resx">
