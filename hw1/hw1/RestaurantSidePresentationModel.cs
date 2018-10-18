@@ -9,13 +9,16 @@ namespace POSCustomerSide
     public class RestaurantSidePresentationModel
     {
         private Model _model;
+        public event MenuChangedEventHandler MenuChanged;
+        public delegate void MenuChangedEventHandler();
 
         //Constructor
         public RestaurantSidePresentationModel(Model model)
         {
             this._model = model;
+            _model.MenuChanged += NotifyMenuChangedObserver;
         }
-
+        
         //呼叫 model 中的 GetMenu
         public List<Meal> GetMenu()
         {
@@ -34,6 +37,42 @@ namespace POSCustomerSide
             return _model.FindMealByName(mealName);
         }
 
+        //呼叫 model 中的 FindMealCategory
+        public Category FindMealCategory(string categoryName)
+        {
+            return _model.FindMealCategory(categoryName);
+        }
+
+        //呼叫 model 中的 ChangeMealName
+        public void ChangeMealName(string mealOldName, string mealNewName)
+        {
+            _model.ChangeMealName(mealOldName, mealNewName);
+        }
+
+        //呼叫 model 中的 ChangeMealPrice
+        public void ChangeMealPrice(string mealOldName, string mealPrice)
+        {
+            _model.ChangeMealPrice(mealOldName, mealPrice);
+        }
+
+        //呼叫 model 中的 ChangeMealCategory
+        public void ChangeMealCategory(string mealOldName, string categoryName)
+        {
+            _model.ChangeMealCategory(mealOldName, categoryName);
+        }
+
+        //呼叫 model 中的 ChangeMealDescription
+        public void ChangeMealDescription(string mealOldName, string mealDescription)
+        {
+            _model.ChangeMealDescription(mealOldName, mealDescription);
+        }
+
+        //呼叫 model 中的 ChangeMealImagePath
+        public void ChangeMealImagePath(string mealOldName, string mealImagePath)
+        {
+            _model.ChangeMealImagePath(mealOldName, mealImagePath);
+        }
+
         //取得在此類別中的所有餐點
         public List<string> GetMealsInCategory(string categoryName)
         {
@@ -44,6 +83,13 @@ namespace POSCustomerSide
                     meals.Add(x.Name);
             });
             return meals;
+        }
+        
+        //通知menu改變
+        public void NotifyMenuChangedObserver()
+        {
+            if (MenuChanged == null)
+                MenuChanged();
         }
     }
 }

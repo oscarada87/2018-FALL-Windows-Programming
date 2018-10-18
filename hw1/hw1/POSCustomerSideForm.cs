@@ -19,7 +19,6 @@ namespace POSCustomerSide
         private List<List<Button>> _mealButtons = new List<List<Button>>();
         string _projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
 
-
         public CustomerSideForm(CustomerFormPresentationModel model)
         {
             InitializeComponent();
@@ -27,15 +26,20 @@ namespace POSCustomerSide
             _mealGridView.CellClick += ClickDataGridCell;
             _mealGridView.CellValueChanged += OnDataGridViewValueChange;
             _tabControlButton.SelectedIndexChanged += ClickTabPage;
-            InitButtonList();
+            UpdateButtonList();
             UpdateTabPage();
             UpdateMealButton();
             UpdateTotalPage();
+            _model.MenuChanged += ClearButton;
+            _model.MenuChanged += UpdateButtonList;
+            _model.MenuChanged += UpdateMealButton;
+            _model.MenuChanged += UpdateTabPage;
         }
 
         //初始化按鈕類別
-        public void InitButtonList()
+        public void UpdateButtonList()
         {
+            _mealButtons.Clear();
             for (int i = ZERO; i < _model.GetCategories().Count; i++)
                 _mealButtons.Add(new List<Button>());
         }
@@ -89,6 +93,15 @@ namespace POSCustomerSide
             });
         }
 
+        //清空按鈕
+        private void ClearButton()
+        {
+            foreach (TabPage tabPage in _tabControlButton.TabPages)
+            {
+                tabPage.Controls.Clear();
+            }       
+        }
+
         //更新最大頁數
         private void UpdateTotalPage()
         {
@@ -104,6 +117,7 @@ namespace POSCustomerSide
             Button mealButton = (Button)sender;
             Meal meal = _model.FindMealByName(mealButton.Text.Split('\n')[0]);
             _model.AddMeal(meal);
+            _addButton.Enabled = _model.IsAddButtonEnable();
             //Console.WriteLine(mealButton.Text.Split('\n')[0]);
         }
 
@@ -111,7 +125,6 @@ namespace POSCustomerSide
         private void AddButtonClick(object sender, EventArgs e)
         {
             List<Meal> mealList = _model.GetMealList();
-
             mealList.ForEach(x =>
             {
                 DataGridViewRow row = new DataGridViewRow();
@@ -127,6 +140,7 @@ namespace POSCustomerSide
             _model.AddToDisplayMealList();
             _model.ClearMealList();
             UpdateTotalPrice();
+            _addButton.Enabled = _model.IsAddButtonEnable();
         }
 
         //按下上一頁
@@ -189,9 +203,9 @@ namespace POSCustomerSide
                 return;
             if (e.ColumnIndex == _mealGridView.Columns["_deleteColumn"].Index)
             {
-                _model.DeleteFromDisplayMealList(e.RowIndex);
-                UpdateTotalPrice();
+                _model.DeleteFromDisplayMealList(dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString());
                 _mealGridView.Rows.RemoveAt(e.RowIndex);
+                UpdateTotalPrice();
             }
             else
             {

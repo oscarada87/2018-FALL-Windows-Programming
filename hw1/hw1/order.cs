@@ -60,17 +60,6 @@ namespace POSCustomerSide
             }
         }
 
-        //初始化將Category加到meal中
-        private Category FindMealCategory(string categoryName)
-        {
-            foreach (Category category in _categories)
-            {
-                if (category.Name == categoryName)
-                    return category;
-            }
-            return null;
-        }
-
         //初始化Categories
         private void InitCategories(HashSet<string> Categories)
         {
@@ -78,6 +67,17 @@ namespace POSCustomerSide
             {
                 _categories.Add(new Category(category));
             }
+        }
+
+        //透過名字找到類別
+        public Category FindMealCategory(string categoryName)
+        {
+            foreach (Category category in _categories)
+            {
+                if (category.Name == categoryName)
+                    return category;
+            }
+            return null;
         }
 
         //透過名字找到餐點
@@ -155,9 +155,14 @@ namespace POSCustomerSide
         }
 
         //刪除display中指定的meal
-        public void DeleteFromDisplayMealList(int mealIndex)
+        public void DeleteFromDisplayMealList(string mealName)
         {
-            _displayMealList.RemoveAt(mealIndex);
+            foreach (Meal meal in _displayMealList)
+            {
+                if (meal.Name == mealName)
+                    _displayMealList.Remove(meal);
+                break;
+            }
         }
 
         //取得總價
@@ -170,12 +175,12 @@ namespace POSCustomerSide
         //取得Categories名字列表
         public List<string> GetCategories()
         {
-            List<string> CategoriesName = new List<string>();
+            List<string> categoriesName = new List<string>();
             _categories.ForEach(x =>
             {
-                CategoriesName.Add(x.Name);
+                categoriesName.Add(x.Name);
             });
-            return CategoriesName;
+            return categoriesName;
         }
     }
 }

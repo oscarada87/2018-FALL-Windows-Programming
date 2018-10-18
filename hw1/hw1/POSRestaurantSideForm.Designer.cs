@@ -32,13 +32,13 @@
             this._mealManageTabPage = new System.Windows.Forms.TabPage();
             this._mealGroupBox1 = new System.Windows.Forms.GroupBox();
             this._saveButton1 = new System.Windows.Forms.Button();
-            this._mealDesciptionTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this._mealDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this._mealDescriptionLabel = new System.Windows.Forms.Label();
             this._mealImageTextBox = new System.Windows.Forms.TextBox();
             this._browseButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this._mealImageLabel = new System.Windows.Forms.Label();
             this._mealCategoryComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this._mealCategoryLabel = new System.Windows.Forms.Label();
             this._Dollarlabel = new System.Windows.Forms.Label();
             this._mealPriceLabel = new System.Windows.Forms.Label();
             this._mealPriceTextBox = new System.Windows.Forms.TextBox();
@@ -49,6 +49,7 @@
             this._mealListBox = new System.Windows.Forms.ListBox();
             this._categoryManageTabPage = new System.Windows.Forms.TabPage();
             this._categoryGroupBox = new System.Windows.Forms.GroupBox();
+            this._categoryUsingListBox = new System.Windows.Forms.ListBox();
             this._saveButton2 = new System.Windows.Forms.Button();
             this._categoryUsingLabel = new System.Windows.Forms.Label();
             this._categoryNameLabel = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this._deleteCategoryButton = new System.Windows.Forms.Button();
             this._addCategoryButton = new System.Windows.Forms.Button();
             this._categoryListBox = new System.Windows.Forms.ListBox();
-            this._categoryUsingListBox = new System.Windows.Forms.ListBox();
             this._mainTabControl.SuspendLayout();
             this._mealManageTabPage.SuspendLayout();
             this._mealGroupBox1.SuspendLayout();
@@ -93,13 +93,13 @@
             // _mealGroupBox1
             // 
             this._mealGroupBox1.Controls.Add(this._saveButton1);
-            this._mealGroupBox1.Controls.Add(this._mealDesciptionTextBox);
-            this._mealGroupBox1.Controls.Add(this.label3);
+            this._mealGroupBox1.Controls.Add(this._mealDescriptionTextBox);
+            this._mealGroupBox1.Controls.Add(this._mealDescriptionLabel);
             this._mealGroupBox1.Controls.Add(this._mealImageTextBox);
             this._mealGroupBox1.Controls.Add(this._browseButton);
-            this._mealGroupBox1.Controls.Add(this.label2);
+            this._mealGroupBox1.Controls.Add(this._mealImageLabel);
             this._mealGroupBox1.Controls.Add(this._mealCategoryComboBox);
-            this._mealGroupBox1.Controls.Add(this.label1);
+            this._mealGroupBox1.Controls.Add(this._mealCategoryLabel);
             this._mealGroupBox1.Controls.Add(this._Dollarlabel);
             this._mealGroupBox1.Controls.Add(this._mealPriceLabel);
             this._mealGroupBox1.Controls.Add(this._mealPriceTextBox);
@@ -114,6 +114,7 @@
             // 
             // _saveButton1
             // 
+            this._saveButton1.Enabled = false;
             this._saveButton1.Location = new System.Drawing.Point(449, 567);
             this._saveButton1.Name = "_saveButton1";
             this._saveButton1.Size = new System.Drawing.Size(89, 27);
@@ -121,22 +122,22 @@
             this._saveButton1.Text = "Save";
             this._saveButton1.UseVisualStyleBackColor = true;
             // 
-            // _mealDesciptionTextBox
+            // _mealDescriptionTextBox
             // 
-            this._mealDesciptionTextBox.Location = new System.Drawing.Point(16, 236);
-            this._mealDesciptionTextBox.Multiline = true;
-            this._mealDesciptionTextBox.Name = "_mealDesciptionTextBox";
-            this._mealDesciptionTextBox.Size = new System.Drawing.Size(523, 328);
-            this._mealDesciptionTextBox.TabIndex = 11;
+            this._mealDescriptionTextBox.Location = new System.Drawing.Point(16, 236);
+            this._mealDescriptionTextBox.Multiline = true;
+            this._mealDescriptionTextBox.Name = "_mealDescriptionTextBox";
+            this._mealDescriptionTextBox.Size = new System.Drawing.Size(523, 328);
+            this._mealDescriptionTextBox.TabIndex = 11;
             // 
-            // label3
+            // _mealDescriptionLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 206);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 16);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Meal Description";
+            this._mealDescriptionLabel.AutoSize = true;
+            this._mealDescriptionLabel.Location = new System.Drawing.Point(13, 206);
+            this._mealDescriptionLabel.Name = "_mealDescriptionLabel";
+            this._mealDescriptionLabel.Size = new System.Drawing.Size(136, 16);
+            this._mealDescriptionLabel.TabIndex = 10;
+            this._mealDescriptionLabel.Text = "Meal Description";
             // 
             // _mealImageTextBox
             // 
@@ -154,14 +155,14 @@
             this._browseButton.Text = "Browse";
             this._browseButton.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // _mealImageLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Meal Image Relative Path (*)";
+            this._mealImageLabel.AutoSize = true;
+            this._mealImageLabel.Location = new System.Drawing.Point(13, 157);
+            this._mealImageLabel.Name = "_mealImageLabel";
+            this._mealImageLabel.Size = new System.Drawing.Size(232, 16);
+            this._mealImageLabel.TabIndex = 7;
+            this._mealImageLabel.Text = "Meal Image Relative Path (*)";
             // 
             // _mealCategoryComboBox
             // 
@@ -171,14 +172,14 @@
             this._mealCategoryComboBox.Size = new System.Drawing.Size(121, 24);
             this._mealCategoryComboBox.TabIndex = 6;
             // 
-            // label1
+            // _mealCategoryLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(268, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Meal Category (*)";
+            this._mealCategoryLabel.AutoSize = true;
+            this._mealCategoryLabel.Location = new System.Drawing.Point(268, 98);
+            this._mealCategoryLabel.Name = "_mealCategoryLabel";
+            this._mealCategoryLabel.Size = new System.Drawing.Size(144, 16);
+            this._mealCategoryLabel.TabIndex = 5;
+            this._mealCategoryLabel.Text = "Meal Category (*)";
             // 
             // _Dollarlabel
             // 
@@ -279,8 +280,18 @@
             this._categoryGroupBox.TabStop = false;
             this._categoryGroupBox.Text = "Edit Category";
             // 
+            // _categoryUsingListBox
+            // 
+            this._categoryUsingListBox.FormattingEnabled = true;
+            this._categoryUsingListBox.ItemHeight = 16;
+            this._categoryUsingListBox.Location = new System.Drawing.Point(16, 123);
+            this._categoryUsingListBox.Name = "_categoryUsingListBox";
+            this._categoryUsingListBox.Size = new System.Drawing.Size(522, 436);
+            this._categoryUsingListBox.TabIndex = 13;
+            // 
             // _saveButton2
             // 
+            this._saveButton2.Enabled = false;
             this._saveButton2.Location = new System.Drawing.Point(449, 567);
             this._saveButton2.Name = "_saveButton2";
             this._saveButton2.Size = new System.Drawing.Size(89, 27);
@@ -342,15 +353,6 @@
             this._categoryListBox.Size = new System.Drawing.Size(394, 564);
             this._categoryListBox.TabIndex = 3;
             // 
-            // _categoryUsingListBox
-            // 
-            this._categoryUsingListBox.FormattingEnabled = true;
-            this._categoryUsingListBox.ItemHeight = 16;
-            this._categoryUsingListBox.Location = new System.Drawing.Point(16, 123);
-            this._categoryUsingListBox.Name = "_categoryUsingListBox";
-            this._categoryUsingListBox.Size = new System.Drawing.Size(522, 436);
-            this._categoryUsingListBox.TabIndex = 13;
-            // 
             // RestaurantSideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -380,13 +382,13 @@
         private System.Windows.Forms.Button _addMealButton;
         private System.Windows.Forms.GroupBox _mealGroupBox1;
         private System.Windows.Forms.Button _saveButton1;
-        private System.Windows.Forms.TextBox _mealDesciptionTextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox _mealDescriptionTextBox;
+        private System.Windows.Forms.Label _mealDescriptionLabel;
         private System.Windows.Forms.TextBox _mealImageTextBox;
         private System.Windows.Forms.Button _browseButton;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label _mealImageLabel;
         private System.Windows.Forms.ComboBox _mealCategoryComboBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label _mealCategoryLabel;
         private System.Windows.Forms.Label _Dollarlabel;
         private System.Windows.Forms.Label _mealPriceLabel;
         private System.Windows.Forms.TextBox _mealPriceTextBox;

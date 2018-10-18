@@ -15,13 +15,15 @@ namespace POSCustomerSide
         private const int NUMBEROFONEPAGEBUTTON = 9;
         private const string ERROR = "ERROR";
         private List<CategoryState> _categoriesState = new List<CategoryState>();
+        public event MenuChangedEventHandler MenuChanged;
+        public delegate void MenuChangedEventHandler();
 
         //Constructor
         public CustomerFormPresentationModel(Model model)
         {
             this._model = model;
             InitCategoriesState();
-
+            _model.MenuChanged += NotifyMenuChangedObserver;
         }
 
         //儲存category狀態的class
@@ -81,7 +83,7 @@ namespace POSCustomerSide
         private void InitCategoriesState()
         {
             _categoriesState.Clear();
-            List<string> categoriesName =  _model.GetCategories();
+            List<string> categoriesName = _model.GetCategories();
             categoriesName.ForEach(x =>
             {
                 _categoriesState.Add(new CategoryState(x));
@@ -91,13 +93,13 @@ namespace POSCustomerSide
         //取得button的位置，並將按鈕數量+1
         public Point GetMealButtonLocation(int number)
         {
-            int XLocation = 0;
-            int YLocation = 0;
+            int LocationX = 0;
+            int LocationY = 0;
             if (number >= NUMBEROFONEPAGEBUTTON)
                 number = number % NUMBEROFONEPAGEBUTTON;
-            XLocation = (number % 3) * 160 + BUTTONLOCATIONX;
-            YLocation = (number / 3) * 160 + BUTTONLOCATIONY;
-            return new Point(XLocation, YLocation);
+            LocationX = (number % 3) * 160 + BUTTONLOCATIONX;
+            LocationY = (number / 3) * 160 + BUTTONLOCATIONY;
+            return new Point(LocationX, LocationY);
         }
 
         //更新最大頁數
@@ -171,6 +173,12 @@ namespace POSCustomerSide
             return false;
         }
 
+        //確認 Add Button 的狀態
+        public bool IsAddButtonEnable()
+        {
+            return !_model.IsMealListEmpty();
+        }
+
         //回傳現在的頁碼
         public string GetCurrentPage(string categoryName)
         {
@@ -227,9 +235,9 @@ namespace POSCustomerSide
         }
 
         //呼叫model中的DeleteFromDisplayMealList
-        public void DeleteFromDisplayMealList(int mealIndex)
+        public void DeleteFromDisplayMealList(string mealName)
         {
-            _model.DeleteFromDisplayMealList(mealIndex);
+            _model.DeleteFromDisplayMealList(mealName);
         }
 
         //呼叫model中的ClearMealList
@@ -284,6 +292,13 @@ namespace POSCustomerSide
         public Meal FindMealByName(string mealName)
         {
             return _model.FindMealByName(mealName);
+        }
+
+        //通知menu改變
+        public void NotifyMenuChangedObserver()
+        {
+            if (MenuChanged == null)
+                MenuChanged();
         }
     }
 }

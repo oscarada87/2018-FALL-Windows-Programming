@@ -38,24 +38,20 @@
             this._pageLabel1 = new System.Windows.Forms.Label();
             this._previousPageButton = new System.Windows.Forms.Button();
             this._mealGridView = new System.Windows.Forms.DataGridView();
-            this._totalLabel = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewNumericUpDownColumn1 = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._deleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this._mealsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsQuantity = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
             this._mealSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._totalLabel = new System.Windows.Forms.Label();
             this._mealsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._mealGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // _addButton
             // 
+            this._addButton.Enabled = false;
             this._addButton.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this._addButton.Location = new System.Drawing.Point(396, 660);
             this._addButton.Name = "_addButton";
@@ -174,47 +170,6 @@
             this._mealGridView.Size = new System.Drawing.Size(646, 682);
             this._mealGridView.TabIndex = 8;
             // 
-            // _totalLabel
-            // 
-            this._totalLabel.AutoSize = true;
-            this._totalLabel.Font = new System.Drawing.Font("微軟正黑體", 22F);
-            this._totalLabel.ForeColor = System.Drawing.Color.SaddleBrown;
-            this._totalLabel.Location = new System.Drawing.Point(1109, 709);
-            this._totalLabel.Name = "_totalLabel";
-            this._totalLabel.Size = new System.Drawing.Size(150, 38);
-            this._totalLabel.TabIndex = 7;
-            this._totalLabel.Text = "Total: 0元";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 107;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Category";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 107;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Unit Price";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 108;
-            // 
-            // dataGridViewNumericUpDownColumn1
-            // 
-            this.dataGridViewNumericUpDownColumn1.HeaderText = "Qty";
-            this.dataGridViewNumericUpDownColumn1.Name = "dataGridViewNumericUpDownColumn1";
-            this.dataGridViewNumericUpDownColumn1.Width = 107;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Subtotal";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 107;
-            // 
             // _deleteColumn
             // 
             this._deleteColumn.HeaderText = "Delete";
@@ -250,6 +205,17 @@
             this._mealSubtotal.Name = "_mealSubtotal";
             this._mealSubtotal.ReadOnly = true;
             // 
+            // _totalLabel
+            // 
+            this._totalLabel.AutoSize = true;
+            this._totalLabel.Font = new System.Drawing.Font("微軟正黑體", 22F);
+            this._totalLabel.ForeColor = System.Drawing.Color.SaddleBrown;
+            this._totalLabel.Location = new System.Drawing.Point(1109, 709);
+            this._totalLabel.Name = "_totalLabel";
+            this._totalLabel.Size = new System.Drawing.Size(150, 38);
+            this._totalLabel.TabIndex = 7;
+            this._totalLabel.Text = "Total: 0元";
+            // 
             // CustomerSideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -281,11 +247,6 @@
         private System.Windows.Forms.Label _totalLabel;
         private System.Windows.Forms.RichTextBox _mealDescriptionBox;
         private System.Windows.Forms.TabControl _tabControlButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn dataGridViewNumericUpDownColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewButtonColumn _deleteColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _mealsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn _mealsCategory;
