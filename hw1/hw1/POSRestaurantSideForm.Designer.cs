@@ -39,7 +39,7 @@
             this._mealImageLabel = new System.Windows.Forms.Label();
             this._mealCategoryComboBox = new System.Windows.Forms.ComboBox();
             this._mealCategoryLabel = new System.Windows.Forms.Label();
-            this._Dollarlabel = new System.Windows.Forms.Label();
+            this._dollarLabel = new System.Windows.Forms.Label();
             this._mealPriceLabel = new System.Windows.Forms.Label();
             this._mealPriceTextBox = new System.Windows.Forms.TextBox();
             this._mealNameLabel = new System.Windows.Forms.Label();
@@ -57,6 +57,7 @@
             this._deleteCategoryButton = new System.Windows.Forms.Button();
             this._addCategoryButton = new System.Windows.Forms.Button();
             this._categoryListBox = new System.Windows.Forms.ListBox();
+            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this._mainTabControl.SuspendLayout();
             this._mealManageTabPage.SuspendLayout();
             this._mealGroupBox1.SuspendLayout();
@@ -100,7 +101,7 @@
             this._mealGroupBox1.Controls.Add(this._mealImageLabel);
             this._mealGroupBox1.Controls.Add(this._mealCategoryComboBox);
             this._mealGroupBox1.Controls.Add(this._mealCategoryLabel);
-            this._mealGroupBox1.Controls.Add(this._Dollarlabel);
+            this._mealGroupBox1.Controls.Add(this._dollarLabel);
             this._mealGroupBox1.Controls.Add(this._mealPriceLabel);
             this._mealGroupBox1.Controls.Add(this._mealPriceTextBox);
             this._mealGroupBox1.Controls.Add(this._mealNameLabel);
@@ -148,6 +149,7 @@
             // 
             // _browseButton
             // 
+            this._browseButton.Enabled = false;
             this._browseButton.Location = new System.Drawing.Point(450, 153);
             this._browseButton.Name = "_browseButton";
             this._browseButton.Size = new System.Drawing.Size(89, 27);
@@ -181,14 +183,14 @@
             this._mealCategoryLabel.TabIndex = 5;
             this._mealCategoryLabel.Text = "Meal Category (*)";
             // 
-            // _Dollarlabel
+            // _dollarLabel
             // 
-            this._Dollarlabel.AutoSize = true;
-            this._Dollarlabel.Location = new System.Drawing.Point(230, 98);
-            this._Dollarlabel.Name = "_Dollarlabel";
-            this._Dollarlabel.Size = new System.Drawing.Size(32, 16);
-            this._Dollarlabel.TabIndex = 4;
-            this._Dollarlabel.Text = "NTD";
+            this._dollarLabel.AutoSize = true;
+            this._dollarLabel.Location = new System.Drawing.Point(230, 98);
+            this._dollarLabel.Name = "_dollarLabel";
+            this._dollarLabel.Size = new System.Drawing.Size(32, 16);
+            this._dollarLabel.TabIndex = 4;
+            this._dollarLabel.Text = "NTD";
             // 
             // _mealPriceLabel
             // 
@@ -224,6 +226,7 @@
             // 
             // _deleteMealButton
             // 
+            this._deleteMealButton.Enabled = false;
             this._deleteMealButton.Font = new System.Drawing.Font("標楷體", 10F);
             this._deleteMealButton.Location = new System.Drawing.Point(245, 578);
             this._deleteMealButton.Name = "_deleteMealButton";
@@ -326,6 +329,7 @@
             // 
             // _deleteCategoryButton
             // 
+            this._deleteCategoryButton.Enabled = false;
             this._deleteCategoryButton.Font = new System.Drawing.Font("標楷體", 10F);
             this._deleteCategoryButton.Location = new System.Drawing.Point(212, 578);
             this._deleteCategoryButton.Name = "_deleteCategoryButton";
@@ -352,6 +356,10 @@
             this._categoryListBox.Name = "_categoryListBox";
             this._categoryListBox.Size = new System.Drawing.Size(394, 564);
             this._categoryListBox.TabIndex = 3;
+            // 
+            // _openFileDialog
+            // 
+            this._openFileDialog.FileName = "openFileDialog1";
             // 
             // RestaurantSideForm
             // 
@@ -389,7 +397,7 @@
         private System.Windows.Forms.Label _mealImageLabel;
         private System.Windows.Forms.ComboBox _mealCategoryComboBox;
         private System.Windows.Forms.Label _mealCategoryLabel;
-        private System.Windows.Forms.Label _Dollarlabel;
+        private System.Windows.Forms.Label _dollarLabel;
         private System.Windows.Forms.Label _mealPriceLabel;
         private System.Windows.Forms.TextBox _mealPriceTextBox;
         private System.Windows.Forms.Label _mealNameLabel;
@@ -403,5 +411,6 @@
         private System.Windows.Forms.Button _addCategoryButton;
         private System.Windows.Forms.ListBox _categoryListBox;
         private System.Windows.Forms.ListBox _categoryUsingListBox;
+        private System.Windows.Forms.OpenFileDialog _openFileDialog;
     }
 }

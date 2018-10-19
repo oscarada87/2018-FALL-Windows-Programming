@@ -15,8 +15,8 @@ namespace POSCustomerSide
         private const int NUMBEROFONEPAGEBUTTON = 9;
         private const string ERROR = "ERROR";
         private List<CategoryState> _categoriesState = new List<CategoryState>();
-        public event MenuChangedEventHandler MenuChanged;
-        public delegate void MenuChangedEventHandler();
+        public event MenuChangedPresentationEventHandler MenuChangedCustomer;
+        public delegate void MenuChangedPresentationEventHandler();
 
         //Constructor
         public CustomerFormPresentationModel(Model model)
@@ -297,8 +297,11 @@ namespace POSCustomerSide
         //通知menu改變
         public void NotifyMenuChangedObserver()
         {
-            if (MenuChanged == null)
-                MenuChanged();
+            if (MenuChangedCustomer != null)
+            {
+                MenuChangedCustomer();
+                Console.WriteLine("CP Model Notify");
+            }           
         }
     }
 }

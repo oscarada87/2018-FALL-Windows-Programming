@@ -9,8 +9,8 @@ namespace POSCustomerSide
     public class RestaurantSidePresentationModel
     {
         private Model _model;
-        public event MenuChangedEventHandler MenuChanged;
-        public delegate void MenuChangedEventHandler();
+        public event MenuChangedRestaurantEventHandler MenuChangedRestaurant;
+        public delegate void MenuChangedRestaurantEventHandler();
 
         //Constructor
         public RestaurantSidePresentationModel(Model model)
@@ -73,6 +73,18 @@ namespace POSCustomerSide
             _model.ChangeMealImagePath(mealOldName, mealImagePath);
         }
 
+        //呼叫 model 中的 ChangeCategoryName
+        public void ChangeCategoryName(string categoryOldName, string categoryNewName)
+        {
+            _model.ChangeCategoryName(categoryOldName, categoryNewName);
+        }
+
+        //呼叫 model 中的 AddNewCategory
+        public void AddNewCategory(string categoryName)
+        {
+            _model.AddNewCategory(categoryName);
+        }
+
         //取得在此類別中的所有餐點
         public List<string> GetMealsInCategory(string categoryName)
         {
@@ -88,8 +100,11 @@ namespace POSCustomerSide
         //通知menu改變
         public void NotifyMenuChangedObserver()
         {
-            if (MenuChanged == null)
-                MenuChanged();
+            if (MenuChangedRestaurant != null)
+            {
+                MenuChangedRestaurant();
+                Console.WriteLine("RP Model Notify");
+            }
         }
     }
 }

@@ -88,7 +88,7 @@ namespace POSCustomerSide
                 if (meal.Name == mealName)
                     return meal;
             }
-            //Console.WriteLine("Not Found!");
+            Console.WriteLine("Not Found!");
             return null;
         }
 
@@ -181,6 +181,23 @@ namespace POSCustomerSide
                 categoriesName.Add(x.Name);
             });
             return categoriesName;
+        }
+
+        //更改 category 名字
+        public void ChangeCategoryName(string categoryOldName, string categoryNewName)
+        {
+            foreach(Category category in _categories)
+            {
+                if (category.Name == categoryOldName)
+                    category.Name = categoryNewName;
+            }
+        }
+
+        //新增新的 category
+        public void AddNewCategory(string categoryName)
+        {
+            if (FindMealCategory(categoryName) == null)
+                _categories.Add(new Category(categoryName));
         }
     }
 }

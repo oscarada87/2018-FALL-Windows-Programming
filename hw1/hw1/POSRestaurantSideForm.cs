@@ -18,6 +18,9 @@ namespace POSCustomerSide
         {
             this._model = model;
             InitializeComponent();
+            _model.MenuChangedRestaurant += UpdateMealListBox;
+            _model.MenuChangedRestaurant += UpdateCategoryListBox;
+            _browseButton.Click += ClickBrowseButton;
             _mealListBox.Click += ClickMealListBox;
             _categoryListBox.Click += ClickCategoryListBox;
             _mealDescriptionTextBox.TextChanged += OnMealTextBoxChanged;
@@ -27,10 +30,9 @@ namespace POSCustomerSide
             _mealCategoryComboBox.TextChanged += OnMealComboBoxChanged;
             _categoryNameTextBox.TextChanged += OnCategoryTextBoxChanged;
             _saveButton1.Click += ClickMealSaveButton;
+            _saveButton2.Click += ClickCategorySaveButton;
             UpdateMealListBox();
-            UpdateCategoryBox();
-            _model.MenuChanged += UpdateMealListBox;
-            _model.MenuChanged += UpdateCategoryBox;
+            UpdateCategoryListBox();
         }
 
         //更新餐點
@@ -45,7 +47,7 @@ namespace POSCustomerSide
         }
 
         //更新類別
-        private void UpdateCategoryBox()
+        private void UpdateCategoryListBox()
         {
             _categoryListBox.Items.Clear();
             _mealCategoryComboBox.Items.Clear();
@@ -70,6 +72,8 @@ namespace POSCustomerSide
             _mealDescriptionTextBox.Text = selectedMeal.Description;
             _mealCategoryComboBox.SelectedItem = selectedMeal.Category.Name;
             _saveButton1.Enabled = false;
+            _browseButton.Enabled = true;
+            _deleteMealButton.Enabled = true;
         }
 
         //按下category listbox
@@ -85,13 +89,20 @@ namespace POSCustomerSide
             });
             _categoryNameTextBox.Text = categoryListBox.SelectedItem.ToString();
             _saveButton1.Enabled = false;
+            _deleteCategoryButton.Enabled = true;
         }
 
         //當修改meal textbox內容
         private void OnMealTextBoxChanged(object sender, EventArgs e)
         {
-            if (((TextBox)sender).Modified)
-                _saveButton1.Enabled = true;
+            TextBox textBox = (TextBox)sender;
+            if (textBox.Modified)
+            {
+                if (textBox.Name != "_mealDescriptionTextBox" && !string.IsNullOrWhiteSpace(textBox.Text))
+                    _saveButton1.Enabled = true;
+                else
+                    _saveButton1.Enabled = false;
+            }
         }
 
         //當修改meal combobox內容
@@ -105,22 +116,50 @@ namespace POSCustomerSide
         //當修改category textbox內容
         private void OnCategoryTextBoxChanged(object sender, EventArgs e)
         {
-            if (((TextBox)sender).Modified)
-                _saveButton2.Enabled = true;
+            TextBox textBox = (TextBox)sender;
+            if (textBox.Modified)
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                    _saveButton2.Enabled = false;
+                else
+                    _saveButton2.Enabled = true;
+            }                       
         }
 
-        //按下save按鈕
+        //按下 meal save 按鈕
         private void ClickMealSaveButton(object sender, EventArgs e)
         {
             ((Button)sender).Enabled = false;
             string mealName = _mealListBox.SelectedItem.ToString();
-            _model.ChangeMealName(mealName, _mealNameTextBox.Text);
             _model.ChangeMealPrice(mealName, _mealPriceTextBox.Text);
             _model.ChangeMealCategory(mealName, _mealCategoryComboBox.SelectedItem.ToString());
             _model.ChangeMealDescription(mealName, _mealDescriptionTextBox.Text);
             _model.ChangeMealImagePath(mealName, _mealImageTextBox.Text);
+            _model.ChangeMealName(mealName, _mealNameTextBox.Text);
             UpdateMealListBox();
             _mealListBox.SelectedItem = _mealNameTextBox.Text;
+        }
+
+        //按下 meal save 按鈕
+        private void ClickCategorySaveButton(object sender, EventArgs e)
+        {
+            ((Button)sender).Enabled = false;
+            string categoryOldName = _categoryListBox.SelectedItem.ToString();
+            _model.ChangeCategoryName(categoryOldName, _categoryNameTextBox.Text);
+            UpdateCategoryListBox();
+            _categoryListBox.SelectedItem = _categoryNameTextBox.Text;
+        }
+
+        //按下 Browse 按鈕
+        private void ClickBrowseButton(object sender, EventArgs e)
+        {
+            if (_openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string[] imageAbosolutePath = _openFileDialog.FileName.Split('\\');
+                string imageRelativePath = '\\' + imageAbosolutePath[imageAbosolutePath.Length - 2] + '\\' + imageAbosolutePath.Last();
+                _mealImageTextBox.Text = imageRelativePath;
+                _saveButton1.Enabled = true;
+            }
         }
     }
 }

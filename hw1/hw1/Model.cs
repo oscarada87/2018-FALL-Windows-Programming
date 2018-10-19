@@ -23,28 +23,40 @@ namespace POSCustomerSide
         public void ChangeMealPrice(string mealOldName, string mealPrice)
         {
             _order.FindMealByName(mealOldName).Price = Int32.Parse(mealPrice);
-            NotifyMenuChangedObserver();
+            //NotifyMenuChangedObserver();
         }
 
         //更改menu meal category
         public void ChangeMealCategory(string mealOldName, string categoryName)
         {
             _order.FindMealByName(mealOldName).Category = _order.FindMealCategory(categoryName);
-            NotifyMenuChangedObserver();
+            //NotifyMenuChangedObserver();
         }
 
         //更改menu meal description
         public void ChangeMealDescription(string mealOldName, string mealDescription)
         {
             _order.FindMealByName(mealOldName).Description = mealDescription;
-            NotifyMenuChangedObserver();
+            //NotifyMenuChangedObserver();
         }
 
         //更改menu meal image path
         public void ChangeMealImagePath(string mealOldName, string mealImagePath)
         {
             _order.FindMealByName(mealOldName).ImageRelativePath = mealImagePath;
-            NotifyMenuChangedObserver();
+            //NotifyMenuChangedObserver();
+        }
+
+        //更改 category 名字
+        public void ChangeCategoryName(string categoryOldName, string categoryNewName)
+        {
+            _order.ChangeCategoryName(categoryOldName, categoryNewName);
+        }
+
+        //新增新的 category
+        public void AddNewCategory(string categoryName)
+        {
+            _order.AddNewCategory(categoryName);
         }
 
         //呼叫order中的GetMealList
@@ -149,8 +161,11 @@ namespace POSCustomerSide
         //通知menu改了
         public void NotifyMenuChangedObserver()
         {
-            if (MenuChanged == null)
+            if (MenuChanged != null)
+            {
                 MenuChanged();
+                Console.WriteLine("Model Notify");
+            }             
         }
     }
 }

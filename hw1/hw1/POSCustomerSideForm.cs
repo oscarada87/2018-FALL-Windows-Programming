@@ -30,10 +30,9 @@ namespace POSCustomerSide
             UpdateTabPage();
             UpdateMealButton();
             UpdateTotalPage();
-            _model.MenuChanged += ClearButton;
-            _model.MenuChanged += UpdateButtonList;
-            _model.MenuChanged += UpdateMealButton;
-            _model.MenuChanged += UpdateTabPage;
+            _model.MenuChangedCustomer += ClearButton;
+            _model.MenuChangedCustomer += UpdateButtonList;
+            _model.MenuChangedCustomer += UpdateMealButton;
         }
 
         //初始化按鈕類別
@@ -216,7 +215,7 @@ namespace POSCustomerSide
         //更改DataGridView內的值
         private void OnDataGridViewValueChange(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView quantity = (DataGridView) sender;
+            DataGridView quantity = (DataGridView)sender;
             int number = Int32.Parse(_mealGridView.Rows[e.RowIndex].Cells[4].Value.ToString());
             int subtotal = Int32.Parse(_mealGridView.Rows[e.RowIndex].Cells[3].Value.ToString()) * number;
             _mealGridView.Rows[e.RowIndex].Cells[5].Value = subtotal.ToString() + " NTD";
