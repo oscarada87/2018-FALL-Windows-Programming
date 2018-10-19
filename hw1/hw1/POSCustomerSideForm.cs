@@ -213,12 +213,14 @@ namespace POSCustomerSide
             }
         }
 
-        //更改DataGeidView內的值
-        private void OnDataGridViewValueChange(object sender, EventArgs e)
+        //更改DataGridView內的值
+        private void OnDataGridViewValueChange(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView quantity = (DataGridView) sender;
-            Console.WriteLine(e);
-            //UpdateTotalPrice(); 
+            int number = Int32.Parse(_mealGridView.Rows[e.RowIndex].Cells[4].Value.ToString());
+            int subtotal = Int32.Parse(_mealGridView.Rows[e.RowIndex].Cells[3].Value.ToString()) * number;
+            _mealGridView.Rows[e.RowIndex].Cells[5].Value = subtotal.ToString() + " NTD";
+            UpdateTotalPrice();
         }
 
         //更新總價
