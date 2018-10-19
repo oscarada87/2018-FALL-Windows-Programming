@@ -120,6 +120,7 @@ namespace POSCustomerSide
             _model.ChangeMealDescription(mealName, _mealDescriptionTextBox.Text);
             _model.ChangeMealImagePath(mealName, _mealImageTextBox.Text);
             UpdateMealListBox();
+            _mealListBox.SelectedItem = _mealNameTextBox.Text;
         }
     }
 }
