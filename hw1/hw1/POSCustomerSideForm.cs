@@ -27,12 +27,13 @@ namespace POSCustomerSide
             _mealGridView.CellValueChanged += OnDataGridViewValueChange;
             _tabControlButton.SelectedIndexChanged += ClickTabPage;
             UpdateButtonList();
-            UpdateTabPage();
+            InitTabPage();
             UpdateMealButton();
             UpdateTotalPage();
             _model.MenuChangedCustomer += ClearButton;
             _model.MenuChangedCustomer += UpdateButtonList;
             _model.MenuChangedCustomer += UpdateMealButton;
+            _model.CategoryChangedCustomer += UpdateTabPage;
         }
 
         //初始化按鈕類別
@@ -44,8 +45,9 @@ namespace POSCustomerSide
         }
 
         //把category加到tabpage
-        private void UpdateTabPage()
+        private void InitTabPage()
         {
+            _tabControlButton.TabPages.Clear();
             List<string> categoriesName = _model.GetCategories();
             categoriesName.ForEach(x => 
             {
@@ -53,6 +55,17 @@ namespace POSCustomerSide
                 tabPage.Name = x;
                 tabPage.Text = x;
                 _tabControlButton.TabPages.Add(tabPage);
+            });
+        }
+
+        //更新tabpage
+        private void UpdateTabPage()
+        {
+            List<string> categoriesName = _model.GetCategories();
+            categoriesName.ForEach(x =>
+            {
+                _tabControlButton.TabPages[categoriesName.IndexOf(x)].Text = x;
+                _tabControlButton.TabPages[categoriesName.IndexOf(x)].Name = x;
             });
         }
 

@@ -11,12 +11,15 @@ namespace POSCustomerSide
         private Model _model;
         public event MenuChangedRestaurantEventHandler MenuChangedRestaurant;
         public delegate void MenuChangedRestaurantEventHandler();
+        public event CategoryChangedRestaurantEventHandler CategoryChangedRestaurant;
+        public delegate void CategoryChangedRestaurantEventHandler();
 
         //Constructor
         public RestaurantSidePresentationModel(Model model)
         {
             this._model = model;
             _model.MenuChanged += NotifyMenuChangedObserver;
+            _model.CategoryChanged += NotifyCategoryChangedObserver;
         }
         
         //呼叫 model 中的 GetMenu
@@ -73,6 +76,12 @@ namespace POSCustomerSide
             _model.ChangeMealImagePath(mealOldName, mealImagePath);
         }
 
+        //呼叫 model 中的 DeleteMeal
+        public void DeleteMeal(string mealName)
+        {
+            _model.DeleteMeal(mealName);
+        }
+
         //呼叫 model 中的 ChangeCategoryName
         public void ChangeCategoryName(string categoryOldName, string categoryNewName)
         {
@@ -83,6 +92,12 @@ namespace POSCustomerSide
         public void AddNewCategory(string categoryName)
         {
             _model.AddNewCategory(categoryName);
+        }
+
+        //呼叫 model 中的 DeleteCategory
+        public void DeleteCategory(string categorName)
+        {
+            _model.DeleteCategory(categorName);
         }
 
         //取得在此類別中的所有餐點
@@ -103,7 +118,17 @@ namespace POSCustomerSide
             if (MenuChangedRestaurant != null)
             {
                 MenuChangedRestaurant();
-                Console.WriteLine("RP Model Notify");
+                Console.WriteLine("RP Model Meal Changed");
+            }
+        }
+
+        //通知menu改變
+        public void NotifyCategoryChangedObserver()
+        {
+            if (CategoryChangedRestaurant != null)
+            {
+                CategoryChangedRestaurant();
+                Console.WriteLine("RP Model Category Changed");
             }
         }
     }

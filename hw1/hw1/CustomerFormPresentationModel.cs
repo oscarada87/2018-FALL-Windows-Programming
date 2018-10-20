@@ -17,6 +17,8 @@ namespace POSCustomerSide
         private List<CategoryState> _categoriesState = new List<CategoryState>();
         public event MenuChangedPresentationEventHandler MenuChangedCustomer;
         public delegate void MenuChangedPresentationEventHandler();
+        public event CategoryChangedPresentationEventHandler CategoryChangedCustomer;
+        public delegate void CategoryChangedPresentationEventHandler();
 
         //Constructor
         public CustomerFormPresentationModel(Model model)
@@ -24,6 +26,8 @@ namespace POSCustomerSide
             this._model = model;
             InitCategoriesState();
             _model.MenuChanged += NotifyMenuChangedObserver;
+            _model.CategoryChanged += NotifyCategoryChangedObserver;
+
         }
 
         //儲存category狀態的class
@@ -300,8 +304,18 @@ namespace POSCustomerSide
             if (MenuChangedCustomer != null)
             {
                 MenuChangedCustomer();
-                Console.WriteLine("CP Model Notify");
+                Console.WriteLine("CP Model Menu Changed");
             }           
+        }
+
+        //通知 Category 改變
+        public void NotifyCategoryChangedObserver()
+        {
+            if (CategoryChangedCustomer != null)
+            {
+                CategoryChangedCustomer();
+                Console.WriteLine("CP Model Category Changed");
+            }
         }
     }
 }

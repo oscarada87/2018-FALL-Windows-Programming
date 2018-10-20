@@ -11,6 +11,8 @@ namespace POSCustomerSide
         private Order _order = new Order();
         public event MenuChangedEventHandler MenuChanged;
         public delegate void MenuChangedEventHandler();
+        public event CategoryChangedEventHandler CategoryChanged;
+        public delegate void CategoryChangedEventHandler();
 
         //更改menu meal name
         public void ChangeMealName(string mealOldName, string mealNewName)
@@ -30,6 +32,7 @@ namespace POSCustomerSide
         public void ChangeMealCategory(string mealOldName, string categoryName)
         {
             _order.FindMealByName(mealOldName).Category = _order.FindMealCategory(categoryName);
+            NotifyCategoryChangedObserver();
             //NotifyMenuChangedObserver();
         }
 
@@ -47,16 +50,32 @@ namespace POSCustomerSide
             //NotifyMenuChangedObserver();
         }
 
+        //刪除指定的餐點
+        public void DeleteMeal(string mealName)
+        {
+            _order.DeleteMeal(mealName);
+            NotifyMenuChangedObserver();
+        }
+
         //更改 category 名字
         public void ChangeCategoryName(string categoryOldName, string categoryNewName)
         {
             _order.ChangeCategoryName(categoryOldName, categoryNewName);
+            NotifyCategoryChangedObserver();
         }
 
         //新增新的 category
         public void AddNewCategory(string categoryName)
         {
             _order.AddNewCategory(categoryName);
+            NotifyCategoryChangedObserver();
+        }
+
+        //刪除指定的 category
+        public void DeleteCategory(string categoryName)
+        {
+            _order.DeleteCategory(categoryName);
+            NotifyCategoryChangedObserver();
         }
 
         //呼叫order中的GetMealList
@@ -164,8 +183,18 @@ namespace POSCustomerSide
             if (MenuChanged != null)
             {
                 MenuChanged();
-                Console.WriteLine("Model Notify");
+                Console.WriteLine("Menu Changed");
             }             
+        }
+
+        //通知Category改了
+        public void NotifyCategoryChangedObserver()
+        {
+            if (CategoryChanged != null)
+            {
+                CategoryChanged();
+                Console.WriteLine("Category Changed");
+            }
         }
     }
 }

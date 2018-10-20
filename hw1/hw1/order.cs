@@ -199,5 +199,33 @@ namespace POSCustomerSide
             if (FindMealCategory(categoryName) == null)
                 _categories.Add(new Category(categoryName));
         }
+
+        //刪除指定的 category
+        public void DeleteCategory(string categoryName)
+        {
+            foreach (Category category in _categories)
+            {
+                if (category.Name == categoryName)
+                {
+                    _categories.Remove(category);
+                    return;
+                }
+                Console.WriteLine("ERROR --- 沒有找到相對應的category");
+            }
+        }
+
+        //刪除指定的 Meal
+        public void DeleteMeal(string mealName)
+        {
+            foreach(Meal meal in _menuList)
+            {
+                if(meal.Name == mealName)
+                {
+                    _menuList.Remove(meal);
+                    return;
+                }
+            }
+            Console.WriteLine("ERROR --- 沒有找到相對應的餐點");
+        }
     }
 }

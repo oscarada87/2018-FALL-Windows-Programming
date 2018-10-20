@@ -31,6 +31,8 @@ namespace POSCustomerSide
             _categoryNameTextBox.TextChanged += OnCategoryTextBoxChanged;
             _saveButton1.Click += ClickMealSaveButton;
             _saveButton2.Click += ClickCategorySaveButton;
+            _deleteMealButton.Click += ClickDeleteMealButton;
+            _deleteCategoryButton.Click += ClickDeleteCategoryButton;
             UpdateMealListBox();
             UpdateCategoryListBox();
         }
@@ -89,7 +91,10 @@ namespace POSCustomerSide
             });
             _categoryNameTextBox.Text = categoryListBox.SelectedItem.ToString();
             _saveButton1.Enabled = false;
-            _deleteCategoryButton.Enabled = true;
+            if (_categoryUsingListBox.Items.Count == 0)
+                _deleteCategoryButton.Enabled = true;
+            else
+                _deleteCategoryButton.Enabled = false;
         }
 
         //當修改meal textbox內容
@@ -108,6 +113,8 @@ namespace POSCustomerSide
         //當修改meal combobox內容
         private void OnMealComboBoxChanged(object sender, EventArgs e)
         {
+            if (_mealListBox.SelectedItem == null)
+                return;
             Meal meal = _model.FindMealByName(_mealListBox.SelectedItem.ToString());
             if (((ComboBox)sender).SelectedItem.ToString() != meal.Category.Name)
                 _saveButton1.Enabled = true;
@@ -140,7 +147,7 @@ namespace POSCustomerSide
             _mealListBox.SelectedItem = _mealNameTextBox.Text;
         }
 
-        //按下 meal save 按鈕
+        //按下 Category save 按鈕
         private void ClickCategorySaveButton(object sender, EventArgs e)
         {
             ((Button)sender).Enabled = false;
@@ -149,6 +156,7 @@ namespace POSCustomerSide
             UpdateCategoryListBox();
             _categoryListBox.SelectedItem = _categoryNameTextBox.Text;
         }
+
 
         //按下 Browse 按鈕
         private void ClickBrowseButton(object sender, EventArgs e)
@@ -160,6 +168,24 @@ namespace POSCustomerSide
                 _mealImageTextBox.Text = imageRelativePath;
                 _saveButton1.Enabled = true;
             }
+        }
+
+        //按下 delete meal 按鈕
+        private void ClickDeleteMealButton(object sender, EventArgs e)
+        {
+            _model.DeleteMeal(_mealListBox.SelectedItem.ToString());
+            _deleteMealButton.Enabled = false;
+            _mealDescriptionTextBox.Text = "";
+            _mealImageTextBox.Text = "";
+            _mealNameTextBox.Text = "";
+            _mealPriceTextBox.Text = "";
+            _mealCategoryComboBox.Text = "";
+        }
+
+        //按下 delete category 按鈕
+        private void ClickDeleteCategoryButton(object sender, EventArgs e)
+        {
+            _model.DeleteCategory(_categoryListBox.SelectedItem.ToString());
         }
     }
 }
