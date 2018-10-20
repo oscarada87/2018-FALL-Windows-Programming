@@ -64,8 +64,19 @@ namespace POSCustomerSide
             List<string> categoriesName = _model.GetCategories();
             categoriesName.ForEach(x =>
             {
-                _tabControlButton.TabPages[categoriesName.IndexOf(x)].Text = x;
-                _tabControlButton.TabPages[categoriesName.IndexOf(x)].Name = x;
+                if(categoriesName.IndexOf(x) <= _tabControlButton.TabPages.Count - 1)
+                {
+                    _tabControlButton.TabPages[categoriesName.IndexOf(x)].Text = x;
+                    _tabControlButton.TabPages[categoriesName.IndexOf(x)].Name = x;
+                }
+                else
+                {
+                    TabPage tabPage = new TabPage();
+                    tabPage.Text = x;
+                    tabPage.Name = x;
+                    _tabControlButton.TabPages.Add(tabPage);
+                }
+
             });
         }
 

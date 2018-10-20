@@ -31,7 +31,7 @@ namespace POSCustomerSide
         //更改menu meal category
         public void ChangeMealCategory(string mealOldName, string categoryName)
         {
-            _order.FindMealByName(mealOldName).Category = _order.FindMealCategory(categoryName);
+            _order.FindMealByName(mealOldName).Category = _order.FindCategory(categoryName);
             NotifyCategoryChangedObserver();
             //NotifyMenuChangedObserver();
         }
@@ -48,6 +48,13 @@ namespace POSCustomerSide
         {
             _order.FindMealByName(mealOldName).ImageRelativePath = mealImagePath;
             //NotifyMenuChangedObserver();
+        }
+
+        //新增新的餐點到菜單
+        public void AddNewMealToMenu(Meal meal)
+        {
+            _order.AddNewMealToMenu(meal);
+            NotifyMenuChangedObserver();
         }
 
         //刪除指定的餐點
@@ -87,7 +94,7 @@ namespace POSCustomerSide
         //呼叫order中的AddMeal
         public void AddMeal(Meal meal)
         {
-            _order.AddMeal(meal);
+            _order.AddMealToMealList(meal);
         }
 
         //呼叫order中的GetImagePath
@@ -162,10 +169,10 @@ namespace POSCustomerSide
             return _order.GetMenu();
         }
 
-        //呼叫 order 中的 FindMealCategory
-        public Category FindMealCategory(string categoryName)
+        //呼叫 order 中的 FindCategory
+        public Category FindCategory(string categoryName)
         {
-            return _order.FindMealCategory(categoryName);
+            return _order.FindCategory(categoryName);
         }
 
         //確認 mealList 是不是空的

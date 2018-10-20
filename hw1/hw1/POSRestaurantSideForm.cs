@@ -13,6 +13,8 @@ namespace POSCustomerSide
     public partial class RestaurantSideForm : Form
     {
         private RestaurantSidePresentationModel _model;
+        const string ADD = "Add";
+        const string SAVE = "Save";
 
         public RestaurantSideForm(RestaurantSidePresentationModel model)
         {
@@ -33,6 +35,12 @@ namespace POSCustomerSide
             _saveButton2.Click += ClickCategorySaveButton;
             _deleteMealButton.Click += ClickDeleteMealButton;
             _deleteCategoryButton.Click += ClickDeleteCategoryButton;
+            _addMealButton.Click += ClickAddMealModeButton;
+            _addCategoryButton.Click += ClickAddCategoryModeButton;
+            _model.MenuChangedRestaurant += UpdateMealListBox;
+            _model.MenuChangedRestaurant += UpdateCategoryListBox;
+            _model.CategoryChangedRestaurant += UpdateCategoryListBox;
+            _model.CategoryChangedRestaurant += UpdateMealListBox;
             UpdateMealListBox();
             UpdateCategoryListBox();
         }
@@ -102,12 +110,7 @@ namespace POSCustomerSide
         {
             TextBox textBox = (TextBox)sender;
             if (textBox.Modified)
-            {
-                if (textBox.Name != "_mealDescriptionTextBox" && !string.IsNullOrWhiteSpace(textBox.Text))
-                    _saveButton1.Enabled = true;
-                else
-                    _saveButton1.Enabled = false;
-            }
+                _saveButton1.Enabled = CheckMealInput();          
         }
 
         //當修改meal combobox內容
@@ -117,7 +120,7 @@ namespace POSCustomerSide
                 return;
             Meal meal = _model.FindMealByName(_mealListBox.SelectedItem.ToString());
             if (((ComboBox)sender).SelectedItem.ToString() != meal.Category.Name)
-                _saveButton1.Enabled = true;
+                _saveButton1.Enabled = CheckMealInput();
         }
 
         //當修改category textbox內容
@@ -131,6 +134,21 @@ namespace POSCustomerSide
                 else
                     _saveButton2.Enabled = true;
             }                       
+        }
+
+        //檢查 meal 欄位都有填
+        private bool CheckMealInput()
+        {
+            if (string.IsNullOrWhiteSpace(_mealImageTextBox.Text))
+                return false;
+            else if (string.IsNullOrWhiteSpace(_mealNameTextBox.Text))
+                return false;
+            else if (string.IsNullOrWhiteSpace(_mealPriceTextBox.Text))
+                return false;
+            else if (string.IsNullOrWhiteSpace(_mealCategoryComboBox.Text))
+                return false;
+            else
+                return true;
         }
 
         //按下 meal save 按鈕
@@ -186,6 +204,51 @@ namespace POSCustomerSide
         private void ClickDeleteCategoryButton(object sender, EventArgs e)
         {
             _model.DeleteCategory(_categoryListBox.SelectedItem.ToString());
+        }
+
+        //按下 Add Meal Mode Button
+        private void ClickAddMealModeButton(object sender, EventArgs e)
+        {
+            _saveButton1.Click -= ClickMealSaveButton;
+            _saveButton1.Click += ClickAddMealButton;
+            _saveButton1.Text = ADD;
+            _mealDescriptionTextBox.Text = "";
+            _mealImageTextBox.Text = "";
+            _mealNameTextBox.Text = "";
+            _mealPriceTextBox.Text = "";
+            _mealCategoryComboBox.Text = "";
+            _mealListBox.Enabled = false;
+            _browseButton.Enabled = true;
+        }
+
+        //按下 Add Meal Button
+        private void ClickAddMealButton(object sender, EventArgs e)
+        {
+            _model.AddNewMealToMenu(_mealNameTextBox.Text, _mealPriceTextBox.Text, _mealImageTextBox.Text, _mealDescriptionTextBox.Text, _mealCategoryComboBox.SelectedItem.ToString());
+            _saveButton1.Click -= ClickAddMealButton;
+            _saveButton1.Click += ClickMealSaveButton;
+            _saveButton1.Text = SAVE;
+            _mealListBox.Enabled = true;
+            _mealListBox.SelectedIndex = _mealListBox.Items.Count - 1;
+            _deleteMealButton.Enabled = true;
+        }
+
+        //按下 Add Category Mode Button
+        private void ClickAddCategoryModeButton(object sender, EventArgs e)
+        {
+            _saveButton2.Click -= ClickCategorySaveButton;
+            _saveButton2.Click += ClickAddCategoryButton;
+            _saveButton2.Text = ADD;
+        }
+
+        //按下 Add Category Button
+        private void ClickAddCategoryButton(object sender, EventArgs e)
+        {
+            _saveButton2.Click += ClickCategorySaveButton;
+            _saveButton2.Click -= ClickAddCategoryButton;
+            _saveButton2.Text = SAVE;
+            _saveButton2.Enabled = false;
+            _model.AddNewCategory(_categoryNameTextBox.Text);
         }
     }
 }

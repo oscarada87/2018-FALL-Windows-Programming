@@ -40,10 +40,10 @@ namespace POSCustomerSide
             return _model.FindMealByName(mealName);
         }
 
-        //呼叫 model 中的 FindMealCategory
-        public Category FindMealCategory(string categoryName)
+        //呼叫 model 中的 FindCategory
+        public Category FindCategory(string categoryName)
         {
-            return _model.FindMealCategory(categoryName);
+            return _model.FindCategory(categoryName);
         }
 
         //呼叫 model 中的 ChangeMealName
@@ -74,6 +74,13 @@ namespace POSCustomerSide
         public void ChangeMealImagePath(string mealOldName, string mealImagePath)
         {
             _model.ChangeMealImagePath(mealOldName, mealImagePath);
+        }
+
+        //新增新餐點到菜單
+        public void AddNewMealToMenu(string mealName, string mealPrice, string mealImagePath, string mealDescription, string categoryName)
+        {
+            Meal meal = new Meal(mealName, Int32.Parse(mealPrice), mealImagePath, mealDescription, _model.FindCategory(categoryName));
+            _model.AddNewMealToMenu(meal);
         }
 
         //呼叫 model 中的 DeleteMeal

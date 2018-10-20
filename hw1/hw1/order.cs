@@ -55,7 +55,7 @@ namespace POSCustomerSide
             while ((line = file.ReadLine()) != null)
             {
                 string[] data = line.Split(',');
-                Meal meal = new Meal(data[1], int.Parse(data[2]), data[3], data[4], FindMealCategory(data[0]));
+                Meal meal = new Meal(data[1], int.Parse(data[2]), data[3], data[4], FindCategory(data[0]));
                 _menuList.Add(meal);
             }
         }
@@ -69,8 +69,14 @@ namespace POSCustomerSide
             }
         }
 
+        //新增餐點到菜單
+        public void AddNewMealToMenu(Meal meal)
+        {
+            _menuList.Add(meal);
+        }
+
         //透過名字找到類別
-        public Category FindMealCategory(string categoryName)
+        public Category FindCategory(string categoryName)
         {
             foreach (Category category in _categories)
             {
@@ -125,7 +131,7 @@ namespace POSCustomerSide
         }
 
         //新增一項餐點
-        public void AddMeal(Meal meal)
+        public void AddMealToMealList(Meal meal)
         {
             _mealList.Add(meal);
         }
@@ -196,7 +202,7 @@ namespace POSCustomerSide
         //新增新的 category
         public void AddNewCategory(string categoryName)
         {
-            if (FindMealCategory(categoryName) == null)
+            if (FindCategory(categoryName) == null)
                 _categories.Add(new Category(categoryName));
         }
 

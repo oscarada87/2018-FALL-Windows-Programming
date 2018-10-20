@@ -194,7 +194,7 @@
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>100</Line>
+              <Line>104</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -210,7 +210,7 @@
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>101</Line>
+              <Line>105</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -226,7 +226,7 @@
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>100</Line>
+              <Line>104</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -242,7 +242,7 @@
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>101</Line>
+              <Line>105</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -258,7 +258,7 @@
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>189</Line>
+              <Line>193</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -274,7 +274,7 @@
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>189</Line>
+              <Line>193</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -284,13 +284,13 @@
             </Smell>
             <Smell>
               <Id>7</Id>
-              <SmellType>Literal constants(字面常數)-"CP Model Notify"</SmellType>
-              <HashCode>LiteralConstants.NotifyMenuChangedObserver."CP Model Notify"</HashCode>
+              <SmellType>Literal constants(字面常數)-"CP Model Menu Changed"</SmellType>
+              <HashCode>LiteralConstants.NotifyMenuChangedObserver."CP Model Menu Changed"</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>303</Line>
+              <Line>307</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -300,6 +300,22 @@
             </Smell>
             <Smell>
               <Id>8</Id>
+              <SmellType>Literal constants(字面常數)-"CP Model Category Changed"</SmellType>
+              <HashCode>LiteralConstants.NotifyCategoryChangedObserver."CP Model Category Changed"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>CustomerFormPresentationModel.cs</File>
+              <Line>317</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>9</Id>
               <SmellType>ICS(Delegate與Event-1)</SmellType>
               <HashCode>DelegateAndEvent1.CustomerFormPresentationModel.MenuChangedCustomer._categoriesState</HashCode>
               <Severity>Red</Severity>
@@ -315,7 +331,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>9</Id>
+              <Id>10</Id>
               <SmellType>ICS(Delegate與Event-1)</SmellType>
               <HashCode>DelegateAndEvent1.CustomerFormPresentationModel.MenuChangedPresentationEventHandler._categoriesState</HashCode>
               <Severity>Red</Severity>
@@ -331,7 +347,39 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>10</Id>
+              <Id>11</Id>
+              <SmellType>ICS(Delegate與Event-1)</SmellType>
+              <HashCode>DelegateAndEvent1.CustomerFormPresentationModel.CategoryChangedCustomer._categoriesState</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>CustomerFormPresentationModel.cs</File>
+              <Line>20</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-1) delegate 與 event 都宣告於 class 的最上方</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>12</Id>
+              <SmellType>ICS(Delegate與Event-1)</SmellType>
+              <HashCode>DelegateAndEvent1.CustomerFormPresentationModel.CategoryChangedPresentationEventHandler._categoriesState</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>CustomerFormPresentationModel.cs</File>
+              <Line>21</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-1) delegate 與 event 都宣告於 class 的最上方</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>13</Id>
               <SmellType>Unsuitable naming(名不符實)-BUTTONLOCATIONX(buttonlocationx)</SmellType>
               <HashCode>UnsuitableNaming.CustomerFormPresentationModel.BUTTONLOCATIONX.BUTTONLOCATIONX</HashCode>
               <Severity>Red</Severity>
@@ -347,7 +395,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>11</Id>
+              <Id>14</Id>
               <SmellType>Unsuitable naming(名不符實)-BUTTONLOCATIONY(buttonlocationy)</SmellType>
               <HashCode>UnsuitableNaming.CustomerFormPresentationModel.BUTTONLOCATIONY.BUTTONLOCATIONY</HashCode>
               <Severity>Red</Severity>
@@ -363,7 +411,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>12</Id>
+              <Id>15</Id>
               <SmellType>Unsuitable naming(名不符實)-NUMBEROFONEPAGEBUTTON(numberofonepagebutton)</SmellType>
               <HashCode>UnsuitableNaming.CustomerFormPresentationModel.NUMBEROFONEPAGEBUTTON.NUMBEROFONEPAGEBUTTON</HashCode>
               <Severity>Red</Severity>
@@ -379,7 +427,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>13</Id>
+              <Id>16</Id>
               <SmellType>ICS(Delegate與Event-3)</SmellType>
               <HashCode>DelegateAndEvent3.CustomerFormPresentationModel.MenuChangedCustomer</HashCode>
               <Severity>Red</Severity>
@@ -395,14 +443,30 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>14</Id>
+              <Id>17</Id>
+              <SmellType>ICS(Delegate與Event-3)</SmellType>
+              <HashCode>DelegateAndEvent3.CustomerFormPresentationModel.CategoryChangedCustomer</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>CustomerFormPresentationModel.cs</File>
+              <Line>20</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-3) event 的變數命名如一般 class 中的成員變數</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>18</Id>
               <SmellType>Unsuitable naming(名不符實)-InitCategoriesState(init)</SmellType>
               <HashCode>UnsuitableNaming.CustomerFormPresentationModel.InitCategoriesState.InitCategoriesState</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>83</Line>
+              <Line>87</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -411,14 +475,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>15</Id>
+              <Id>19</Id>
               <SmellType>ICS(函式-2)</SmellType>
               <HashCode>Method2.CustomerFormPresentationModel.InitCategoriesState</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>83</Line>
+              <Line>87</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -427,14 +491,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>16</Id>
+              <Id>20</Id>
               <SmellType>ICS(變數-2)</SmellType>
               <HashCode>Variable2.GetMealButtonLocation.LocationX</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>96</Line>
+              <Line>100</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -443,14 +507,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>17</Id>
+              <Id>21</Id>
               <SmellType>ICS(變數-2)</SmellType>
               <HashCode>Variable2.GetMealButtonLocation.LocationY</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>97</Line>
+              <Line>101</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -459,14 +523,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>18</Id>
+              <Id>22</Id>
               <SmellType>ICS(函式-2)</SmellType>
               <HashCode>Method2.CustomerFormPresentationModel.MinusOnePage</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>CustomerFormPresentationModel.cs</File>
-              <Line>208</Line>
+              <Line>212</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -475,14 +539,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>19</Id>
-              <SmellType>Literal constants(字面常數)-"Model Notify"</SmellType>
-              <HashCode>LiteralConstants.NotifyMenuChangedObserver."Model Notify"</HashCode>
+              <Id>23</Id>
+              <SmellType>Literal constants(字面常數)-"Menu Changed"</SmellType>
+              <HashCode>LiteralConstants.NotifyMenuChangedObserver."Menu Changed"</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>Model.cs</File>
-              <Line>167</Line>
+              <Line>193</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -491,7 +555,23 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>20</Id>
+              <Id>24</Id>
+              <SmellType>Literal constants(字面常數)-"Category Changed"</SmellType>
+              <HashCode>LiteralConstants.NotifyCategoryChangedObserver."Category Changed"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>Model.cs</File>
+              <Line>203</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>25</Id>
               <SmellType>ICS(Delegate與Event-1)</SmellType>
               <HashCode>DelegateAndEvent1.Model.MenuChanged._order</HashCode>
               <Severity>Red</Severity>
@@ -507,7 +587,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>21</Id>
+              <Id>26</Id>
               <SmellType>ICS(Delegate與Event-1)</SmellType>
               <HashCode>DelegateAndEvent1.Model.MenuChangedEventHandler._order</HashCode>
               <Severity>Red</Severity>
@@ -523,7 +603,39 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>22</Id>
+              <Id>27</Id>
+              <SmellType>ICS(Delegate與Event-1)</SmellType>
+              <HashCode>DelegateAndEvent1.Model.CategoryChanged._order</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>Model.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-1) delegate 與 event 都宣告於 class 的最上方</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>28</Id>
+              <SmellType>ICS(Delegate與Event-1)</SmellType>
+              <HashCode>DelegateAndEvent1.Model.CategoryChangedEventHandler._order</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>Model.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-1) delegate 與 event 都宣告於 class 的最上方</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>29</Id>
               <SmellType>ICS(Delegate與Event-3)</SmellType>
               <HashCode>DelegateAndEvent3.Model.MenuChanged</HashCode>
               <Severity>Red</Severity>
@@ -539,14 +651,30 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>23</Id>
+              <Id>30</Id>
+              <SmellType>ICS(Delegate與Event-3)</SmellType>
+              <HashCode>DelegateAndEvent3.Model.CategoryChanged</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>Model.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-3) event 的變數命名如一般 class 中的成員變數</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>31</Id>
               <SmellType>ICS(空白與空行-3)</SmellType>
               <HashCode>SpacingAndNewLine3</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>Order.cs</File>
-              <Line>189</Line>
+              <Line>195</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -555,7 +683,39 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>24</Id>
+              <Id>32</Id>
+              <SmellType>ICS(空白與空行-3)</SmellType>
+              <HashCode>SpacingAndNewLine3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>Order.cs</File>
+              <Line>226</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-3) for, foreach, while, switch, if 等關鍵字與左括號之間加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>33</Id>
+              <SmellType>ICS(空白與空行-3)</SmellType>
+              <HashCode>SpacingAndNewLine3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>Order.cs</File>
+              <Line>228</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-3) for, foreach, while, switch, if 等關鍵字與左括號之間加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>34</Id>
               <SmellType>Literal constants(字面常數)-','</SmellType>
               <HashCode>LiteralConstants.ReadCategories.','</HashCode>
               <Severity>Red</Severity>
@@ -571,7 +731,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>25</Id>
+              <Id>35</Id>
               <SmellType>Literal constants(字面常數)-','</SmellType>
               <HashCode>LiteralConstants.ReadMenuList.','</HashCode>
               <Severity>Red</Severity>
@@ -587,7 +747,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>26</Id>
+              <Id>36</Id>
               <SmellType>Literal constants(字面常數)-2</SmellType>
               <HashCode>LiteralConstants.ReadMenuList.2</HashCode>
               <Severity>Warning</Severity>
@@ -603,7 +763,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>27</Id>
+              <Id>37</Id>
               <SmellType>Literal constants(字面常數)-3</SmellType>
               <HashCode>LiteralConstants.ReadMenuList.3</HashCode>
               <Severity>Red</Severity>
@@ -619,7 +779,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>28</Id>
+              <Id>38</Id>
               <SmellType>Literal constants(字面常數)-4</SmellType>
               <HashCode>LiteralConstants.ReadMenuList.4</HashCode>
               <Severity>Red</Severity>
@@ -635,7 +795,55 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>29</Id>
+              <Id>39</Id>
+              <SmellType>Literal constants(字面常數)-"Not Found!"</SmellType>
+              <HashCode>LiteralConstants.FindMealByName."Not Found!"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>Order.cs</File>
+              <Line>97</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>40</Id>
+              <SmellType>Literal constants(字面常數)-"ERROR --- 沒有找到相對應的category"</SmellType>
+              <HashCode>LiteralConstants.DeleteCategory."ERROR --- 沒有找到相對應的category"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>Order.cs</File>
+              <Line>219</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>41</Id>
+              <SmellType>Literal constants(字面常數)-"ERROR --- 沒有找到相對應的餐點"</SmellType>
+              <HashCode>LiteralConstants.DeleteMeal."ERROR --- 沒有找到相對應的餐點"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>Order.cs</File>
+              <Line>234</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>42</Id>
               <SmellType>ICS(變數-2)</SmellType>
               <HashCode>Variable2.ReadCategories.Categories</HashCode>
               <Severity>Red</Severity>
@@ -651,7 +859,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>30</Id>
+              <Id>43</Id>
               <SmellType>Unsuitable naming(名不符實)-InitCategories(init)</SmellType>
               <HashCode>UnsuitableNaming.Order.InitCategories.InitCategories</HashCode>
               <Severity>Red</Severity>
@@ -667,7 +875,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>31</Id>
+              <Id>44</Id>
               <SmellType>ICS(變數-2)</SmellType>
               <HashCode>Variable2.InitCategories.Categories</HashCode>
               <Severity>Red</Severity>
@@ -683,7 +891,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>32</Id>
+              <Id>45</Id>
               <SmellType>ICS(函式-2)</SmellType>
               <HashCode>Method2.Order.InitCategories</HashCode>
               <Severity>Red</Severity>
@@ -699,141 +907,29 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>33</Id>
+              <Id>46</Id>
+              <SmellType>ICS(空白與空行-3)</SmellType>
+              <HashCode>SpacingAndNewLine3</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>67</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-3) for, foreach, while, switch, if 等關鍵字與左括號之間加一個空白</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>47</Id>
               <SmellType>Literal constants(字面常數)-3</SmellType>
               <HashCode>LiteralConstants.AddButtonClick.3</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>POSCustomerSideForm.cs</File>
-              <Line>135</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>34</Id>
-              <SmellType>Literal constants(字面常數)-3</SmellType>
-              <HashCode>LiteralConstants.OnDataGridViewValueChange.3</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>POS</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>221</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>35</Id>
-              <SmellType>Literal constants(字面常數)-4</SmellType>
-              <HashCode>LiteralConstants.AddButtonClick.4</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>POS</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>136</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>36</Id>
-              <SmellType>Literal constants(字面常數)-4</SmellType>
-              <HashCode>LiteralConstants.OnDataGridViewValueChange.4</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>POS</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>220</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>37</Id>
-              <SmellType>Literal constants(字面常數)-5</SmellType>
-              <HashCode>LiteralConstants.AddButtonClick.5</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>POS</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>137</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>38</Id>
-              <SmellType>Literal constants(字面常數)-5</SmellType>
-              <HashCode>LiteralConstants.OnDataGridViewValueChange.5</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>POS</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>222</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>39</Id>
-              <SmellType>Literal constants(字面常數)-5</SmellType>
-              <HashCode>LiteralConstants.UpdateTotalPrice.5</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>POS</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>232</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>40</Id>
-              <SmellType>ICS(函式-2)</SmellType>
-              <HashCode>Method2.CustomerSideForm.OnDataGridViewValueChange</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>POS</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>217</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>41</Id>
-              <SmellType>Literal constants(字面常數)-'\\'</SmellType>
-              <HashCode>LiteralConstants.ClickBrowseButton.'\\'</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>POS</Project>
-              <File>POSRestaurantSideForm.cs</File>
               <Line>158</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
@@ -843,13 +939,29 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>42</Id>
-              <SmellType>Literal constants(字面常數)-'\\'</SmellType>
-              <HashCode>LiteralConstants.ClickBrowseButton.'\\'</HashCode>
+              <Id>48</Id>
+              <SmellType>Literal constants(字面常數)-3</SmellType>
+              <HashCode>LiteralConstants.OnDataGridViewValueChange.3</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
-              <File>POSRestaurantSideForm.cs</File>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>244</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>49</Id>
+              <SmellType>Literal constants(字面常數)-4</SmellType>
+              <HashCode>LiteralConstants.AddButtonClick.4</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSCustomerSideForm.cs</File>
               <Line>159</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
@@ -859,14 +971,14 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>43</Id>
-              <SmellType>Literal constants(字面常數)-'\\'</SmellType>
-              <HashCode>LiteralConstants.ClickBrowseButton.'\\'</HashCode>
+              <Id>50</Id>
+              <SmellType>Literal constants(字面常數)-4</SmellType>
+              <HashCode>LiteralConstants.OnDataGridViewValueChange.4</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
-              <File>POSRestaurantSideForm.cs</File>
-              <Line>159</Line>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>243</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -875,14 +987,78 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>44</Id>
+              <Id>51</Id>
+              <SmellType>Literal constants(字面常數)-5</SmellType>
+              <HashCode>LiteralConstants.AddButtonClick.5</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>160</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>52</Id>
+              <SmellType>Literal constants(字面常數)-5</SmellType>
+              <HashCode>LiteralConstants.OnDataGridViewValueChange.5</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>245</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>53</Id>
+              <SmellType>Literal constants(字面常數)-5</SmellType>
+              <HashCode>LiteralConstants.UpdateTotalPrice.5</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>255</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>54</Id>
+              <SmellType>Unsuitable naming(名不符實)-InitTabPage(init)</SmellType>
+              <HashCode>UnsuitableNaming.CustomerSideForm.InitTabPage.InitTabPage</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>48</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>55</Id>
               <SmellType>ICS(函式-2)</SmellType>
-              <HashCode>Method2.RestaurantSideForm.OnMealTextBoxChanged</HashCode>
-              <Severity>Warning</Severity>
+              <HashCode>Method2.CustomerSideForm.InitTabPage</HashCode>
+              <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
-              <File>POSRestaurantSideForm.cs</File>
-              <Line>96</Line>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>48</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -891,9 +1067,105 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>45</Id>
+              <Id>56</Id>
               <SmellType>ICS(函式-2)</SmellType>
-              <HashCode>Method2.RestaurantSideForm.OnMealComboBoxChanged</HashCode>
+              <HashCode>Method2.CustomerSideForm.OnDataGridViewValueChange</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSCustomerSideForm.cs</File>
+              <Line>240</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>57</Id>
+              <SmellType>ICS(空白與空行-17)</SmellType>
+              <HashCode>SpacingAndNewLine17.POSRestaurantSideForm.cs.2.        }.        //按下 Browse 按鈕</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSRestaurantSideForm.cs</File>
+              <Line>177</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-17) 一次不加多個空行(若發生時，則指定在多個空行的第一行即可)</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>58</Id>
+              <SmellType>Literal constants(字面常數)-'\\'</SmellType>
+              <HashCode>LiteralConstants.ClickBrowseButton.'\\'</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSRestaurantSideForm.cs</File>
+              <Line>184</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>59</Id>
+              <SmellType>Literal constants(字面常數)-'\\'</SmellType>
+              <HashCode>LiteralConstants.ClickBrowseButton.'\\'</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSRestaurantSideForm.cs</File>
+              <Line>185</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>60</Id>
+              <SmellType>Literal constants(字面常數)-'\\'</SmellType>
+              <HashCode>LiteralConstants.ClickBrowseButton.'\\'</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSRestaurantSideForm.cs</File>
+              <Line>185</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>61</Id>
+              <SmellType>ICS(空白與空行-16)</SmellType>
+              <HashCode>SpacingAndNewLine16.RestaurantSideForm.ClickBrowseButton.2</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSRestaurantSideForm.cs</File>
+              <Line>180</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(空白與空行-16) 每個函式之間加一個空行</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>62</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.RestaurantSideForm.OnMealTextBoxChanged</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
@@ -907,9 +1179,9 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>46</Id>
+              <Id>63</Id>
               <SmellType>ICS(函式-2)</SmellType>
-              <HashCode>Method2.RestaurantSideForm.OnCategoryTextBoxChanged</HashCode>
+              <HashCode>Method2.RestaurantSideForm.OnMealComboBoxChanged</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
@@ -923,14 +1195,30 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>47</Id>
-              <SmellType>Literal constants(字面常數)-"RP Model Notify"</SmellType>
-              <HashCode>LiteralConstants.NotifyMenuChangedObserver."RP Model Notify"</HashCode>
+              <Id>64</Id>
+              <SmellType>ICS(函式-2)</SmellType>
+              <HashCode>Method2.RestaurantSideForm.OnCategoryTextBoxChanged</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>POSRestaurantSideForm.cs</File>
+              <Line>127</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(函式-2) 每個函式表示一種操作，因此一律使用動詞做為第一個單字</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>65</Id>
+              <SmellType>Literal constants(字面常數)-"RP Model Meal Changed"</SmellType>
+              <HashCode>LiteralConstants.NotifyMenuChangedObserver."RP Model Meal Changed"</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>RestaurantSidePresentationModel.cs</File>
-              <Line>106</Line>
+              <Line>128</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -939,7 +1227,23 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>48</Id>
+              <Id>66</Id>
+              <SmellType>Literal constants(字面常數)-"RP Model Category Changed"</SmellType>
+              <HashCode>LiteralConstants.NotifyCategoryChangedObserver."RP Model Category Changed"</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>RestaurantSidePresentationModel.cs</File>
+              <Line>138</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>67</Id>
               <SmellType>ICS(Delegate與Event-1)</SmellType>
               <HashCode>DelegateAndEvent1.RestaurantSidePresentationModel.MenuChangedRestaurant._model</HashCode>
               <Severity>Red</Severity>
@@ -955,7 +1259,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>49</Id>
+              <Id>68</Id>
               <SmellType>ICS(Delegate與Event-1)</SmellType>
               <HashCode>DelegateAndEvent1.RestaurantSidePresentationModel.MenuChangedRestaurantEventHandler._model</HashCode>
               <Severity>Red</Severity>
@@ -971,7 +1275,39 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>50</Id>
+              <Id>69</Id>
+              <SmellType>ICS(Delegate與Event-1)</SmellType>
+              <HashCode>DelegateAndEvent1.RestaurantSidePresentationModel.CategoryChangedRestaurant._model</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>RestaurantSidePresentationModel.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-1) delegate 與 event 都宣告於 class 的最上方</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>70</Id>
+              <SmellType>ICS(Delegate與Event-1)</SmellType>
+              <HashCode>DelegateAndEvent1.RestaurantSidePresentationModel.CategoryChangedRestaurantEventHandler._model</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>RestaurantSidePresentationModel.cs</File>
+              <Line>15</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-1) delegate 與 event 都宣告於 class 的最上方</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>71</Id>
               <SmellType>ICS(Delegate與Event-3)</SmellType>
               <HashCode>DelegateAndEvent3.RestaurantSidePresentationModel.MenuChangedRestaurant</HashCode>
               <Severity>Red</Severity>
@@ -987,145 +1323,193 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>51</Id>
+              <Id>72</Id>
+              <SmellType>ICS(Delegate與Event-3)</SmellType>
+              <HashCode>DelegateAndEvent3.RestaurantSidePresentationModel.CategoryChangedRestaurant</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>RestaurantSidePresentationModel.cs</File>
+              <Line>14</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>ICS(Delegate 與 Event-3) event 的變數命名如一般 class 中的成員變數</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>73</Id>
+              <SmellType>Long parameter list(過長參數列)</SmellType>
+              <HashCode>LongParameterList.RestaurantSidePresentationModel.AddNewMealToMenu.string mealName;string mealPrice;string mealImagePath;string mealDescription;string categoryName;</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>5</Weight>
+              <Project>POS</Project>
+              <File>RestaurantSidePresentationModel.cs</File>
+              <Line>80</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>74</Id>
+              <SmellType>Unsuitable naming(名不符實)-categorName(categor)</SmellType>
+              <HashCode>UnsuitableNaming.RestaurantSidePresentationModel.DeleteCategory.categorName</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>POS</Project>
+              <File>RestaurantSidePresentationModel.cs</File>
+              <Line>105</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>75</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>69 目前物件 POSCustomerSide.CustomerSideForm，使用物件的方法或屬性次數：1次，Envy到對象物件 POSCustomerSide.Meal，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.Meal.Name 以及 POSCustomerSide.Meal.Price</HashCode>
+              <HashCode>92 目前物件 POSCustomerSide.CustomerSideForm，使用物件的方法或屬性次數：1次，Envy到對象物件 POSCustomerSide.Meal，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.Meal.Name 以及 POSCustomerSide.Meal.Price</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\POSCustomerSideForm.cs</File>
-              <Line>69</Line>
-              <StartLine>68</StartLine>
+              <Line>92</Line>
+              <StartLine>91</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>69</EndLine>
+              <EndLine>92</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 POSCustomerSide.CustomerSideForm，使用物件的方法或屬性次數：1次，Envy到對象物件 POSCustomerSide.Meal，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.Meal.Name 以及 POSCustomerSide.Meal.Price</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>52</Id>
+              <Id>76</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>119 目前物件 POSCustomerSide.CustomerSideForm，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.FindMealByName(string) 以及 POSCustomerSide.CustomerFormPresentationModel.AddMeal(POSCustomerSide.Meal)</HashCode>
+              <HashCode>142 目前物件 POSCustomerSide.CustomerSideForm，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.FindMealByName(string) 以及 POSCustomerSide.CustomerFormPresentationModel.AddMeal(POSCustomerSide.Meal)</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\POSCustomerSideForm.cs</File>
-              <Line>119</Line>
-              <StartLine>118</StartLine>
+              <Line>142</Line>
+              <StartLine>141</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>119</EndLine>
+              <EndLine>142</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 POSCustomerSide.CustomerSideForm，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.FindMealByName(string) 以及 POSCustomerSide.CustomerFormPresentationModel.AddMeal(POSCustomerSide.Meal)</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>53</Id>
+              <Id>77</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>131 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：2次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
+              <HashCode>135 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：2次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\CustomerFormPresentationModel.cs</File>
-              <Line>131</Line>
-              <StartLine>131</StartLine>
+              <Line>135</Line>
+              <StartLine>135</StartLine>
               <StartCol>24</StartCol>
-              <EndLine>131</EndLine>
+              <EndLine>135</EndLine>
               <EndCol>151</EndCol>
               <Comment>目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：2次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>54</Id>
+              <Id>78</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>148 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.TotalPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
+              <HashCode>152 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.TotalPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\CustomerFormPresentationModel.cs</File>
-              <Line>148</Line>
-              <StartLine>148</StartLine>
+              <Line>152</Line>
+              <StartLine>152</StartLine>
               <StartCol>24</StartCol>
-              <EndLine>148</EndLine>
+              <EndLine>152</EndLine>
               <EndCol>66</EndCol>
               <Comment>目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.TotalPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>55</Id>
+              <Id>79</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>165 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
+              <HashCode>169 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\CustomerFormPresentationModel.cs</File>
-              <Line>165</Line>
-              <StartLine>165</StartLine>
+              <Line>169</Line>
+              <StartLine>169</StartLine>
               <StartCol>24</StartCol>
-              <EndLine>165</EndLine>
+              <EndLine>169</EndLine>
               <EndCol>49</EndCol>
               <Comment>目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>56</Id>
+              <Id>80</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>189 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.TotalPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
+              <HashCode>193 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.TotalPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\CustomerFormPresentationModel.cs</File>
-              <Line>189</Line>
-              <StartLine>188</StartLine>
+              <Line>193</Line>
+              <StartLine>192</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>189</EndLine>
+              <EndLine>193</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.TotalPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>57</Id>
+              <Id>81</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>202 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
+              <HashCode>206 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\CustomerFormPresentationModel.cs</File>
-              <Line>202</Line>
-              <StartLine>201</StartLine>
+              <Line>206</Line>
+              <StartLine>205</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>202</EndLine>
+              <EndLine>206</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>58</Id>
+              <Id>82</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>214 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
+              <HashCode>218 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\CustomerFormPresentationModel.cs</File>
-              <Line>214</Line>
-              <StartLine>213</StartLine>
+              <Line>218</Line>
+              <StartLine>217</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>214</EndLine>
+              <EndLine>218</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>59</Id>
+              <Id>83</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>95 目前物件 POSCustomerSide.RestaurantSidePresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.Meal，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.Meal.Name 以及 POSCustomerSide.Meal.Category</HashCode>
+              <HashCode>117 目前物件 POSCustomerSide.RestaurantSidePresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.Meal，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.Meal.Name 以及 POSCustomerSide.Meal.Category</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>POS</Project>
               <File>C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\hw1\RestaurantSidePresentationModel.cs</File>
-              <Line>95</Line>
-              <StartLine>94</StartLine>
+              <Line>117</Line>
+              <StartLine>116</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>95</EndLine>
+              <EndLine>117</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 POSCustomerSide.RestaurantSidePresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.Meal，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.Meal.Name 以及 POSCustomerSide.Meal.Category</Comment>
               <Auto>false</Auto>
@@ -1249,7 +1633,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>2281</ProductionLoc>
+          <ProductionLoc>2509</ProductionLoc>
           <TestLoc>1503</TestLoc>
         </CodeReview>
       </Data>
