@@ -15,13 +15,14 @@ namespace POSCustomerSide
         private RestaurantSidePresentationModel _model;
         const string ADD = "Add";
         const string SAVE = "Save";
+        const char SLASH = '\\';
 
         public RestaurantSideForm(RestaurantSidePresentationModel model)
         {
             this._model = model;
             InitializeComponent();
-            _model.MenuChangedRestaurant += UpdateMealListBox;
-            _model.MenuChangedRestaurant += UpdateCategoryListBox;
+            _model._menuChangedRestaurant += UpdateMealListBox;
+            _model._menuChangedRestaurant += UpdateCategoryListBox;
             _browseButton.Click += ClickBrowseButton;
             _mealListBox.Click += ClickMealListBox;
             _categoryListBox.Click += ClickCategoryListBox;
@@ -37,10 +38,10 @@ namespace POSCustomerSide
             _deleteCategoryButton.Click += ClickDeleteCategoryButton;
             _addMealButton.Click += ClickAddMealModeButton;
             _addCategoryButton.Click += ClickAddCategoryModeButton;
-            _model.MenuChangedRestaurant += UpdateMealListBox;
-            _model.MenuChangedRestaurant += UpdateCategoryListBox;
-            _model.CategoryChangedRestaurant += UpdateCategoryListBox;
-            _model.CategoryChangedRestaurant += UpdateMealListBox;
+            _model._menuChangedRestaurant += UpdateMealListBox;
+            _model._menuChangedRestaurant += UpdateCategoryListBox;
+            _model._categoryChangedRestaurant += UpdateCategoryListBox;
+            _model._categoryChangedRestaurant += UpdateMealListBox;
             UpdateMealListBox();
             UpdateCategoryListBox();
         }
@@ -175,14 +176,13 @@ namespace POSCustomerSide
             _categoryListBox.SelectedItem = _categoryNameTextBox.Text;
         }
 
-
         //按下 Browse 按鈕
         private void ClickBrowseButton(object sender, EventArgs e)
         {
             if (_openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string[] imageAbosolutePath = _openFileDialog.FileName.Split('\\');
-                string imageRelativePath = '\\' + imageAbosolutePath[imageAbosolutePath.Length - 2] + '\\' + imageAbosolutePath.Last();
+                string[] imageAbosolutePath = _openFileDialog.FileName.Split(SLASH);
+                string imageRelativePath = SLASH + imageAbosolutePath[imageAbosolutePath.Length - 2] + SLASH + imageAbosolutePath.Last();
                 _mealImageTextBox.Text = imageRelativePath;
                 _saveButton1.Enabled = true;
             }

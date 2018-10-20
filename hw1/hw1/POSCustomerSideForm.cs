@@ -30,10 +30,12 @@ namespace POSCustomerSide
             InitTabPage();
             UpdateMealButton();
             UpdateTotalPage();
-            _model.MenuChangedCustomer += ClearButton;
-            _model.MenuChangedCustomer += UpdateButtonList;
-            _model.MenuChangedCustomer += UpdateMealButton;
-            _model.CategoryChangedCustomer += UpdateTabPage;
+            _model._menuChangedCustomer += ClearButton;
+            _model._menuChangedCustomer += UpdateButtonList;
+            _model._menuChangedCustomer += UpdateMealButton;
+            _model._menuChangedCustomer += UpdateDataGridViewRow;
+            _model._categoryChangedCustomer += UpdateTabPage;
+            _model._categoryChangedCustomer += UpdateDataGridViewRow;
         }
 
         //初始化按鈕類別
@@ -64,7 +66,7 @@ namespace POSCustomerSide
             List<string> categoriesName = _model.GetCategories();
             categoriesName.ForEach(x =>
             {
-                if(categoriesName.IndexOf(x) <= _tabControlButton.TabPages.Count - 1)
+                if (categoriesName.IndexOf(x) <= _tabControlButton.TabPages.Count - 1)
                 {
                     _tabControlButton.TabPages[categoriesName.IndexOf(x)].Text = x;
                     _tabControlButton.TabPages[categoriesName.IndexOf(x)].Name = x;
@@ -147,7 +149,7 @@ namespace POSCustomerSide
         //按下新增按鈕
         private void AddButtonClick(object sender, EventArgs e)
         {
-            List<Meal> mealList = _model.GetMealList();
+            List<Meal> mealList = _model.GetMealList();          
             mealList.ForEach(x =>
             {
                 DataGridViewRow row = new DataGridViewRow();
@@ -166,12 +168,47 @@ namespace POSCustomerSide
             _addButton.Enabled = _model.IsAddButtonEnable();
         }
 
+        //更新 DataGridView 資料
+        private void UpdateDataGridViewRow()
+        {
+            List<Meal> displayMealList = _model.GetDisplayMealList();
+            List<int> quantityList = GetOldQuantity();
+            _mealGridView.Rows.Clear();
+            displayMealList.ForEach(x =>
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row.CreateCells(_mealGridView);
+                row.Cells[0].Value = "X";
+                row.Cells[1].Value = x.Name;
+                row.Cells[2].Value = x.Category.Name;
+                row.Cells[3].Value = x.Price;
+                if (displayMealList.IndexOf(x) <= quantityList.Count - 1)
+                    row.Cells[4].Value = quantityList[displayMealList.IndexOf(x)];
+                else
+                    row.Cells[4].Value = 1;
+                row.Cells[5].Value = x.Price.ToString() + "  NTD";
+                _mealGridView.Rows.Add(row);
+            });
+            UpdateTotalPrice();
+        }
+
+        //取得舊的數量
+        private List<int> GetOldQuantity()
+        {
+            List<int> quantityList = new List<int>();
+            foreach (DataGridViewRow row in _mealGridView.Rows)
+            {
+                quantityList.Add(Int32.Parse(row.Cells[4].Value.ToString()));
+            }
+            return quantityList;
+        }
+
         //按下上一頁
         private void ClickPreviousPage(object sender, EventArgs e)
         {
             string categoryName = _tabControlButton.SelectedTab.Name;
             List<string> categories = _model.GetCategories();
-            _model.MinusOnePage(categoryName);
+            _model.RemoveOnePage(categoryName);
             _nextPageButton.Enabled = _model.IsNextPageButtonEnable(categoryName);
             _previousPageButton.Enabled = _model.IsPreviousPageButtonEnable(categoryName);
             _pageLabel1.Text = _model.GetCurrentPage(categoryName);

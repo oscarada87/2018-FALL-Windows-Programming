@@ -8,11 +8,11 @@ namespace POSCustomerSide
 {
     public class Model
     {
-        private Order _order = new Order();
-        public event MenuChangedEventHandler MenuChanged;
+        public event MenuChangedEventHandler _menuChanged;
         public delegate void MenuChangedEventHandler();
-        public event CategoryChangedEventHandler CategoryChanged;
+        public event CategoryChangedEventHandler _categoryChanged;
         public delegate void CategoryChangedEventHandler();
+        private Order _order = new Order();
 
         //更改menu meal name
         public void ChangeMealName(string mealOldName, string mealNewName)
@@ -89,6 +89,12 @@ namespace POSCustomerSide
         public List<Meal> GetMealList()
         {
             return _order.GetMealList();
+        }
+
+        //呼叫order中的GetDisplayMealList
+        public List<Meal> GetDisplayMealList()
+        {
+            return _order.GetDisplayMealList();
         }
 
         //呼叫order中的AddMeal
@@ -187,20 +193,18 @@ namespace POSCustomerSide
         //通知menu改了
         public void NotifyMenuChangedObserver()
         {
-            if (MenuChanged != null)
+            if (_menuChanged != null)
             {
-                MenuChanged();
-                Console.WriteLine("Menu Changed");
+                _menuChanged();
             }             
         }
 
         //通知Category改了
         public void NotifyCategoryChangedObserver()
         {
-            if (CategoryChanged != null)
+            if (_categoryChanged != null)
             {
-                CategoryChanged();
-                Console.WriteLine("Category Changed");
+                _categoryChanged();
             }
         }
     }

@@ -8,18 +8,18 @@ namespace POSCustomerSide
 {
     public class RestaurantSidePresentationModel
     {
-        private Model _model;
-        public event MenuChangedRestaurantEventHandler MenuChangedRestaurant;
+        public event MenuChangedRestaurantEventHandler _menuChangedRestaurant;
         public delegate void MenuChangedRestaurantEventHandler();
-        public event CategoryChangedRestaurantEventHandler CategoryChangedRestaurant;
+        public event CategoryChangedRestaurantEventHandler _categoryChangedRestaurant;
         public delegate void CategoryChangedRestaurantEventHandler();
+        private Model _model;
 
         //Constructor
         public RestaurantSidePresentationModel(Model model)
         {
             this._model = model;
-            _model.MenuChanged += NotifyMenuChangedObserver;
-            _model.CategoryChanged += NotifyCategoryChangedObserver;
+            _model._menuChanged += NotifyMenuChangedObserver;
+            _model._categoryChanged += NotifyCategoryChangedObserver;
         }
         
         //呼叫 model 中的 GetMenu
@@ -122,20 +122,18 @@ namespace POSCustomerSide
         //通知menu改變
         public void NotifyMenuChangedObserver()
         {
-            if (MenuChangedRestaurant != null)
+            if (_menuChangedRestaurant != null)
             {
-                MenuChangedRestaurant();
-                Console.WriteLine("RP Model Meal Changed");
+                _menuChangedRestaurant();
             }
         }
 
         //通知menu改變
         public void NotifyCategoryChangedObserver()
         {
-            if (CategoryChangedRestaurant != null)
+            if (_categoryChangedRestaurant != null)
             {
-                CategoryChangedRestaurant();
-                Console.WriteLine("RP Model Category Changed");
+                _categoryChangedRestaurant();
             }
         }
     }

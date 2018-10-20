@@ -94,7 +94,7 @@ namespace POSCustomerSide
                 if (meal.Name == mealName)
                     return meal;
             }
-            Console.WriteLine("Not Found!");
+            //Console.WriteLine("Not Found!");
             return null;
         }
 
@@ -160,6 +160,12 @@ namespace POSCustomerSide
             _displayMealList.AddRange(_mealList);
         }
 
+        //取得顯示Meal List
+        public List<Meal> GetDisplayMealList()
+        {
+            return _displayMealList;
+        }
+
         //刪除display中指定的meal
         public void DeleteFromDisplayMealList(string mealName)
         {
@@ -192,7 +198,7 @@ namespace POSCustomerSide
         //更改 category 名字
         public void ChangeCategoryName(string categoryOldName, string categoryNewName)
         {
-            foreach(Category category in _categories)
+            foreach (Category category in _categories)
             {
                 if (category.Name == categoryOldName)
                     category.Name = categoryNewName;
@@ -216,22 +222,22 @@ namespace POSCustomerSide
                     _categories.Remove(category);
                     return;
                 }
-                Console.WriteLine("ERROR --- 沒有找到相對應的category");
+                //Console.WriteLine("ERROR --- 沒有找到相對應的category");
             }
         }
 
         //刪除指定的 Meal
         public void DeleteMeal(string mealName)
         {
-            foreach(Meal meal in _menuList)
+            foreach (Meal meal in _menuList)
             {
-                if(meal.Name == mealName)
+                if (meal.Name == mealName)
                 {
                     _menuList.Remove(meal);
                     return;
                 }
             }
-            Console.WriteLine("ERROR --- 沒有找到相對應的餐點");
+            //Console.WriteLine("ERROR --- 沒有找到相對應的餐點");
         }
     }
 }

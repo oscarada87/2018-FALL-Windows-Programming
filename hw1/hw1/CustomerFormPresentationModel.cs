@@ -9,24 +9,27 @@ namespace POSCustomerSide
 {
     public class CustomerFormPresentationModel
     {
+        public event MenuChangedPresentationEventHandler _menuChangedCustomer;
+        public delegate void MenuChangedPresentationEventHandler();
+        public event CategoryChangedPresentationEventHandler _categoryChangedCustomer;
+        public delegate void CategoryChangedPresentationEventHandler();
         private Model _model;
         private const int BUTTONLOCATIONX = 10;
         private const int BUTTONLOCATIONY = 10;
-        private const int NUMBEROFONEPAGEBUTTON = 9;
+        private const int ONEPAGEBUTTONNUMBER = 9;
+        private const int ROWBUTTONNUMBER = 3;
+        private const int POSITIONDISTANCE = 160;
         private const string ERROR = "ERROR";
+        private const string PAGE = "Page: ";
         private List<CategoryState> _categoriesState = new List<CategoryState>();
-        public event MenuChangedPresentationEventHandler MenuChangedCustomer;
-        public delegate void MenuChangedPresentationEventHandler();
-        public event CategoryChangedPresentationEventHandler CategoryChangedCustomer;
-        public delegate void CategoryChangedPresentationEventHandler();
 
         //Constructor
         public CustomerFormPresentationModel(Model model)
         {
             this._model = model;
             InitCategoriesState();
-            _model.MenuChanged += NotifyMenuChangedObserver;
-            _model.CategoryChanged += NotifyCategoryChangedObserver;
+            _model._menuChanged += NotifyMenuChangedObserver;
+            _model._categoryChanged += NotifyCategoryChangedObserver;
 
         }
 
@@ -79,7 +82,7 @@ namespace POSCustomerSide
             //更新最大頁數
             public void UpdateTotalPage(int number)
             {
-                _totalPage = (number / NUMBEROFONEPAGEBUTTON) + 1;
+                _totalPage = (number / ONEPAGEBUTTONNUMBER) + 1;
             }
         }
 
@@ -97,13 +100,13 @@ namespace POSCustomerSide
         //取得button的位置，並將按鈕數量+1
         public Point GetMealButtonLocation(int number)
         {
-            int LocationX = 0;
-            int LocationY = 0;
-            if (number >= NUMBEROFONEPAGEBUTTON)
-                number = number % NUMBEROFONEPAGEBUTTON;
-            LocationX = (number % 3) * 160 + BUTTONLOCATIONX;
-            LocationY = (number / 3) * 160 + BUTTONLOCATIONY;
-            return new Point(LocationX, LocationY);
+            int locationX = 0;
+            int locationY = 0;
+            if (number >= ONEPAGEBUTTONNUMBER)
+                number = number % ONEPAGEBUTTONNUMBER;
+            locationX = (number % ROWBUTTONNUMBER) * POSITIONDISTANCE + BUTTONLOCATIONX;
+            locationY = (number / ROWBUTTONNUMBER) * POSITIONDISTANCE + BUTTONLOCATIONY;
+            return new Point(locationX, locationY);
         }
 
         //更新最大頁數
@@ -133,7 +136,7 @@ namespace POSCustomerSide
             {
                 if (categoryState.Name == tabName)
                 {
-                    if (categoryState.CurrentPage * NUMBEROFONEPAGEBUTTON > number && (categoryState.CurrentPage - 1) * NUMBEROFONEPAGEBUTTON <= number)
+                    if (categoryState.CurrentPage * ONEPAGEBUTTONNUMBER > number && (categoryState.CurrentPage - 1) * ONEPAGEBUTTONNUMBER <= number)
                         return true;
                     else
                         return false;
@@ -190,7 +193,7 @@ namespace POSCustomerSide
             {
                 if (categoryName == category.Name)
                 {
-                    return "Page: " + category.CurrentPage.ToString() + "/" + category.TotalPage.ToString();
+                    return PAGE + category.CurrentPage.ToString() + "/" + category.TotalPage.ToString();
                 }
             }
             return "";
@@ -209,7 +212,7 @@ namespace POSCustomerSide
         }
 
         //減1頁
-        public void MinusOnePage(string categoryName)
+        public void RemoveOnePage(string categoryName)
         {
             foreach (CategoryState category in _categoriesState)
             {
@@ -224,6 +227,12 @@ namespace POSCustomerSide
         public List<Meal> GetMealList()
         {
             return _model.GetMealList();
+        }
+
+        //呼叫model的GetDisplayMealList
+        public List<Meal> GetDisplayMealList()
+        {
+            return _model.GetDisplayMealList();
         }
 
         //呼叫model中的AddMeal
@@ -301,20 +310,18 @@ namespace POSCustomerSide
         //通知menu改變
         public void NotifyMenuChangedObserver()
         {
-            if (MenuChangedCustomer != null)
+            if (_menuChangedCustomer != null)
             {
-                MenuChangedCustomer();
-                Console.WriteLine("CP Model Menu Changed");
+                _menuChangedCustomer();
             }           
         }
 
         //通知 Category 改變
         public void NotifyCategoryChangedObserver()
         {
-            if (CategoryChangedCustomer != null)
+            if (_categoryChangedCustomer != null)
             {
-                CategoryChangedCustomer();
-                Console.WriteLine("CP Model Category Changed");
+                _categoryChangedCustomer();
             }
         }
     }
