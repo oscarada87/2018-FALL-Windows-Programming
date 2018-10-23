@@ -102,9 +102,9 @@ namespace POSCustomerSide
         }
 
         //呼叫 model 中的 DeleteCategory
-        public void DeleteCategory(string categorName)
+        public void DeleteCategory(string categoryName)
         {
-            _model.DeleteCategory(categorName);
+            _model.DeleteCategory(categoryName);
         }
 
         //取得在此類別中的所有餐點

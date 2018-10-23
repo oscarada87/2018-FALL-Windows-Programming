@@ -14,20 +14,21 @@ namespace POSCustomerSide
         public event CategoryChangedPresentationEventHandler _categoryChangedCustomer;
         public delegate void CategoryChangedPresentationEventHandler();
         private Model _model;
-        private const int BUTTONLOCATIONX = 10;
-        private const int BUTTONLOCATIONY = 10;
-        private const int ONEPAGEBUTTONNUMBER = 9;
-        private const int ROWBUTTONNUMBER = 3;
-        private const int POSITIONDISTANCE = 160;
+        private const int BUTTON_LOCATION_X = 10;
+        private const int BUTTON_LOCATION_Y = 10;
+        private const int ONE_PAGE_BUTTON_NUMBER = 9;
+        private const int ROW_BUTTON_NUMBER = 3;
+        private const int POSITION_DISTANCE = 160;
         private const string ERROR = "ERROR";
         private const string PAGE = "Page: ";
+        private const string SLASH = "/";
         private List<CategoryState> _categoriesState = new List<CategoryState>();
 
         //Constructor
         public CustomerFormPresentationModel(Model model)
         {
             this._model = model;
-            InitCategoriesState();
+            InitialCategoriesState();
             _model._menuChanged += NotifyMenuChangedObserver;
             _model._categoryChanged += NotifyCategoryChangedObserver;
 
@@ -82,12 +83,12 @@ namespace POSCustomerSide
             //更新最大頁數
             public void UpdateTotalPage(int number)
             {
-                _totalPage = (number / ONEPAGEBUTTONNUMBER) + 1;
+                _totalPage = (number / ONE_PAGE_BUTTON_NUMBER) + 1;
             }
         }
 
         //初始化category數量
-        private void InitCategoriesState()
+        private void InitialCategoriesState()
         {
             _categoriesState.Clear();
             List<string> categoriesName = _model.GetCategories();
@@ -102,10 +103,10 @@ namespace POSCustomerSide
         {
             int locationX = 0;
             int locationY = 0;
-            if (number >= ONEPAGEBUTTONNUMBER)
-                number = number % ONEPAGEBUTTONNUMBER;
-            locationX = (number % ROWBUTTONNUMBER) * POSITIONDISTANCE + BUTTONLOCATIONX;
-            locationY = (number / ROWBUTTONNUMBER) * POSITIONDISTANCE + BUTTONLOCATIONY;
+            if (number >= ONE_PAGE_BUTTON_NUMBER)
+                number = number % ONE_PAGE_BUTTON_NUMBER;
+            locationX = (number % ROW_BUTTON_NUMBER) * POSITION_DISTANCE + BUTTON_LOCATION_X;
+            locationY = (number / ROW_BUTTON_NUMBER) * POSITION_DISTANCE + BUTTON_LOCATION_Y;
             return new Point(locationX, locationY);
         }
 
@@ -136,7 +137,7 @@ namespace POSCustomerSide
             {
                 if (categoryState.Name == tabName)
                 {
-                    if (categoryState.CurrentPage * ONEPAGEBUTTONNUMBER > number && (categoryState.CurrentPage - 1) * ONEPAGEBUTTONNUMBER <= number)
+                    if (categoryState.CurrentPage * ONE_PAGE_BUTTON_NUMBER > number && (categoryState.CurrentPage - 1) * ONE_PAGE_BUTTON_NUMBER <= number)
                         return true;
                     else
                         return false;
@@ -193,7 +194,7 @@ namespace POSCustomerSide
             {
                 if (categoryName == category.Name)
                 {
-                    return PAGE + category.CurrentPage.ToString() + "/" + category.TotalPage.ToString();
+                    return PAGE + category.CurrentPage.ToString() + SLASH + category.TotalPage.ToString();
                 }
             }
             return "";

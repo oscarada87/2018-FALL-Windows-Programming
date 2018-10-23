@@ -26,12 +26,12 @@ namespace POSCustomerSide
             _browseButton.Click += ClickBrowseButton;
             _mealListBox.Click += ClickMealListBox;
             _categoryListBox.Click += ClickCategoryListBox;
-            _mealDescriptionTextBox.TextChanged += OnMealTextBoxChanged;
-            _mealImageTextBox.TextChanged += OnMealTextBoxChanged;
-            _mealNameTextBox.TextChanged += OnMealTextBoxChanged;
-            _mealPriceTextBox.TextChanged += OnMealTextBoxChanged;
-            _mealCategoryComboBox.TextChanged += OnMealComboBoxChanged;
-            _categoryNameTextBox.TextChanged += OnCategoryTextBoxChanged;
+            _mealDescriptionTextBox.TextChanged += ChangeMealTextBox;
+            _mealImageTextBox.TextChanged += ChangeMealTextBox;
+            _mealNameTextBox.TextChanged += ChangeMealTextBox;
+            _mealPriceTextBox.TextChanged += ChangeMealTextBox;
+            _mealCategoryComboBox.TextChanged += ChangeMealComboBox;
+            _categoryNameTextBox.TextChanged += ChangeCategoryTextBox;
             _saveButton1.Click += ClickMealSaveButton;
             _saveButton2.Click += ClickCategorySaveButton;
             _deleteMealButton.Click += ClickDeleteMealButton;
@@ -107,7 +107,7 @@ namespace POSCustomerSide
         }
 
         //當修改meal textbox內容
-        private void OnMealTextBoxChanged(object sender, EventArgs e)
+        private void ChangeMealTextBox(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             if (textBox.Modified)
@@ -115,7 +115,7 @@ namespace POSCustomerSide
         }
 
         //當修改meal combobox內容
-        private void OnMealComboBoxChanged(object sender, EventArgs e)
+        private void ChangeMealComboBox(object sender, EventArgs e)
         {
             if (_mealListBox.SelectedItem == null)
                 return;
@@ -125,7 +125,7 @@ namespace POSCustomerSide
         }
 
         //當修改category textbox內容
-        private void OnCategoryTextBoxChanged(object sender, EventArgs e)
+        private void ChangeCategoryTextBox(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             if (textBox.Modified)

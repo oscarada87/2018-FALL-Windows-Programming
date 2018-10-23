@@ -14,7 +14,13 @@ namespace POSCustomerSide
     public partial class CustomerSideForm : Form
     {
         private const int ZERO = 0;
-        private const string DOLLAR = "元"; 
+        private const string DOLLAR = "元";
+        private const string X = "X";
+        private const string NEW_TAIWAN_DOLLAR = "  NTD";
+        private const int TWO = 2;
+        private const int THREE = 3;
+        private const int FOUR = 4;
+        private const int FIVE = 5;
         private CustomerFormPresentationModel _model;
         private List<List<Button>> _mealButtons = new List<List<Button>>();
         string _projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
@@ -24,10 +30,10 @@ namespace POSCustomerSide
             InitializeComponent();
             this._model = model;
             _mealGridView.CellClick += ClickDataGridCell;
-            _mealGridView.CellValueChanged += OnDataGridViewValueChange;
+            _mealGridView.CellValueChanged += ChangeDataGridViewValue;
             _tabControlButton.SelectedIndexChanged += ClickTabPage;
             UpdateButtonList();
-            InitTabPage();
+            InitialTabPage();
             UpdateMealButton();
             UpdateTotalPage();
             _model._menuChangedCustomer += ClearButton;
@@ -47,7 +53,7 @@ namespace POSCustomerSide
         }
 
         //把category加到tabpage
-        private void InitTabPage()
+        private void InitialTabPage()
         {
             _tabControlButton.TabPages.Clear();
             List<string> categoriesName = _model.GetCategories();
@@ -154,12 +160,12 @@ namespace POSCustomerSide
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(_mealGridView);
-                row.Cells[0].Value = "X";
+                row.Cells[0].Value = X;
                 row.Cells[1].Value = x.Name;
-                row.Cells[2].Value = x.Category.Name;
-                row.Cells[3].Value = x.Price;
-                row.Cells[4].Value = 1;
-                row.Cells[5].Value = x.Price.ToString() + "  NTD";
+                row.Cells[TWO].Value = x.Category.Name;
+                row.Cells[THREE].Value = x.Price;
+                row.Cells[FOUR].Value = 1;
+                row.Cells[FIVE].Value = x.Price.ToString() + NEW_TAIWAN_DOLLAR;
                 _mealGridView.Rows.Add(row);
             });
             _model.AddToDisplayMealList();
@@ -173,20 +179,24 @@ namespace POSCustomerSide
         {
             List<Meal> displayMealList = _model.GetDisplayMealList();
             List<int> quantityList = GetOldQuantity();
+            quantityList.ForEach(x =>
+            {
+                Console.WriteLine(x);
+            });
             _mealGridView.Rows.Clear();
             displayMealList.ForEach(x =>
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(_mealGridView);
-                row.Cells[0].Value = "X";
+                row.Cells[0].Value = X;
                 row.Cells[1].Value = x.Name;
-                row.Cells[2].Value = x.Category.Name;
-                row.Cells[3].Value = x.Price;
+                row.Cells[TWO].Value = x.Category.Name;
+                row.Cells[THREE].Value = x.Price;
                 if (displayMealList.IndexOf(x) <= quantityList.Count - 1)
-                    row.Cells[4].Value = quantityList[displayMealList.IndexOf(x)];
+                    row.Cells[FOUR].Value = quantityList[displayMealList.IndexOf(x)];
                 else
-                    row.Cells[4].Value = 1;
-                row.Cells[5].Value = x.Price.ToString() + "  NTD";
+                    row.Cells[FOUR].Value = 1;
+                row.Cells[FIVE].Value = (Int32.Parse(x.Price.ToString()) * Int32.Parse(row.Cells[FOUR].Value.ToString())).ToString() + NEW_TAIWAN_DOLLAR;
                 _mealGridView.Rows.Add(row);
             });
             UpdateTotalPrice();
@@ -198,7 +208,7 @@ namespace POSCustomerSide
             List<int> quantityList = new List<int>();
             foreach (DataGridViewRow row in _mealGridView.Rows)
             {
-                quantityList.Add(Int32.Parse(row.Cells[4].Value.ToString()));
+                quantityList.Add(Int32.Parse(row.Cells[FOUR].Value.ToString()));
             }
             return quantityList;
         }
@@ -274,12 +284,11 @@ namespace POSCustomerSide
         }
 
         //更改DataGridView內的值
-        private void OnDataGridViewValueChange(object sender, DataGridViewCellEventArgs e)
+        private void ChangeDataGridViewValue(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView quantity = (DataGridView)sender;
-            int number = Int32.Parse(_mealGridView.Rows[e.RowIndex].Cells[4].Value.ToString());
-            int subtotal = Int32.Parse(_mealGridView.Rows[e.RowIndex].Cells[3].Value.ToString()) * number;
-            _mealGridView.Rows[e.RowIndex].Cells[5].Value = subtotal.ToString() + " NTD";
+            int number = Int32.Parse(_mealGridView.Rows[e.RowIndex].Cells[FOUR].Value.ToString());
+            int subtotal = Int32.Parse(_mealGridView.Rows[e.RowIndex].Cells[THREE].Value.ToString()) * number;
+            _mealGridView.Rows[e.RowIndex].Cells[FIVE].Value = subtotal.ToString() + " NTD";
             UpdateTotalPrice();
         }
 
@@ -289,7 +298,7 @@ namespace POSCustomerSide
             int total = 0;
             foreach (DataGridViewRow row in _mealGridView.Rows)
             {
-                string subtotal = (string)row.Cells[5].Value;
+                string subtotal = (string)row.Cells[FIVE].Value;
                 total = total + Int32.Parse(subtotal.Split(' ')[0]);
             }
 

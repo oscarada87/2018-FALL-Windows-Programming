@@ -11,7 +11,12 @@ namespace POSCustomerSide
     public class Order
     {
         string _projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
-        const string MENU_RELATIVE_PATH = @"\resources\menu.txt";
+        private const string MENU_RELATIVE_PATH = @"\resources\menu.txt";
+        private const char COMMA = ',';
+        private const int TWO = 2;
+        private const int THREE = 3;
+        private const int FOUR = 4;
+        private const int FIVE = 5;
         private List<Meal> _menuList = new List<Meal>();
         private List<Category> _categories = new List<Category>();
         private List<Meal> _mealList = new List<Meal>();
@@ -38,13 +43,13 @@ namespace POSCustomerSide
         {
             string line;
             StreamReader file = new StreamReader(_projectPath + MENU_RELATIVE_PATH, System.Text.Encoding.Default);
-            HashSet<string> Categories = new HashSet<string>();
+            HashSet<string> categories = new HashSet<string>();
             while ((line = file.ReadLine()) != null)
             {
-                string[] data = line.Split(',');
-                Categories.Add(data[0]);
+                string[] data = line.Split(COMMA);
+                categories.Add(data[0]);
             }
-            InitCategories(Categories);
+            InitialCategories(categories);
         }
 
         //讀取meal
@@ -54,16 +59,16 @@ namespace POSCustomerSide
             StreamReader file = new StreamReader(_projectPath + MENU_RELATIVE_PATH, System.Text.Encoding.Default);
             while ((line = file.ReadLine()) != null)
             {
-                string[] data = line.Split(',');
-                Meal meal = new Meal(data[1], int.Parse(data[2]), data[3], data[4], FindCategory(data[0]));
+                string[] data = line.Split(COMMA);
+                Meal meal = new Meal(data[1], int.Parse(data[TWO]), data[THREE], data[FOUR], FindCategory(data[0]));
                 _menuList.Add(meal);
             }
         }
 
         //初始化Categories
-        private void InitCategories(HashSet<string> Categories)
+        private void InitialCategories(HashSet<string> categories)
         {
-            foreach (string category in Categories)
+            foreach (string category in categories)
             {
                 _categories.Add(new Category(category));
             }
