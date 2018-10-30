@@ -17,36 +17,45 @@ namespace POSCustomerSide
         //更改menu meal name
         public void ChangeMealName(string mealOldName, string mealNewName)
         {
-            _order.FindMealByName(mealOldName).Name = mealNewName;
-            NotifyMenuChangedObserver();
+            if(_order.FindMealByName(mealOldName)!= null)
+            {
+                _order.FindMealByName(mealOldName).Name = mealNewName;
+                NotifyMenuChangedObserver();
+            }           
         }
 
         //更改menu meal price
         public void ChangeMealPrice(string mealOldName, string mealPrice)
         {
-            _order.FindMealByName(mealOldName).Price = Int32.Parse(mealPrice);
+            if (_order.FindMealByName(mealOldName) != null)
+                _order.FindMealByName(mealOldName).Price = Int32.Parse(mealPrice);
             //NotifyMenuChangedObserver();
         }
 
         //更改menu meal category
         public void ChangeMealCategory(string mealOldName, string categoryName)
         {
-            _order.FindMealByName(mealOldName).Category = _order.FindCategory(categoryName);
-            NotifyCategoryChangedObserver();
-            //NotifyMenuChangedObserver();
+            if (_order.FindMealByName(mealOldName) != null)
+            {
+                _order.FindMealByName(mealOldName).Category = _order.FindCategory(categoryName);
+                NotifyCategoryChangedObserver();
+                //NotifyMenuChangedObserver();
+            }
         }
 
         //更改menu meal description
         public void ChangeMealDescription(string mealOldName, string mealDescription)
         {
-            _order.FindMealByName(mealOldName).Description = mealDescription;
+            if (_order.FindMealByName(mealOldName) != null)
+                _order.FindMealByName(mealOldName).Description = mealDescription;
             //NotifyMenuChangedObserver();
         }
 
         //更改menu meal image path
         public void ChangeMealImagePath(string mealOldName, string mealImagePath)
         {
-            _order.FindMealByName(mealOldName).ImageRelativePath = mealImagePath;
+            if (_order.FindMealByName(mealOldName) != null)
+                _order.FindMealByName(mealOldName).ImageRelativePath = mealImagePath;
             //NotifyMenuChangedObserver();
         }
 
@@ -107,12 +116,6 @@ namespace POSCustomerSide
         public Meal FindMealByName(string mealName)
         {
             return _order.FindMealByName(mealName);
-        }
-
-        //呼叫order中的GetDescriptionByName
-        public string GetDescriptionByName(string mealName)
-        {
-            return _order.GetDescriptionByName(mealName);
         }
 
         //呼叫order中的GetTotalPrice

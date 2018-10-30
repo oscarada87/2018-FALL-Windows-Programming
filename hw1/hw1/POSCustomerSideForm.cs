@@ -149,6 +149,7 @@ namespace POSCustomerSide
             Meal meal = _model.FindMealByName(mealButton.Text.Split('\n')[0]);
             _model.AddMeal(meal);
             _addButton.Enabled = _model.IsAddButtonEnable();
+            _mealDescriptionBox.Text = meal.Description;
             //Console.WriteLine(mealButton.Text.Split('\n')[0]);
         }
 
@@ -279,7 +280,7 @@ namespace POSCustomerSide
             }
             else
             {
-                _mealDescriptionBox.Text = _model.GetDescriptionByName(dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString());
+                _mealDescriptionBox.Text = _model.FindMealByName(dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString()).Description;
             }
         }
 

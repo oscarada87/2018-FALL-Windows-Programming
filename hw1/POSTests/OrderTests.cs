@@ -56,14 +56,6 @@ namespace POSCustomerSide.Tests
         }
 
         [TestMethod()]
-        public void GetDescriptionByNameTest()
-        {
-            Order order = new Order();
-            string description = order.GetDescriptionByName("大麥克");
-            Assert.AreEqual(description, "好吃的大麥克");
-        }
-
-        [TestMethod()]
         public void AddMealToMealListTest()
         {
             Order order = new Order();

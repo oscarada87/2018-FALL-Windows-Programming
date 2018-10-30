@@ -57,8 +57,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="MealTests.cs" />
+    <Compile Include="ModelTests.cs" />
     <Compile Include="OrderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartUpFormPresentationModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

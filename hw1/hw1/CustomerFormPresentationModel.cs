@@ -266,12 +266,6 @@ namespace POSCustomerSide
             return _model.GetTotalPrice();
         }
 
-        //呼叫model中的GetDescriptionByName
-        public string GetDescriptionByName(string mealName)
-        {
-            return _model.GetDescriptionByName(mealName);
-        }
-
         //呼叫model中的GetCategories
         public List<string> GetCategories()
         {

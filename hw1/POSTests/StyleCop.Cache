@@ -1,38 +1,24 @@
 <stylecopresultscache>
   <version>12</version>
-  <project key="593625642">
+  <project key="-293684306">
     <configuration>DEBUG;TRACE</configuration>
   </project>
-  <project key="2045385639">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
-  <sourcecode name="DataGridViewNumericUpDownCell.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="MealTests.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2018/09/19 17:29:50.181</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/10/30 17:50:53.143</sourceFile>
+      <sourceFile>2018/10/30 17:50:53.154</sourceFile>
       <parser>2018/09/19 17:29:50.181</parser>
       <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="DataGridViewNumericUpDownColumn.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="OrderTests.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2018/09/19 17:29:50.181</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/10/30 17:50:53.144</sourceFile>
-      <parser>2018/09/19 17:29:50.181</parser>
-      <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
-      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
-    </timestamps>
-    <violations />
-  </sourcecode>
-  <sourcecode name="DataGridViewNumericUpDownEditingControl.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2018/09/19 17:29:50.181</styleCop>
-      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/10/30 17:50:53.145</sourceFile>
+      <sourceFile>2018/10/30 17:50:53.155</sourceFile>
       <parser>2018/09/19 17:29:50.181</parser>
       <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -43,7 +29,7 @@
     <timestamps>
       <styleCop>2018/09/19 17:29:50.181</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/10/30 17:50:53.146</sourceFile>
+      <sourceFile>2018/10/30 17:50:53.156</sourceFile>
       <parser>2018/09/19 17:29:50.181</parser>
       <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>

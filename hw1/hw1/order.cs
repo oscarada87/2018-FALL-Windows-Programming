@@ -109,13 +109,6 @@ namespace POSCustomerSide
             return _menuList;
         }
 
-        //取得Menu的描述透過名字
-        public string GetDescriptionByName(string mealName)
-        {
-            Meal meal = FindMealByName(mealName);
-            return meal.Description;
-        }
-
         //新增一項餐點
         public void AddMealToMealList(Meal meal)
         {
