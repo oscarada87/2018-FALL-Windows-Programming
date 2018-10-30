@@ -220,38 +220,6 @@
             </Smell>
             <Smell>
               <Id>3</Id>
-              <SmellType>Duplicated code(重複的程式碼)強式比對2</SmellType>
-              <HashCode>POS.POSCustomerSideForm.cs.ClickNextPage.240.255</HashCode>
-              <Severity>Red</Severity>
-              <Weight>16</Weight>
-              <Project>POS</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>240</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>4</Id>
-              <SmellType>Duplicated code(重複的程式碼)強式比對2</SmellType>
-              <HashCode>POS.POSCustomerSideForm.cs.ClickPreviousPage.219.234</HashCode>
-              <Severity>Red</Severity>
-              <Weight>16</Weight>
-              <Project>POS</Project>
-              <File>POSCustomerSideForm.cs</File>
-              <Line>219</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>5</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>139 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：2次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Red</Severity>
@@ -267,7 +235,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>6</Id>
+              <Id>4</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>156 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.TotalPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Red</Severity>
@@ -283,7 +251,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>7</Id>
+              <Id>5</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>173 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Warning</Severity>
@@ -299,7 +267,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>8</Id>
+              <Id>6</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>197 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：2次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：3次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.TotalPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Red</Severity>
@@ -315,7 +283,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>9</Id>
+              <Id>7</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>210 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Warning</Severity>
@@ -331,7 +299,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>10</Id>
+              <Id>8</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>222 目前物件 POSCustomerSide.CustomerFormPresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel.CategoryState，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.CategoryState.CurrentPage 以及 POSCustomerSide.CustomerFormPresentationModel.CategoryState.Name</HashCode>
               <Severity>Warning</Severity>
@@ -347,7 +315,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>11</Id>
+              <Id>9</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>117 目前物件 POSCustomerSide.RestaurantSidePresentationModel，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.Meal，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.Meal.Name 以及 POSCustomerSide.Meal.Category</HashCode>
               <Severity>Warning</Severity>
@@ -363,7 +331,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>12</Id>
+              <Id>10</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>100 目前物件 POSCustomerSide.CustomerSideForm，使用物件的方法或屬性次數：1次，Envy到對象物件 POSCustomerSide.Meal，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.Meal.Name 以及 POSCustomerSide.Meal.Price</HashCode>
               <Severity>Warning</Severity>
@@ -379,7 +347,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>13</Id>
+              <Id>11</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>150 目前物件 POSCustomerSide.CustomerSideForm，使用物件的方法或屬性次數：0次，Envy到對象物件 POSCustomerSide.CustomerFormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：POSCustomerSide.CustomerFormPresentationModel.FindMealByName(string) 以及 POSCustomerSide.CustomerFormPresentationModel.AddMeal(POSCustomerSide.Meal)</HashCode>
               <Severity>Warning</Severity>
@@ -511,7 +479,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>2576</ProductionLoc>
+          <ProductionLoc>2539</ProductionLoc>
           <TestLoc>1503</TestLoc>
         </CodeReview>
       </Data>

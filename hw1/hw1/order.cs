@@ -109,30 +109,11 @@ namespace POSCustomerSide
             return _menuList;
         }
 
-        //取得Menu的背景圖片位置
-        public string GetImagePath(int buttonIndex)
-        {
-            string path = _projectPath + _menuList[buttonIndex].ImageRelativePath;
-            return path;
-        }
-
-        //取得Menu的價錢
-        public string GetPrice(int buttonIndex)
-        {
-            return _menuList[buttonIndex].Price.ToString();
-        }
-
         //取得Menu的描述透過名字
         public string GetDescriptionByName(string mealName)
         {
             Meal meal = FindMealByName(mealName);
             return meal.Description;
-        }
-
-        //取得Menu的描述透過Index
-        public string GetDescriptionByIndex(int mealIndex)
-        {
-            return _menuList[mealIndex].Description;
         }
 
         //新增一項餐點
@@ -151,12 +132,6 @@ namespace POSCustomerSide
         public List<Meal> GetMealList()
         {
             return _mealList;
-        }
-
-        //取得要新增的餐點數量
-        public int GetLengthOfMealList()
-        {
-            return _mealList.Count;
         }
 
         //將要新增的餐點加進display中

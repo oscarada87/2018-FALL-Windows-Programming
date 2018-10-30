@@ -103,18 +103,6 @@ namespace POSCustomerSide
             _order.AddMealToMealList(meal);
         }
 
-        //呼叫order中的GetImagePath
-        public string GetImagePath(int buttonIndex)
-        {
-            return _order.GetImagePath(buttonIndex);
-        }
-
-        //呼叫order中的GetPrice
-        public string GetPrice(int buttonIndex)
-        {
-            return _order.GetPrice(buttonIndex);
-        }
-
         //呼叫order中的FindMealByName
         public Meal FindMealByName(string mealName)
         {
@@ -125,12 +113,6 @@ namespace POSCustomerSide
         public string GetDescriptionByName(string mealName)
         {
             return _order.GetDescriptionByName(mealName);
-        }
-
-        //呼叫order中的GetDescriptionByIndex
-        public string GetDescriptionByIndex(int mealIndex)
-        {
-            return _order.GetDescriptionByIndex(mealIndex);
         }
 
         //呼叫order中的GetTotalPrice
@@ -155,12 +137,6 @@ namespace POSCustomerSide
         public void DeleteFromDisplayMealList(string mealName)
         {
             _order.DeleteFromDisplayMealList(mealName);
-        }
-
-        //呼叫 order 中的 GetLengthOfMealList
-        public int GetLengthOfMealList()
-        {
-            return _order.GetLengthOfMealList();
         }
 
         //呼叫 order 中的 GetCategories

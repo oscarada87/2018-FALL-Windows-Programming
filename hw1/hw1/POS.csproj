@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{187ED3E4-FAA8-47A6-80BF-F927643341F2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>POSCustomerSide</RootNamespace>
-    <AssemblyName>POSCustomerSide</AssemblyName>
+    <RootNamespace>POS</RootNamespace>
+    <AssemblyName>POS</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

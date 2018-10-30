@@ -266,28 +266,10 @@ namespace POSCustomerSide
             return _model.GetTotalPrice();
         }
 
-        //呼叫model中的GetImagePath
-        public string GetImagePath(int buttonIndex)
-        {
-            return _model.GetImagePath(buttonIndex);
-        }
-
-        //呼叫model中的GetPrice
-        public string GetPrice(int buttonIndex)
-        {
-            return _model.GetPrice(buttonIndex);
-        }
-
         //呼叫model中的GetDescriptionByName
         public string GetDescriptionByName(string mealName)
         {
             return _model.GetDescriptionByName(mealName);
-        }
-
-        //呼叫model中的GetDescriptionByIndex
-        public string GetDescriptionByIndex(int mealIndex)
-        {
-            return _model.GetDescriptionByIndex(mealIndex);
         }
 
         //呼叫model中的GetCategories
