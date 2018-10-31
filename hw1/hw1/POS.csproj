@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="CategoryState.cs" />
     <Compile Include="RestaurantSidePresentationModel.cs" />
     <Compile Include="StartUpFormPresentationModel.cs" />
     <Compile Include="CustomerFormPresentationModel.cs" />

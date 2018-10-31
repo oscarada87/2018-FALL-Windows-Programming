@@ -1,51 +1,51 @@
 <stylecopresultscache>
   <version>12</version>
-  <project key="593625642">
+  <project key="2045385639">
     <configuration>DEBUG;TRACE</configuration>
   </project>
-  <project key="2045385639">
+  <project key="593625642">
     <configuration>DEBUG;TRACE</configuration>
   </project>
   <sourcecode name="DataGridViewNumericUpDownCell.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
-      <styleCop>2018/09/19 17:29:50.181</styleCop>
+      <styleCop>2018/09/21 10:43:55.315</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/10/30 17:50:53.143</sourceFile>
-      <parser>2018/09/19 17:29:50.181</parser>
-      <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
+      <sourceFile>2018/10/12 10:22:02.551</sourceFile>
+      <parser>2018/09/21 10:43:55.315</parser>
+      <KellyPalRules.KellyPalAnalyzer>2018/09/21 10:43:55.315</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />
   </sourcecode>
   <sourcecode name="DataGridViewNumericUpDownColumn.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
-      <styleCop>2018/09/19 17:29:50.181</styleCop>
+      <styleCop>2018/09/21 10:43:55.315</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/10/30 17:50:53.144</sourceFile>
-      <parser>2018/09/19 17:29:50.181</parser>
-      <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
+      <sourceFile>2018/10/12 10:22:02.551</sourceFile>
+      <parser>2018/09/21 10:43:55.315</parser>
+      <KellyPalRules.KellyPalAnalyzer>2018/09/21 10:43:55.315</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />
   </sourcecode>
   <sourcecode name="DataGridViewNumericUpDownEditingControl.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
-      <styleCop>2018/09/19 17:29:50.181</styleCop>
+      <styleCop>2018/09/21 10:43:55.315</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/10/30 17:50:53.145</sourceFile>
-      <parser>2018/09/19 17:29:50.181</parser>
-      <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
+      <sourceFile>2018/10/12 10:22:02.567</sourceFile>
+      <parser>2018/09/21 10:43:55.315</parser>
+      <KellyPalRules.KellyPalAnalyzer>2018/09/21 10:43:55.315</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />
   </sourcecode>
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
-      <styleCop>2018/09/19 17:29:50.181</styleCop>
+      <styleCop>2018/09/21 10:43:55.315</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2018/10/30 17:50:53.146</sourceFile>
-      <parser>2018/09/19 17:29:50.181</parser>
-      <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
+      <sourceFile>2018/10/12 10:22:02.583</sourceFile>
+      <parser>2018/09/21 10:43:55.315</parser>
+      <KellyPalRules.KellyPalAnalyzer>2018/09/21 10:43:55.315</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
     <violations />

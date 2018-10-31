@@ -17,7 +17,7 @@ namespace POSCustomerSide
         //更改menu meal name
         public void ChangeMealName(string mealOldName, string mealNewName)
         {
-            if(_order.FindMealByName(mealOldName)!= null)
+            if (_order.FindMealByName(mealOldName) != null)
             {
                 _order.FindMealByName(mealOldName).Name = mealNewName;
                 NotifyMenuChangedObserver();

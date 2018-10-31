@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 
 namespace POSCustomerSide
 {
@@ -31,60 +30,6 @@ namespace POSCustomerSide
             InitialCategoriesState();
             _model._menuChanged += NotifyMenuChangedObserver;
             _model._categoryChanged += NotifyCategoryChangedObserver;
-
-        }
-
-        //儲存category狀態的class
-        private class CategoryState
-        {
-            private int _currentPage;
-            private int _totalPage;
-            private string _name;
-
-            public CategoryState(string name)
-            {
-                this._name = name;
-                this._currentPage = 1;
-                this._totalPage = 1;
-            }
-            public string Name
-            {
-                get
-                {
-                    return _name;
-                }
-                set
-                {
-                    _name = value;
-                }
-            }
-            public int CurrentPage
-            {
-                get
-                {
-                    return _currentPage;
-                }
-                set
-                {
-                    _currentPage = value;
-                }
-            }
-            public int TotalPage
-            {
-                get
-                {
-                    return _totalPage;
-                }
-                set
-                {
-                    _totalPage = value;
-                }
-            }
-            //更新最大頁數
-            public void UpdateTotalPage(int number)
-            {
-                _totalPage = (number / ONE_PAGE_BUTTON_NUMBER) + 1;
-            }
         }
 
         //初始化category數量
@@ -99,7 +44,7 @@ namespace POSCustomerSide
         }
 
         //取得button的位置，並將按鈕數量+1
-        public Point GetMealButtonLocation(int number)
+        public List<int> GetMealButtonLocation(int number)
         {
             int locationX = 0;
             int locationY = 0;
@@ -107,7 +52,11 @@ namespace POSCustomerSide
                 number = number % ONE_PAGE_BUTTON_NUMBER;
             locationX = (number % ROW_BUTTON_NUMBER) * POSITION_DISTANCE + BUTTON_LOCATION_X;
             locationY = (number / ROW_BUTTON_NUMBER) * POSITION_DISTANCE + BUTTON_LOCATION_Y;
-            return new Point(locationX, locationY);
+            return new List<int>
+            {
+                locationX,
+                locationY
+            };
         }
 
         //更新最大頁數

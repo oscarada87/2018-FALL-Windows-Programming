@@ -105,7 +105,8 @@ namespace POSCustomerSide
                 button.TextAlign = ContentAlignment.BottomRight;
                 button.Click += MealButtonClick;
                 UpdateMealCategory(x.Category.Name, button);
-                button.Location = _model.GetMealButtonLocation(_mealButtons[categories.IndexOf(x.Category.Name)].IndexOf(button));
+                List<int> buttonLocation = _model.GetMealButtonLocation(_mealButtons[categories.IndexOf(x.Category.Name)].IndexOf(button));
+                button.Location = new Point(buttonLocation[0], buttonLocation[1]);
             });
         }
 

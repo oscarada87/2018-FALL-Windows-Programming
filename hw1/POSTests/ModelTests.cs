@@ -11,9 +11,6 @@ namespace POSCustomerSide.Tests
     [TestClass()]
     public class ModelTests
     {
-        PrivateObject _menuChanged;
-        PrivateObject _categoryChanged;
-
         [TestMethod()]
         public void ChangeMealNameTest()
         {
