@@ -1,0 +1,6 @@
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\bin\Debug\CodedUITestProject.dll
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\bin\Debug\CodedUITestProject.pdb
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.csprojAssemblyReference.cache
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.csproj.CoreCompileInputs.cache
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.dll
+D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.pdb
