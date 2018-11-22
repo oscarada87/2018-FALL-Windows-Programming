@@ -54,6 +54,9 @@ namespace CodedUITestProject
             Robot.ClickButton("千島黃金蝦堡\n69元");
             Robot.ClickButton("BLT 安格斯黑牛堡\n109元");
             Robot.ClickButton("BLT 辣脆雞腿堡\n109元");
+            Robot.ClickButton("Add");
+            Robot.ClickButton("Previous Page");
+            Robot.ClickTabControl("點心");
         }
 
         [TestMethod]

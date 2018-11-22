@@ -38,13 +38,13 @@
             this._pageLabel1 = new System.Windows.Forms.Label();
             this._previousPageButton = new System.Windows.Forms.Button();
             this._mealGridView = new System.Windows.Forms.DataGridView();
-            this._totalLabel = new System.Windows.Forms.Label();
             this._deleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this._mealsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mealsQuantity = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
             this._mealSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._totalLabel = new System.Windows.Forms.Label();
             this._mealsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._mealGridView)).BeginInit();
             this.SuspendLayout();
@@ -127,7 +127,7 @@
             this._previousPageButton.Name = "_previousPageButton";
             this._previousPageButton.Size = new System.Drawing.Size(150, 31);
             this._previousPageButton.TabIndex = 5;
-            this._previousPageButton.Text = "Previos Page";
+            this._previousPageButton.Text = "Previous Page";
             this._previousPageButton.UseVisualStyleBackColor = true;
             this._previousPageButton.Click += new System.EventHandler(this.ClickPreviousPage);
             // 
@@ -170,17 +170,6 @@
             this._mealGridView.Size = new System.Drawing.Size(646, 682);
             this._mealGridView.TabIndex = 8;
             // 
-            // _totalLabel
-            // 
-            this._totalLabel.AutoSize = true;
-            this._totalLabel.Font = new System.Drawing.Font("微軟正黑體", 22F);
-            this._totalLabel.ForeColor = System.Drawing.Color.SaddleBrown;
-            this._totalLabel.Location = new System.Drawing.Point(1109, 709);
-            this._totalLabel.Name = "_totalLabel";
-            this._totalLabel.Size = new System.Drawing.Size(150, 38);
-            this._totalLabel.TabIndex = 7;
-            this._totalLabel.Text = "Total: 0元";
-            // 
             // _deleteColumn
             // 
             this._deleteColumn.HeaderText = "Delete";
@@ -220,6 +209,17 @@
             this._mealSubtotal.HeaderText = "Subtotal";
             this._mealSubtotal.Name = "_mealSubtotal";
             this._mealSubtotal.ReadOnly = true;
+            // 
+            // _totalLabel
+            // 
+            this._totalLabel.AutoSize = true;
+            this._totalLabel.Font = new System.Drawing.Font("微軟正黑體", 22F);
+            this._totalLabel.ForeColor = System.Drawing.Color.SaddleBrown;
+            this._totalLabel.Location = new System.Drawing.Point(1109, 709);
+            this._totalLabel.Name = "_totalLabel";
+            this._totalLabel.Size = new System.Drawing.Size(150, 38);
+            this._totalLabel.TabIndex = 7;
+            this._totalLabel.Text = "Total: 0元";
             // 
             // CustomerSideForm
             // 
