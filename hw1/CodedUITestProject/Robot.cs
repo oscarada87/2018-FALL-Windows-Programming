@@ -163,32 +163,18 @@ namespace CodedUITestProject
             Assert.AreEqual(button.Enabled, assertValue);
         }
 
-        public static void DelteteDataGridViewByIndex(string[] data)
+        public static void DeleteDataGridViewRowByIndex(string name, string index)
         {
-            WinTable table = (WinTable)Robot.FindWinControl(typeof(WinTable), data[0], _root);
+            WinTable table = (WinTable)Robot.FindWinControl(typeof(WinTable), name, _root);
             WinRow row = new WinRow(table);
-            if (data[3] == string.Empty)
-            {
-                Mouse.Click(table, System.Windows.Forms.MouseButtons.Right);
-            }
-            else
-            {
-                row.SearchProperties.Add(WinRow.PropertyNames.RowIndex, data[3]);
-                row.Find();
-                UITestControlCollection collection = row.GetChildren();
-                Mouse.Click(collection[0]);
-                Mouse.Click(collection[0], System.Windows.Forms.MouseButtons.Right);
-            }
-            WinWindow window = new WinWindow();
-            WinMenu menu = new WinMenu(window);
-            menu.SearchProperties[WinMenu.PropertyNames.Name] = data[1];
-            WinMenuItem item = new WinMenuItem(menu);
-            item.SearchProperties[WinMenuItem.PropertyNames.Name] = data[2];
-            Mouse.Click(item);
+            row.SearchProperties.Add(WinRow.PropertyNames.RowIndex, index);
+            UITestControlCollection collection = row.GetChildren();
+            Mouse.Click(collection[0]);
         }
-        
+
         public static void ClickListViewByValue(string name, string data)
         {
+            //WinList list = (WinList)Robot.FindWinControl(typeof(WinList), name, _root);
             WinWindow window = new WinWindow();
             window.SearchProperties[WinWindow.PropertyNames.Name] = name;
             WinList list = new WinList(window);

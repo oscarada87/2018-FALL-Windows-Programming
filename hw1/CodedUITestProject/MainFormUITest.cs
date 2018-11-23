@@ -94,9 +94,12 @@ namespace CodedUITestProject
             Robot.ClickButton("冰奶茶（大）\n45元");
             Robot.ClickButton("冰奶茶（大）\n45元");
             Robot.ClickButton("Add");
-            string[] cell = {"X", "薯餅\n32元", "點心", "32", "1", "32 NTD"};
-            //Robot.AssertDataGridViewByIndex("dataGridView", "3", cell);
-            //Robot.DelteteDataGridViewByIndex(new string[] {"dataGridView", "", "", "3"});
+            Robot.DeleteDataGridViewRowByIndex("dataGridView", "4");
+        }
+
+        private void RunScriptTestQTY()
+        {
+            Robot.SetNumericUpDown("dataGridView", "2");
         }
 
         [TestMethod]
@@ -105,6 +108,10 @@ namespace CodedUITestProject
             RunScriptTestDataGridView();
             string EXPECTED_VALUE = "Total: 146元";
             Robot.AssertText(RESULT_PRICE_CONTROL_NAME, EXPECTED_VALUE);
+            //RunScriptTestQTY();
+            //EXPECTED_VALUE = "Total: 191元";
+            //Robot.AssertText(RESULT_PRICE_CONTROL_NAME, EXPECTED_VALUE);
+
         }
 
         private void RunScriptTestModifiedMeal()
@@ -115,7 +122,7 @@ namespace CodedUITestProject
             Robot.ClickButton("大麥克\n69元");
             Robot.ClickButton("Add");
             Robot.SetForm("POS-Restaurant Side");
-            Robot.ClickListViewByValue("mealListBox", "");
+            Robot.ClickListViewByValue("Meal Manager", "大麥克");
             Robot.SetEdit("mealPriceBox", "99");
             Robot.ClickButton("Save");
             Robot.SetForm("POS-Customer Side");

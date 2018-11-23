@@ -4,3 +4,9 @@ D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\
 D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.csproj.CoreCompileInputs.cache
 D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.dll
 D:\Users\Oscar\Desktop\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.pdb
+C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.csprojAssemblyReference.cache
+C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.dll
+C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\CodedUITestProject\obj\Debug\CodedUITestProject.pdb
+C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\CodedUITestProject\bin\Debug\CodedUITestProject.dll
+C:\Users\User\Desktop\code練習\c#\105820006\2018-FALL-Windows-Programming\hw1\CodedUITestProject\bin\Debug\CodedUITestProject.pdb
