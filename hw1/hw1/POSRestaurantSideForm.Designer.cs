@@ -203,6 +203,7 @@
             // 
             // _mealPriceTextBox
             // 
+            this._mealPriceTextBox.AccessibleName = "mealPriceBox";
             this._mealPriceTextBox.Location = new System.Drawing.Point(137, 93);
             this._mealPriceTextBox.Name = "_mealPriceTextBox";
             this._mealPriceTextBox.Size = new System.Drawing.Size(86, 27);
@@ -247,6 +248,7 @@
             // 
             // _mealListBox
             // 
+            this._mealListBox.AccessibleName = "mealListBox";
             this._mealListBox.FormattingEnabled = true;
             this._mealListBox.ItemHeight = 16;
             this._mealListBox.Location = new System.Drawing.Point(6, 6);

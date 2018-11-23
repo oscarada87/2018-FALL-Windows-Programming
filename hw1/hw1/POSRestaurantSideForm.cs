@@ -21,6 +21,7 @@ namespace POSCustomerSide
         {
             this._model = model;
             InitializeComponent();
+            _mealListBox.AccessibleName = "mealListBox";
             _model._menuChangedRestaurant += UpdateMealListBox;
             _model._menuChangedRestaurant += UpdateCategoryListBox;
             _browseButton.Click += ClickBrowseButton;

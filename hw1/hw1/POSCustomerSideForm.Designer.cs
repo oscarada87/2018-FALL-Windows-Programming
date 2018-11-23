@@ -38,13 +38,13 @@
             this._pageLabel1 = new System.Windows.Forms.Label();
             this._previousPageButton = new System.Windows.Forms.Button();
             this._mealGridView = new System.Windows.Forms.DataGridView();
-            this._deleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this._mealsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._mealsCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._mealsPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._mealsQuantity = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
-            this._mealSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._totalLabel = new System.Windows.Forms.Label();
+            this._mealSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._mealsQuantity = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
+            this._mealsPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._mealsCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._mealsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._deleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this._mealsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._mealGridView)).BeginInit();
             this.SuspendLayout();
@@ -133,6 +133,7 @@
             // 
             // _mealGridView
             // 
+            this._mealGridView.AccessibleName = "dataGridView";
             this._mealGridView.AllowUserToAddRows = false;
             this._mealGridView.AllowUserToDeleteRows = false;
             this._mealGridView.AllowUserToResizeColumns = false;
@@ -170,29 +171,23 @@
             this._mealGridView.Size = new System.Drawing.Size(646, 682);
             this._mealGridView.TabIndex = 8;
             // 
-            // _deleteColumn
+            // _totalLabel
             // 
-            this._deleteColumn.HeaderText = "Delete";
-            this._deleteColumn.Name = "_deleteColumn";
-            this._deleteColumn.ReadOnly = true;
+            this._totalLabel.AccessibleName = "totalPrice";
+            this._totalLabel.AutoSize = true;
+            this._totalLabel.Font = new System.Drawing.Font("微軟正黑體", 22F);
+            this._totalLabel.ForeColor = System.Drawing.Color.SaddleBrown;
+            this._totalLabel.Location = new System.Drawing.Point(1109, 709);
+            this._totalLabel.Name = "_totalLabel";
+            this._totalLabel.Size = new System.Drawing.Size(150, 38);
+            this._totalLabel.TabIndex = 7;
+            this._totalLabel.Text = "Total: 0元";
             // 
-            // _mealsName
+            // _mealSubtotal
             // 
-            this._mealsName.HeaderText = "Name";
-            this._mealsName.Name = "_mealsName";
-            this._mealsName.ReadOnly = true;
-            // 
-            // _mealsCategory
-            // 
-            this._mealsCategory.HeaderText = "Category";
-            this._mealsCategory.Name = "_mealsCategory";
-            this._mealsCategory.ReadOnly = true;
-            // 
-            // _mealsPrice
-            // 
-            this._mealsPrice.HeaderText = "Unit Price";
-            this._mealsPrice.Name = "_mealsPrice";
-            this._mealsPrice.ReadOnly = true;
+            this._mealSubtotal.HeaderText = "Subtotal";
+            this._mealSubtotal.Name = "_mealSubtotal";
+            this._mealSubtotal.ReadOnly = true;
             // 
             // _mealsQuantity
             // 
@@ -204,22 +199,30 @@
             0});
             this._mealsQuantity.Name = "_mealsQuantity";
             // 
-            // _mealSubtotal
+            // _mealsPrice
             // 
-            this._mealSubtotal.HeaderText = "Subtotal";
-            this._mealSubtotal.Name = "_mealSubtotal";
-            this._mealSubtotal.ReadOnly = true;
+            this._mealsPrice.HeaderText = "Unit Price";
+            this._mealsPrice.Name = "_mealsPrice";
+            this._mealsPrice.ReadOnly = true;
             // 
-            // _totalLabel
+            // _mealsCategory
             // 
-            this._totalLabel.AutoSize = true;
-            this._totalLabel.Font = new System.Drawing.Font("微軟正黑體", 22F);
-            this._totalLabel.ForeColor = System.Drawing.Color.SaddleBrown;
-            this._totalLabel.Location = new System.Drawing.Point(1109, 709);
-            this._totalLabel.Name = "_totalLabel";
-            this._totalLabel.Size = new System.Drawing.Size(150, 38);
-            this._totalLabel.TabIndex = 7;
-            this._totalLabel.Text = "Total: 0元";
+            this._mealsCategory.HeaderText = "Category";
+            this._mealsCategory.Name = "_mealsCategory";
+            this._mealsCategory.ReadOnly = true;
+            // 
+            // _mealsName
+            // 
+            this._mealsName.DataPropertyName = "mealName";
+            this._mealsName.HeaderText = "Name";
+            this._mealsName.Name = "_mealsName";
+            this._mealsName.ReadOnly = true;
+            // 
+            // _deleteColumn
+            // 
+            this._deleteColumn.HeaderText = "Delete";
+            this._deleteColumn.Name = "_deleteColumn";
+            this._deleteColumn.ReadOnly = true;
             // 
             // CustomerSideForm
             // 

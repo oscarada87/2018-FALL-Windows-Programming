@@ -14,27 +14,28 @@ using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 namespace CodedUITestProject
 {
     /// <summary>
-    /// StartUpFormUITest 的摘要說明
+    /// MainFormUITest 的摘要說明
     /// </summary>
     [CodedUITest]
-    public class StartUpFormUITest
+    public class MainFormUITest
     {
         //string _projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
         private const string FILE_PATH = @"..\..\..\hw1\bin\Debug\POS.exe";
         private const string CALCULATOR_TITLE = "StartUp";
+        private const string RESULT_PRICE_CONTROL_NAME = "totalPrice";
 
-
-        public StartUpFormUITest()
+        public MainFormUITest()
         {
         }
 
         [TestInitialize()]
         public void Initialize()
         {
+            Robot.SetDelayBetweenActions(3);
             Robot.Initialize(FILE_PATH, CALCULATOR_TITLE);
         }
 
-        private void RunScriptOrder()
+        private void RunScriptAllOrder()
         {
             Robot.ClickButton("Start the Cutomer Program (Frontend)");
             Robot.SetForm("POS-Customer Side");
@@ -57,20 +58,76 @@ namespace CodedUITestProject
             Robot.ClickButton("Add");
             Robot.ClickButton("Previous Page");
             Robot.ClickTabControl("點心");
+            Robot.ClickButton("薯條（小包）\n32元");
+            Robot.ClickButton("薯條（中包）\n42元");
+            Robot.ClickButton("薯條（大包）\n55元");
+            Robot.ClickButton("薯餅\n32元");
+            Robot.ClickButton("蘋果派\n32元");
+            Robot.ClickButton("水果袋\n39元");
+            Robot.ClickButton("Add");
+            Robot.ClickTabControl("飲料");
+            Robot.ClickButton("可口可樂（大）\n40元");
+            Robot.ClickButton("雪碧（大）\n40元");
+            Robot.ClickButton("冰紅茶（大）\n40元");
+            Robot.ClickButton("冰綠茶（大）\n40元");
+            Robot.ClickButton("冰奶茶（大）\n45元");
+            Robot.ClickButton("柳橙汁（大）\n45元");
+            Robot.ClickButton("Add");
         }
 
         [TestMethod]
-        public void TestOrder()
+        public void TestAllOrder()
         {
-            RunScriptOrder();
-            //Robot.AssertText(RESULT_CONTROL_NAME, EXPECTED_VALUE);
+            RunScriptAllOrder();
+            string EXPECTED_VALUE = "Total: 1699元";
+            Robot.AssertText(RESULT_PRICE_CONTROL_NAME, EXPECTED_VALUE);
+        }
+        
+        private void RunScriptTestDataGridView()
+        {
+            Robot.ClickButton("Start the Cutomer Program (Frontend)");
+            Robot.SetForm("POS-Customer Side");
+            Robot.ClickButton("大麥克\n69元");
+            Robot.ClickTabControl("點心");
+            Robot.ClickButton("薯餅\n32元");
+            Robot.ClickTabControl("飲料");
+            Robot.ClickButton("冰奶茶（大）\n45元");
+            Robot.ClickButton("冰奶茶（大）\n45元");
+            Robot.ClickButton("Add");
+            string[] cell = {"X", "薯餅\n32元", "點心", "32", "1", "32 NTD"};
+            //Robot.AssertDataGridViewByIndex("dataGridView", "3", cell);
+            //Robot.DelteteDataGridViewByIndex(new string[] {"dataGridView", "", "", "3"});
         }
 
-        //[TestMethod]
-        //public void CodedUITestMethod1()
-        //{
-            // 若要為這個測試產生程式碼，請在捷徑功能表上選取 [產生自動程式化 UI 測試的程式碼]，並選取其中一個功能表項目。
-        //}
+        [TestMethod]
+        public void TestDataGridView()
+        {
+            RunScriptTestDataGridView();
+            string EXPECTED_VALUE = "Total: 146元";
+            Robot.AssertText(RESULT_PRICE_CONTROL_NAME, EXPECTED_VALUE);
+        }
+
+        private void RunScriptTestModifiedMeal()
+        {
+            Robot.ClickButton("Start the Cutomer Program (Frontend)");
+            Robot.ClickButton("Start the Restaurant Program (Backend)");
+            Robot.SetForm("POS-Customer Side");
+            Robot.ClickButton("大麥克\n69元");
+            Robot.ClickButton("Add");
+            Robot.SetForm("POS-Restaurant Side");
+            Robot.ClickListViewByValue("mealListBox", "");
+            Robot.SetEdit("mealPriceBox", "99");
+            Robot.ClickButton("Save");
+            Robot.SetForm("POS-Customer Side");
+        }
+
+        [TestMethod]
+        public void TestModifiedMeal()
+        {
+            RunScriptTestModifiedMeal();
+            string EXPECTED_VALUE = "Total: 99元";
+            Robot.AssertText(RESULT_PRICE_CONTROL_NAME, EXPECTED_VALUE);
+        }
 
         [TestCleanup()]
         public void Cleanup()
