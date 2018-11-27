@@ -1,0 +1,39 @@
+<stylecopresultscache>
+  <version>12</version>
+  <project key="-202966537">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
+  <sourcecode name="MainFormUITest.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2018/09/19 17:29:50.181</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2018/11/27 17:09:54.399</sourceFile>
+      <parser>2018/09/19 17:29:50.181</parser>
+      <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2018/09/19 17:29:50.181</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2018/11/22 23:03:26.315</sourceFile>
+      <parser>2018/09/19 17:29:50.181</parser>
+      <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Robot.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2018/09/19 17:29:50.181</styleCop>
+      <settingsFile>0001/01/01 00:00:00.000</settingsFile>
+      <sourceFile>2018/11/27 16:45:34.380</sourceFile>
+      <parser>2018/09/19 17:29:50.181</parser>
+      <KellyPalRules.KellyPalAnalyzer>2018/09/19 17:29:50.181</KellyPalRules.KellyPalAnalyzer>
+      <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+</stylecopresultscache>

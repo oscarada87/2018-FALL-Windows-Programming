@@ -1,0 +1,27 @@
+漢堡,大麥克,69,\resources\1.jpg,好吃的大麥克
+漢堡,雙層牛肉吉事堡,59,\resources\2.jpg,好吃的雙層牛肉吉事堡
+漢堡,安格斯黑牛堡,99,\resources\3.jpg,好吃的安格斯黑牛堡
+漢堡,嫩煎雞腿堡,79,\resources\4.jpg,好吃的嫩煎雞腿堡
+漢堡,麥香雞,49,\resources\5.jpg,好吃的麥香雞
+漢堡,麥克雞塊（6塊）,59,\resources\6.jpg,好吃的麥克雞塊（6塊）
+漢堡,麥克雞塊（9塊）,89,\resources\7.jpg,好吃的麥克雞塊（9塊）
+漢堡,勁辣雞腿堡,69,\resources\8.jpg,好吃的勁辣雞腿堡
+漢堡,麥脆雞（2塊）,104,\resources\9.jpg,好吃的麥脆雞（2塊）
+漢堡,麥脆雞（3塊）,156,\resources\10.jpg,好吃的麥脆雞（3塊）
+漢堡,黃金起司豬排堡,49,\resources\11.jpg,美味的黃金起司豬排堡
+漢堡,麥香魚,49,\resources\12.jpg,美味的麥香魚
+漢堡,千島黃金蝦堡,69,\resources\13.jpg,美味的千島黃金蝦堡
+漢堡,BLT 安格斯黑牛堡,109,\resources\14.jpg,美味的 BLT 安格斯黑牛堡
+漢堡,BLT 辣脆雞腿堡,109,\resources\15.jpg,美味的 BLT 辣脆雞腿堡
+點心,薯條（小包）,32,\resources\16.jpg,美味的薯條（小包）
+點心,薯條（中包）,42,\resources\17.jpg,美味的薯條（中包）
+點心,薯條（大包）,55,\resources\18.jpg,美味的薯條（大包）
+點心,薯餅,32,\resources\19.jpg,美味的薯餅
+點心,蘋果派,32,\resources\20.jpg,美味的蘋果派
+點心,水果袋,39,\resources\21.jpg,美味的水果袋
+飲料,可口可樂（大）,40,\resources\22.jpg,好喝的可口可樂
+飲料,雪碧（大）,40,\resources\23.jpg,好喝的雪碧
+飲料,冰紅茶（大）,40,\resources\24.jpg,好喝的冰紅茶
+飲料,冰綠茶（大）,40,\resources\25.jpg,好喝的冰綠茶
+飲料,冰奶茶（大）,45,\resources\26.jpg,好喝的冰奶茶
+飲料,柳橙汁（大）,45,\resources\27.jpg,好喝的柳橙汁
