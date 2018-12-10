@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="8aa0a572-74ba-431f-b407-3afd26e6d9a9"
+    Name="d0aae4b3-959f-4c33-a32a-037170750c8f"
     Publisher="CN=User"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="8aa0a572-74ba-431f-b407-3afd26e6d9a9" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="d0aae4b3-959f-4c33-a32a-037170750c8f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>DrawingApp</DisplayName>

@@ -22,9 +22,61 @@ namespace DrawingApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        PresentationModel.PresentationModel _presentationModel;
+
         public MainPage()
         {
             this.InitializeComponent();
+            _presentationModel = new PresentationModel.PresentationModel(_canvas);
+            _canvas.PointerPressed += HandleCanvasPressed;
+            _canvas.PointerReleased += HandleCanvasReleased;
+            _canvas.PointerMoved += HandleCanvasMoved;
+            _clear.Click += HandleClearButtonClick;
+            _diamond.Click += HandleDiamondButtonClick;
+            _line.Click += HandleLineButtonClick;
+            _presentationModel._modelChanged += HandleModelChanged;
+        }
+
+        // 菱形按鈕
+        private void HandleDiamondButtonClick(object sender, RoutedEventArgs e)
+        {
+            _presentationModel.Mode = "diamond";
+        }
+
+        // 線按鈕
+        private void HandleLineButtonClick(object sender, RoutedEventArgs e)
+        {
+            _presentationModel.Mode = "line";
+        }
+
+        // 清除按鈕
+        private void HandleClearButtonClick(object sender, RoutedEventArgs e)
+        {
+            _presentationModel.Clear();
+        }
+
+        // 滑鼠按下
+        public void HandleCanvasPressed(object sender, PointerRoutedEventArgs e)
+        {
+            _presentationModel.PointerPressed(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+        }
+
+        // 滑鼠放開
+        public void HandleCanvasReleased(object sender, PointerRoutedEventArgs e)
+        {
+            _presentationModel.PointerReleased(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+        }
+
+        // 滑鼠移動
+        public void HandleCanvasMoved(object sender, PointerRoutedEventArgs e)
+        {
+            _presentationModel.PointerMoved(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+        }
+
+        // 畫面更新
+        public void HandleModelChanged()
+        {
+            _presentationModel.Draw();
         }
     }
 }

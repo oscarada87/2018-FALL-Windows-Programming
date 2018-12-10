@@ -13,7 +13,7 @@ namespace DrawingModel
         {
             if (type == "line")
                 return new Line();
-            else if (type == "daimond")
+            else if (type == "diamond")
                 return new Diamond();
             else
                 return null;

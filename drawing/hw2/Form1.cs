@@ -36,7 +36,7 @@ namespace hw2
         // daimond 按鈕按下
         public void HandleDaimondButtonClick(object sender, EventArgs e)
         {
-            _presentationModel.Mode = "daimond";
+            _presentationModel.Mode = "diamond";
         }
 
         // Line 按鈕按下

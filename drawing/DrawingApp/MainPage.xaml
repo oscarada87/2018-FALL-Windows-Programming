@@ -6,9 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Stretch">
 
     <Grid>
+        <Canvas x:Name="_canvas" Margin="60,138,60,30" Background="#FFFFFFA0"/>
+        <Button x:Name="_diamond" Content="Diamond" HorizontalAlignment="Left" Margin="70,60,0,0" VerticalAlignment="Top" Height="41" Width="279" FontSize="20"/>
+        <Button x:Name="_line" Content="Line" HorizontalAlignment="Left" Margin="470,60,0,0" VerticalAlignment="Top" Height="41" Width="279" FontSize="20"/>
+        <Button x:Name="_clear" Content="Clear" HorizontalAlignment="Left" Margin="870,60,0,0" VerticalAlignment="Top" Height="41" Width="279" FontSize="20"/>
+
 
     </Grid>
 </Page>

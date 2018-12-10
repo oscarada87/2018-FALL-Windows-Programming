@@ -1,25 +1,32 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 using DrawingModel;
 
-namespace hw2.PresentationModel
+namespace DrawingApp.PresentationModel
 {
     class PresentationModel
     {
-        private string _mode = "diamond";
         Model _model;
+        IGraphics _igraphics;
+        string _mode = "diamond";
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
 
-        public PresentationModel(Control canvas)
+        public PresentationModel(Canvas canvas)
         {
             this._model = new Model();
-            _model._modelChanged += HandleModelChanged;
+            _igraphics = new WindowsAppGraphicsAdaptor(canvas);
         }
 
         // 畫
-        public void Draw(System.Drawing.Graphics graphics)
+        public void Draw()
         {
-            _model.Draw(new WindowsFormsGraphicsAdaptor(graphics));
+            // 重複使用igraphics物件
+            _model.Draw(_igraphics);
         }
 
         // 清除
@@ -28,20 +35,20 @@ namespace hw2.PresentationModel
             _model.Clear();
         }
 
-        // 滑鼠按下
-        public void PointerPressed(int X, int Y)
+        // 滑鼠點下
+        public void PointerPressed(double X, double Y)
         {
             _model.PointerPressed(X, Y, _mode);
         }
 
         // 滑鼠放開
-        public void PointerReleased(int X, int Y)
+        public void PointerReleased(double X, double Y)
         {
             _model.PointerReleased(X, Y, _mode);
         }
 
         // 滑鼠移動
-        public void PointerMoved(int X, int Y)
+        public void PointerMoved(double X, double Y)
         {
             _model.PointerMoved(X, Y);
         }
@@ -51,12 +58,6 @@ namespace hw2.PresentationModel
         {
             if (_modelChanged != null)
                 _modelChanged();
-        }
-
-        // 畫面更動
-        public void HandleModelChanged()
-        {
-            NotifyModelChanged();
         }
 
         public string Mode
@@ -72,3 +73,4 @@ namespace hw2.PresentationModel
         }
     }
 }
+
