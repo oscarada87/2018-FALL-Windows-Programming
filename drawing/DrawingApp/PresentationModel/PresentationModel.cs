@@ -12,7 +12,7 @@ namespace DrawingApp.PresentationModel
     {
         Model _model;
         IGraphics _igraphics;
-        string _mode = "diamond";
+        string _mode = "line";
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
 
