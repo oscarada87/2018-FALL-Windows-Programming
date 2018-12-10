@@ -7,7 +7,7 @@
     <ProjectGuid>{1E855AD7-DB83-4886-94B3-E357399D9C95}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>hw2</RootNamespace>
-    <AssemblyName>hw2</AssemblyName>
+    <AssemblyName>DrawingForm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
