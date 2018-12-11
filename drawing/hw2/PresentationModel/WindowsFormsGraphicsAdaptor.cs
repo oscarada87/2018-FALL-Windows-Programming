@@ -4,7 +4,7 @@ using System;
 
 namespace hw2.PresentationModel
 {
-    class WindowsFormsGraphicsAdaptor: IGraphics
+    class WindowsFormsGraphicsAdaptor : IGraphics
     {
         Graphics _graphics;
 
@@ -30,7 +30,7 @@ namespace hw2.PresentationModel
         }
 
         // 畫菱形
-        public void DrawDaimond(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4)
+        public void DrawDiamond(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4)
         {
             //Console.WriteLine("123");
             //Console.WriteLine(x1);

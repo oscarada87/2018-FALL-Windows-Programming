@@ -7,8 +7,8 @@ namespace hw2.PresentationModel
     {
         private string _mode = "diamond";
         Model _model;
-        public event ModelChangedEventHandler _modelChanged;
-        public delegate void ModelChangedEventHandler();
+        public event PresentaionModelChangedEventHandler _presentaionModelChanged;
+        public delegate void PresentaionModelChangedEventHandler();
 
         public PresentationModel(Control canvas)
         {
@@ -29,28 +29,28 @@ namespace hw2.PresentationModel
         }
 
         // 滑鼠按下
-        public void PointerPressed(int X, int Y)
+        public void PressPointer(int X, int Y)
         {
-            _model.PointerPressed(X, Y, _mode);
+            _model.PressPointer(X, Y, _mode);
         }
 
         // 滑鼠放開
-        public void PointerReleased(int X, int Y)
+        public void ReleasePointer(int X, int Y)
         {
-            _model.PointerReleased(X, Y, _mode);
+            _model.ReleasePointer(X, Y, _mode);
         }
 
         // 滑鼠移動
-        public void PointerMoved(int X, int Y)
+        public void MovePointer(int X, int Y)
         {
-            _model.PointerMoved(X, Y);
+            _model.MovePointer(X, Y);
         }
 
         // 通知
         void NotifyModelChanged()
         {
-            if (_modelChanged != null)
-                _modelChanged();
+            if (_presentaionModelChanged != null)
+                _presentaionModelChanged();
         }
 
         // 畫面更動

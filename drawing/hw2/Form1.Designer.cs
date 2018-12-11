@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._daimondButton = new System.Windows.Forms.Button();
+            this._diamondButton = new System.Windows.Forms.Button();
             this._lineButton = new System.Windows.Forms.Button();
             this._clearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // _daimondButton
+            // _diamondButton
             // 
-            this._daimondButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this._daimondButton.Location = new System.Drawing.Point(12, 12);
-            this._daimondButton.Name = "_daimondButton";
-            this._daimondButton.Size = new System.Drawing.Size(249, 33);
-            this._daimondButton.TabIndex = 0;
-            this._daimondButton.Text = "Daimond";
-            this._daimondButton.UseVisualStyleBackColor = true;
+            this._diamondButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._diamondButton.Location = new System.Drawing.Point(12, 12);
+            this._diamondButton.Name = "_diamondButton";
+            this._diamondButton.Size = new System.Drawing.Size(249, 33);
+            this._diamondButton.TabIndex = 0;
+            this._diamondButton.Text = "Daimond";
+            this._diamondButton.UseVisualStyleBackColor = true;
             // 
             // _lineButton
             // 
@@ -71,7 +71,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this._clearButton);
             this.Controls.Add(this._lineButton);
-            this.Controls.Add(this._daimondButton);
+            this.Controls.Add(this._diamondButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -80,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button _daimondButton;
+        private System.Windows.Forms.Button _diamondButton;
         private System.Windows.Forms.Button _lineButton;
         private System.Windows.Forms.Button _clearButton;
     }

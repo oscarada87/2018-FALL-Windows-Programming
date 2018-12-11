@@ -15,6 +15,6 @@ namespace DrawingModel
         void DrawLine(double x1, double y1, double x2, double y2);
 
         // 畫出菱形
-        void DrawDaimond(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4);
+        void DrawDiamond(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4);
     }
 }

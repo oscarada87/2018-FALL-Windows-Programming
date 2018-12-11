@@ -12,9 +12,10 @@ namespace hw2
 {
     public partial class Form1 : Form
     {
-        DrawingModel.Model _model;
         PresentationModel.PresentationModel _presentationModel;
         Panel _canvas = new DoubleBufferedPanel();
+        const string DIAMOND = "diamond";
+        const string LINE = "line";
 
         public Form1()
         {
@@ -27,22 +28,22 @@ namespace hw2
             _canvas.Paint += HandleCanvasPaint;
             Controls.Add(_canvas);
             _presentationModel = new PresentationModel.PresentationModel(_canvas);
-            _presentationModel._modelChanged += HandleModelChanged;
+            _presentationModel._presentaionModelChanged += HandleModelChanged;
             _clearButton.Click += HandleClearButtonClick;
             _lineButton.Click += HandleLineButtonClick;
-            _daimondButton.Click += HandleDaimondButtonClick;
+            _diamondButton.Click += HandleDiamondButtonClick;
         }
 
         // daimond 按鈕按下
-        public void HandleDaimondButtonClick(object sender, EventArgs e)
+        public void HandleDiamondButtonClick(object sender, EventArgs e)
         {
-            _presentationModel.Mode = "diamond";
+            _presentationModel.Mode = DIAMOND;
         }
 
         // Line 按鈕按下
         public void HandleLineButtonClick(object sender, EventArgs e)
         {
-            _presentationModel.Mode = "line";
+            _presentationModel.Mode = LINE;
         }
 
         // clear 按鈕按下
@@ -54,19 +55,19 @@ namespace hw2
         // 滑鼠按下
         public void HandleCanvasPressed(object sender, MouseEventArgs e)
         {
-            _presentationModel.PointerPressed(e.X, e.Y);
+            _presentationModel.PressPointer(e.X, e.Y);
         }
 
         // 滑鼠放開
         public void HandleCanvasReleased(object sender, MouseEventArgs e)
         {
-            _presentationModel.PointerReleased(e.X, e.Y);
+            _presentationModel.ReleasePointer(e.X, e.Y);
         }
 
         // 滑鼠移動
         public void HandleCanvasMoved(object sender, MouseEventArgs e)
         {
-            _presentationModel.PointerMoved(e.X, e.Y);
+            _presentationModel.MovePointer(e.X, e.Y);
         }
 
         // 畫

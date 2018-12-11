@@ -12,14 +12,16 @@ namespace DrawingApp.PresentationModel
     {
         Model _model;
         IGraphics _igraphics;
-        string _mode = "line";
-        public event ModelChangedEventHandler _modelChanged;
-        public delegate void ModelChangedEventHandler();
+        string _mode = "diamond";
+
+        public event PresentaionModelChangedEventHandler _presentaionModelChanged;
+        public delegate void PresentaionModelChangedEventHandler();
 
         public PresentationModel(Canvas canvas)
         {
             this._model = new Model();
             _igraphics = new WindowsAppGraphicsAdaptor(canvas);
+            _model._modelChanged += HandleModelChanged;
         }
 
         // 畫
@@ -36,28 +38,34 @@ namespace DrawingApp.PresentationModel
         }
 
         // 滑鼠點下
-        public void PointerPressed(double X, double Y)
+        public void PressPointer(double X, double Y)
         {
-            _model.PointerPressed(X, Y, _mode);
+            _model.PressPointer(X, Y, _mode);
         }
 
         // 滑鼠放開
-        public void PointerReleased(double X, double Y)
+        public void ReleasePointer(double X, double Y)
         {
-            _model.PointerReleased(X, Y, _mode);
+            _model.ReleasePointer(X, Y, _mode);
         }
 
         // 滑鼠移動
-        public void PointerMoved(double X, double Y)
+        public void MovePointer(double X, double Y)
         {
-            _model.PointerMoved(X, Y);
+            _model.MovePointer(X, Y);
         }
 
         // 通知
         void NotifyModelChanged()
         {
-            if (_modelChanged != null)
-                _modelChanged();
+            if (_presentaionModelChanged != null)
+                _presentaionModelChanged();
+        }
+
+        // 畫面更動
+        public void HandleModelChanged()
+        {
+            NotifyModelChanged();
         }
 
         public string Mode

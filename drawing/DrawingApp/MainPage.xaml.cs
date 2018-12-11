@@ -5,12 +5,14 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Shapes;
 using Windows.UI.Xaml.Navigation;
 
 // 空白頁項目範本已記錄在 https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x404
@@ -23,6 +25,8 @@ namespace DrawingApp
     public sealed partial class MainPage : Page
     {
         PresentationModel.PresentationModel _presentationModel;
+        const string DIAMOND = "diamond";
+        const string LINE = "line";
 
         public MainPage()
         {
@@ -34,19 +38,19 @@ namespace DrawingApp
             _clear.Click += HandleClearButtonClick;
             _diamond.Click += HandleDiamondButtonClick;
             _line.Click += HandleLineButtonClick;
-            _presentationModel._modelChanged += HandleModelChanged;
+            _presentationModel._presentaionModelChanged += HandleModelChanged;
         }
 
         // 菱形按鈕
         private void HandleDiamondButtonClick(object sender, RoutedEventArgs e)
         {
-            _presentationModel.Mode = "diamond";
+            _presentationModel.Mode = DIAMOND;
         }
 
         // 線按鈕
         private void HandleLineButtonClick(object sender, RoutedEventArgs e)
         {
-            _presentationModel.Mode = "line";
+            _presentationModel.Mode = LINE;
         }
 
         // 清除按鈕
@@ -58,19 +62,19 @@ namespace DrawingApp
         // 滑鼠按下
         public void HandleCanvasPressed(object sender, PointerRoutedEventArgs e)
         {
-            _presentationModel.PointerPressed(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+            _presentationModel.PressPointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
         }
 
         // 滑鼠放開
         public void HandleCanvasReleased(object sender, PointerRoutedEventArgs e)
         {
-            _presentationModel.PointerReleased(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+            _presentationModel.ReleasePointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
         }
 
         // 滑鼠移動
         public void HandleCanvasMoved(object sender, PointerRoutedEventArgs e)
         {
-            _presentationModel.PointerMoved(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
+            _presentationModel.MovePointer(e.GetCurrentPoint(_canvas).Position.X, e.GetCurrentPoint(_canvas).Position.Y);
         }
 
         // 畫面更新

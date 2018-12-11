@@ -8,12 +8,15 @@ namespace DrawingModel
 {
     class ShapeFactory
     {
+        const string DIAMOND = "diamond";
+        const string LINE = "line";
+
         // 創造新的shape
         public IShape CreateShape(string type)
         {
-            if (type == "line")
+            if (type == LINE)
                 return new Line();
-            else if (type == "diamond")
+            else if (type == DIAMOND)
                 return new Diamond();
             else
                 return null;

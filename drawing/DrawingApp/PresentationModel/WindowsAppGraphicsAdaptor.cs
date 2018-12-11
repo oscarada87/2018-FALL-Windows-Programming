@@ -7,7 +7,7 @@ using DrawingModel;
 
 namespace DrawingApp.PresentationModel
 {
-    class WindowsAppGraphicsAdaptor: IGraphics
+    class WindowsAppGraphicsAdaptor : IGraphics
     {
         Canvas _canvas;
 
@@ -35,7 +35,7 @@ namespace DrawingApp.PresentationModel
         }
 
         // 畫菱形
-        public void DrawDaimond(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4)
+        public void DrawDiamond(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4)
         {
             Polygon polygon = new Polygon();
             PointCollection points = new PointCollection();

@@ -18,13 +18,13 @@ namespace DrawingModel
         IShape _hint;
 
         // 滑鼠點下
-        public void PointerPressed(double x, double y, string type)
+        public void PressPointer(double X, double Y, string type)
         {
             _hint = _shapeFactory.CreateShape(type);
-            if (x > 0 && y > 0)
+            if (X > 0 && Y > 0)
             {
-                _firstPointX = x;
-                _firstPointY = y;
+                _firstPointX = X;
+                _firstPointY = Y;
                 _hint.X1 = _firstPointX;
                 _hint.Y1 = _firstPointY;
                 _isPressed = true;
@@ -32,18 +32,18 @@ namespace DrawingModel
         }
 
         // 滑鼠移動
-        public void PointerMoved(double x, double y)
+        public void MovePointer(double X, double Y)
         {
             if (_isPressed)
             {
-                _hint.X2 = x;
-                _hint.Y2 = y;
+                _hint.X2 = X;
+                _hint.Y2 = Y;
                 NotifyModelChanged();
             }
         }
 
         // 滑鼠放開
-        public void PointerReleased(double x, double y, string type)
+        public void ReleasePointer(double X, double Y, string type)
         {
             IShape shape;
             if (_isPressed)
@@ -52,8 +52,8 @@ namespace DrawingModel
                 shape = _shapeFactory.CreateShape(type);
                 shape.X1 = _firstPointX;
                 shape.Y1 = _firstPointY;
-                shape.X2 = x;
-                shape.Y2 = y;
+                shape.X2 = X;
+                shape.Y2 = Y;
                 _shapes.Add(_hint);
                 NotifyModelChanged();
             }
